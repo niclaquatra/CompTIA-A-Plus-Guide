@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking - CompTIA A+ Exam Study Guide</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-dark border-bottom-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="index.html">CompTIA A+ Study Guide</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-dark"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto mb-lg-0 p-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-white mx-1" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white mx-1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Core 1 Topics
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="hardware.html">Hardware</a></li>
+                                <li><a class="dropdown-item active" href="networking.html">Networking</a></li>
+                                <li><a class="dropdown-item" href="mobile_devices.html">Mobile Devices</a></li>
+                                <li><a class="dropdown-item" href="operating_systems.html">Operating Systems</a></li>
+                                <li><a class="dropdown-item" href="security.html">Security</a></li>
+                                <li><a class="dropdown-item" href="troubleshooting.html">Troubleshooting</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white mx-1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Core 2 Topics
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="operating_systems_core2.html">Operating Systems</a>
+                                </li>
+                                <li><a class="dropdown-item" href="security_core2.html">Security</a></li>
+                                <li><a class="dropdown-item" href="software_troubleshooting.html">Software
+                                        Troubleshooting</a></li>
+                                <li><a class="dropdown-item" href="operational_procedures.html">Operational
+                                        Procedures</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Navbar -->
+    <div class="container-fluid">
+        <!-- Hero Section -->
+        <div class="row justify-content-center bg-primary text-white pb-4">
+            <div class="col-xl-10 col-xxl-8">
+                <div class="text-center px-5">
+                    <h1 class="mt-5 display-4">Core 1 220-1201 Networking</h1>
+                    <p class="lead">Study materials related to computer networks, network infrastructure, and
+                        troubleshooting.</p>
+                    <p class="lead mb-4"><strong>Key Topics Covered: </strong>Network Protocols & Ports, TCP/IP Model,
+                        SOHO Networks, Network Devices & Tools, Wireless Standards, IP Addressing</p>
+                </div>
+            </div>
+        </div>
+        <!-- Sticky Table of Contents -->
+        <!-- Mobile/Tablet Toggle Button -->
+        <button class="btn btn-primary toc-toggle d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas">
+            <i class="bi bi-list"></i> Contents
+        </button>
+
+        <!-- Mobile/Tablet Offcanvas Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="tocOffcanvasLabel">Contents</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="toc-list">
+                    <li><a href="#osi-model" data-bs-dismiss="offcanvas">OSI & TCP/IP Models</a></li>
+                    <li><a href="#protocols" data-bs-dismiss="offcanvas">Ports / Protocols</a></li>
+                    <li><a href="#devices" data-bs-dismiss="offcanvas">Network Devices</a></li>
+                    <li><a href="#soho" data-bs-dismiss="offcanvas">SOHO Networking</a></li>
+                    <li><a href="#wireless" data-bs-dismiss="offcanvas">Wireless Networking</a></li>
+                    <li><a href="#ip-addressing" data-bs-dismiss="offcanvas">IP Addressing</a></li>
+                    <li><a href="#tools" data-bs-dismiss="offcanvas">Networking Tools</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Desktop Fixed Sidebar -->
+        <div class="toc-sidebar mt-5">
+            <div class="toc-container">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="toc-title mb-0">Contents</h5>
+                    <button class="btn btn-sm btn-outline-secondary toc-collapse-btn" type="button" id="tocCollapseBtn">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <ul class="toc-list d-none" id="tocList">
+                    <li><a href="#osi-model">OSI & TCP/IP Models</a></li>
+                    <li><a href="#protocols">Protocols / Ports</a></li>
+                    <li><a href="#tcp">TCP / UDP</a></li>
+                    <li><a href="#devices">Network Devices</a></li>
+                    <li><a href="#soho">SOHO Networking</a></li>
+                    <li><a href="#wireless">Wireless Networking</a></li>
+                    <li><a href="#ip-addressing">IP Addressing</a></li>
+                    <li><a href="#tools">Networking Tools</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-xxl-8">
+                <!-- OSI & TCP/IP Models Section -->
+                <div class="content-section" id="osi-model">
+                    <h2 class="display-6 mb-4">OSI & TCP/IP Models</h2>
+                    <p class="lead">Understanding the OSI (Open Systems Interconnection) and TCP/IP models is
+                        fundamental to networking. These models describe how data is transmitted across networks.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">OSI Model (7 Layers)</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Layer</th>
+                                        <th>Name</th>
+                                        <th>Function</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>7</strong></td>
+                                        <td>Application</td>
+                                        <td>User applications & services</td>
+                                        <td>HTTP, HTTPS, SMTP, FTP, Telnet</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>6</strong></td>
+                                        <td>Presentation</td>
+                                        <td>Data translation & encryption</td>
+                                        <td>SSL/TLS, JPEG, MPEG</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5</strong></td>
+                                        <td>Session</td>
+                                        <td>Session management</td>
+                                        <td>NetBIOS, RPC, PPTP</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4</strong></td>
+                                        <td>Transport</td>
+                                        <td>End-to-end communication</td>
+                                        <td>TCP, UDP, SCTP</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td>Network</td>
+                                        <td>Routing & IP addressing</td>
+                                        <td>IP, ICMP, IGP</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td>Data Link</td>
+                                        <td>MAC addressing & switching</td>
+                                        <td>Ethernet, PPP, Frame Relay</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>1</strong></td>
+                                        <td>Physical</td>
+                                        <td>Physical transmission</td>
+                                        <td>Cables, Hubs, Repeaters</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3 class="h4 mb-3">TCP/IP Model (4-5 Layers)</h3>
+                        <p>The TCP/IP model is a more practical model used in modern networking.</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Layer</th>
+                                        <th>Name</th>
+                                        <th>Protocols</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>4-5</strong></td>
+                                        <td>Application</td>
+                                        <td>HTTP, HTTPS, SMTP, FTP, DNS, DHCP, Telnet</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td>Transport</td>
+                                        <td>TCP, UDP</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td>Internet</td>
+                                        <td>IP, ICMP, IPsec</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>1</strong></td>
+                                        <td>Link/Physical</td>
+                                        <td>Ethernet, PPP, ARP</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Protocols Section -->
+                <div class="content-section" id="protocols">
+                    <h2 class="display-6 mb-4">Network Protocols & Ports</h2>
+                    <p class="lead"><strong>Protocols</strong> define the rules and standards for communication between
+                        network devices such
+                        as how data is formatted, transmitted, and received. You can think of Protocols like it is the languages spoken through
+                        doorways. They set the rules that define how communication happens.</p>
+                    <p class="lead"><strong>Ports</strong> are logical endpoints identifed by numbers (ex. HTTP is Port
+                        80). They allow
+                        multiple devices to run simultaneously on a single IP address by directing traffic to the
+                        correct service. Ports are like
+                        doorways into a device. They have specific entry and exit points for data tied to services</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Common Protocols & Ports</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Protocol</th>
+                                        <th>Port(s)</th>
+                                        <th>Layer</th>
+                                        <th>Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>HTTP</strong></td>
+                                        <td>80/TCP</td>
+                                        <td>Application</td>
+                                        <td>Unsecured web traffic</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HTTPS</strong></td>
+                                        <td>443/TCP</td>
+                                        <td>Application</td>
+                                        <td>Secured web traffic (SSL/TLS)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FTP</strong></td>
+                                        <td>20, 21/TCP</td>
+                                        <td>Application</td>
+                                        <td>File transfer</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SSH</strong></td>
+                                        <td>22/TCP</td>
+                                        <td>Application</td>
+                                        <td>Secure shell & remote access</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Telnet</strong></td>
+                                        <td>23/TCP</td>
+                                        <td>Application</td>
+                                        <td>Unsecured remote access</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SMTP</strong></td>
+                                        <td>25, 587/TCP</td>
+                                        <td>Application</td>
+                                        <td>Email sending</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DNS</strong></td>
+                                        <td>53/UDP, TCP</td>
+                                        <td>Application</td>
+                                        <td>Domain name resolution</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DHCP</strong></td>
+                                        <td>67, 68/UDP</td>
+                                        <td>Application</td>
+                                        <td>Dynamic IP assignment</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>POP3</strong></td>
+                                        <td>110/TCP</td>
+                                        <td>Application</td>
+                                        <td>Email retrieval</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>IMAP</strong></td>
+                                        <td>143, 993/TCP</td>
+                                        <td>Application</td>
+                                        <td>Email access (secure)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>RDP</strong></td>
+                                        <td>3389/TCP</td>
+                                        <td>Application</td>
+                                        <td>Remote desktop protocol</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="display-6 mb-4" id="tcp">Transmission Control Protocol (TCP)</h2>
+                        <p class="lead mb-5"><strong>TCP</strong> is one of the core transport layer protocols used for
+                            data transmission over IP networks.
+                            TCP ensures reliable delivery, ordered and error-checked of the data. TCP is
+                            Connection-oriented communication. It
+                            establishes a three-way handshake <i>(SYN → SYN-ACK → ACK)</i> before data transmission.
+                            This process ensures
+                            data integrity and order. Error Detection and Retransmission uses checksums and
+                            acknowledgement messages for reliable delivery. Also retransmits
+                            lost packets to prevent data corruption.</p>
+                        <h2 class="display-6 mb-4" id="udp">User Datagram Protocol (UDP)</h2>
+                        <p class="lead mb-5"><strong>UDP</strong> is another core transport layer protocol. Unlike TCP,
+                            UDP is connectionless and does not guarantee reliable delivery or ordered packets.
+                            UDP is faster and has lower overhead, making it suitable for real-time applications where
+                            speed is more critical than reliability.</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>TCP (Transmission Control Protocol)</th>
+                                        <th>UDP (User Datagram Protocol)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Connection</strong></td>
+                                        <td>Connection-oriented (3-way handshake)</td>
+                                        <td>Connectionless</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Reliability</strong></td>
+                                        <td>Guaranteed delivery, ordered packets</td>
+                                        <td>No guarantees (best effort)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Speed</strong></td>
+                                        <td>Slower (overhead)</td>
+                                        <td>Faster (minimal overhead)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ordering</strong></td>
+                                        <td>Maintains packet order</td>
+                                        <td>No ordering guarantee</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Use Cases</strong></td>
+                                        <td>Email, File transfer, Web browsing</td>
+                                        <td>Video streaming, VoIP, Gaming</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row justify-content-center g-4 mt-3">
+                            <h2 class="display-6 mb-4 text-center">Good Practices for Secure TCP/UDP</h2>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Firewall Configuration</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Configure firewalls and access control lists to strictly filter TCP and UDP traffic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Use Secure Protocols</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Use HTTPS over HTTP, and SFTP over FTP, for secure, encrypted data transmission.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Regular Updates</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Keep software and firmware updated to patch vulnerabilities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Logging / Monitoring</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Maintain detailed logs of TCP/UDP connections to detect abnormal traffic patterns. Monitor for suspicious behavior such as <i>SYN</i> floods on TCP or amplification attacks over UDP. Implement <i>SYN</i>
+                                        flood protection for TCP and limit UDP request rates to prevent Dos/DDoS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Strong Authentication</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Use strong passwords and implement multi-factor authentication, digital certificates, or secure keys for services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="h5 mb-0">Encryption</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Use TLS/SSL for TCP traffic (HTTPS, SMTPS, IMAPS) and Datagram TLS (DTLS) for UDP traffic to prevent eavesdropping.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Devices Section -->
+                <div class="content-section" id="devices">
+                    <h2 class="display-6 mb-4">Network Devices</h2>
+                    <p class="lead">Network devices are hardware components that enable communication and data flow
+                        within networks. Each device operates at different OSI layers.</p>
+
+                    <div class="row align-items-center g-4 mb-5">
+                        <div class="col-lg-4 px-3">
+                            <img src="img/router.png" alt="Router" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Router</h3>
+                            <p>Connects multiple networks and routes data packets between them based on IP addresses.
+                                Operates at Layer 3 (Network).</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Key Function:</strong> IP routing & NAT
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>SOHO Example:</strong> Wireless router at home
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Interfaces:</strong> WAN, LAN ports
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 px-3">
+                            <img src="img/switch.png" alt="Switch" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Switch</h3>
+                            <p>Connects devices within a LAN and forwards frames based on MAC addresses. Operates at
+                                Layer 2 (Data Link).</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Key Function:</strong> MAC address learning & forwarding
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>VLAN Support:</strong> Virtual LAN segmentation
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Ports:</strong> 4-48+ Ethernet ports
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 px-3">
+                            <img src="img/firewall.png" alt="Firewall" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Firewall</h3>
+                            <p>Filters incoming/outgoing network traffic based on security rules. Can operate at Layer
+                                3-7.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Key Function:</strong> Packet filtering & protection
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>SOHO:</strong> Often built into home routers
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Types:</strong> Stateful, proxy, next-gen
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center g-4 mb-5">
+                        <div class="col-lg-4 px-3">
+                            <img src="img/modem.png" alt="Modem" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Modem</h3>
+                            <p>Modulates/demodulates digital signals for transmission over ISP lines. Converts WAN
+                                signal to network traffic.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Types:</strong> Cable, DSL, Fiber
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Connection:</strong> Coax, phone line, or fiber
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Output:</strong> Ethernet to router
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 px-3">
+                            <img src="img/access_point.png" alt="Access Point" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Access Point (AP)</h3>
+                            <p>Extends network range wirelessly. Connects to a wired network and broadcasts Wi-Fi
+                                signal.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Key Function:</strong> Wireless coverage extension
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Standards:</strong> 802.11a/b/g/n/ac/ax
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Setup:</strong> Often in bridge or AP mode
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 px-3">
+                            <img src="img/wifi_repeater.png" alt="Repeater" class="img-fluid hardware-image mb-1">
+                            <h3 class="h5">Repeater</h3>
+                            <p>Repeater: Amplifies signals to extend Wi-Fi range.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Key Function:</strong> Signal boosting
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Placement:</strong> Midway between router and dead zone
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0">
+                                    <strong>Limitations:</strong> May reduce bandwidth
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOHO Networking Section -->
+                <div class="content-section gray-bg px-3 border rounded" id="soho">
+                    <h2 class="display-6 mb-4">SOHO Networking</h2>
+                    <p class="lead">Small Office/Home Office (SOHO) networks are small, cost-effective setups typically
+                        used in home or small business environments.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">SOHO Network Characteristics</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Limited devices:</strong> 2-50 devices typically
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Shared internet:</strong> Single ISP connection shared via router
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Wireless:</strong> Wi-Fi for mobility and convenience
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Basic security:</strong> Router firewall + Wi-Fi encryption
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Automatic IP:</strong> DHCP for IP assignment
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Simple management:</strong> Minimal IT overhead
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Typical SOHO Setup</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <p><strong>Internet → Modem → Router → Devices</strong></p>
+                                <ul>
+                                    <li><strong>ISP Line:</strong> Cable/DSL/Fiber to modem</li>
+                                    <li><strong>Modem:</strong> Converts ISP signal to Ethernet</li>
+                                    <li><strong>Router:</strong> Distributes internet to multiple devices</li>
+                                    <li><strong>Devices:</strong> Computers, phones, printers, smart home devices</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">SOHO Security Best Practices</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Change default credentials:</strong> Router admin username/password
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Enable WPA2/WPA3:</strong> Use strong Wi-Fi encryption (not WEP or WPA)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Disable WPS:</strong> Wi-Fi Protected Setup has security vulnerabilities
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Update firmware:</strong> Keep router firmware current
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Enable firewall:</strong> Use built-in router firewall
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Guest network:</strong> Separate network for visitors
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Wireless Networking Section -->
+                <div class="content-section" id="wireless">
+                    <h2 class="display-6 mb-4">Wireless Networking</h2>
+                    <p class="lead">Wireless networking allows devices to connect without physical cables using radio
+                        frequencies. IEEE 802.11 standards define Wi-Fi specifications.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Wi-Fi Standards (802.11)</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Standard</th>
+                                        <th>Frequency</th>
+                                        <th>Max Speed</th>
+                                        <th>Range</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>802.11b</strong></td>
+                                        <td>2.4 GHz</td>
+                                        <td>11 Mbps</td>
+                                        <td>~100m</td>
+                                        <td>Obsolete</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11g</strong></td>
+                                        <td>2.4 GHz</td>
+                                        <td>54 Mbps</td>
+                                        <td>~100m</td>
+                                        <td>Backward compatible with 802.11b</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11a</strong></td>
+                                        <td>5 GHz</td>
+                                        <td>54 Mbps</td>
+                                        <td>~50m</td>
+                                        <td>Less interference, shorter range</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11n</strong></td>
+                                        <td>2.4/5 GHz</td>
+                                        <td>600 Mbps</td>
+                                        <td>~100m</td>
+                                        <td>MIMO technology, dual-band</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11ac</strong></td>
+                                        <td>5 GHz</td>
+                                        <td>1.3 Gbps</td>
+                                        <td>~50m</td>
+                                        <td>Very High Throughput (VHT)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11ax (Wi-Fi 6)</strong></td>
+                                        <td>2.4/5 GHz</td>
+                                        <td>10 Gbps</td>
+                                        <td>~30m</td>
+                                        <td>OFDMA, latest standard</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>802.11be (Wi-Fi 7)</strong></td>
+                                        <td>2.4/5/6 GHz</td>
+                                        <td>30 Gbps+</td>
+                                        <td>~30m</td>
+                                        <td>Upcoming standard, enhanced features</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Wi-Fi Security Protocols</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Security Type</th>
+                                        <th>Strength</th>
+                                        <th>Status</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Open (None)</strong></td>
+                                        <td>None</td>
+                                        <td>❌ Not recommended</td>
+                                        <td>No encryption, anyone can connect</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>WEP</strong></td>
+                                        <td>Very Weak</td>
+                                        <td>❌ Deprecated</td>
+                                        <td>Easily cracked, do not use</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>WPA</strong></td>
+                                        <td>Weak</td>
+                                        <td>⚠️ Legacy</td>
+                                        <td>Improvement over WEP but outdated</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>WPA2 (802.11i)</strong></td>
+                                        <td>Strong</td>
+                                        <td>✅ Current standard</td>
+                                        <td>AES encryption, widely supported</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>WPA3</strong></td>
+                                        <td>Very Strong</td>
+                                        <td>✅ Latest standard</td>
+                                        <td>Enhanced security, protection against brute-force</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Key Wireless Concepts</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>SSID:</strong> Service Set Identifier - the network name broadcast by AP
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Channel:</strong> 2.4 GHz has channels 1-13 (1, 6, 11 are non-overlapping)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Frequency bands:</strong> 2.4 GHz (longer range, more interference) vs 5 GHz
+                                (shorter range, less interference)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>MIMO:</strong> Multiple-Input Multiple-Output - uses multiple antennas for
+                                better throughput
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Site survey:</strong> Process of analyzing wireless coverage and interference
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IP Addressing Section -->
+                <div class="content-section gray-bg border rounded px-3" id="ip-addressing">
+                    <h2 class="display-6 mb-4">IP Addressing & Subnetting</h2>
+                    <p class="lead">IP addressing is how devices identify and communicate with each other on networks.
+                        Understanding IPv4, IPv6, and subnetting is essential for networking.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">IPv4 Addressing</h3>
+                        <p><strong>Format:</strong> Four octets (0-255) separated by dots. Example: 192.168.1.1</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Range</th>
+                                        <th>Private Range</th>
+                                        <th>Default Subnet Mask</th>
+                                        <th>Hosts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Class A</strong></td>
+                                        <td>1-126.x.x.x</td>
+                                        <td>10.0.0.0 - 10.255.255.255</td>
+                                        <td>255.0.0.0</td>
+                                        <td>16.7 million</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Class B</strong></td>
+                                        <td>128-191.x.x.x</td>
+                                        <td>172.16.0.0 - 172.31.255.255</td>
+                                        <td>255.255.0.0</td>
+                                        <td>65,534</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Class C</strong></td>
+                                        <td>192-223.x.x.x</td>
+                                        <td>192.168.0.0 - 192.168.255.255</td>
+                                        <td>255.255.255.0</td>
+                                        <td>254</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Class D</strong></td>
+                                        <td>224-239.x.x.x</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>Multicast</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Class E</strong></td>
+                                        <td>240-255.x.x.x</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>Reserved</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">IPv6 Addressing</h3>
+                        <p><strong>Format:</strong> Eight groups of hexadecimal numbers separated by colons. Example:
+                            2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Length:</strong> 128 bits (vs IPv4's 32 bits)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Advantages:</strong> Vastly larger address space, built-in security (IPsec)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Shorthand:</strong> Can omit leading zeros and consecutive zero groups (::)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Link-local:</strong> fe80:: prefix for automatic local addresses
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">DHCP & DNS</h3>
+                        <div class="card mb-3">
+                            <div class="card-header bg-primary text-white">
+                                <strong>DHCP (Dynamic Host Configuration Protocol)</strong>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Automatically assigns IP addresses to devices on a network</li>
+                                    <li><strong>Process:</strong> DISCOVER → OFFER → REQUEST → ACK</li>
+                                    <li>Uses ports 67 (server) and 68 (client)</li>
+                                    <li>Includes lease time (how long address is valid)</li>
+                                    <li>Also provides subnet mask, gateway, and DNS server addresses</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <strong>DNS (Domain Name System)</strong>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Translates domain names to IP addresses</li>
+                                    <li>Uses port 53 (TCP and UDP)</li>
+                                    <li><strong>Record types:</strong> A (IPv4), AAAA (IPv6), MX (mail), CNAME
+                                        (alias), TXT (text)
+                                    </li>
+                                    <li>Recursive resolution through root, TLD, and authoritative nameservers</li>
+                                    <li>Common public DNS: 8.8.8.8 (Google), 1.1.1.1 (Cloudflare)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Networking Tools Section -->
+                <div class="content-section" id="tools">
+                    <h2 class="display-6 mb-4">Networking Tools & Troubleshooting</h2>
+                    <p class="lead">Network administrators use various physical tools, command-line and graphical tools to diagnose
+                        network issues and verify connectivity.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3 text-center">Essential Networking Tools</h3>
+                            <div class="row justify-content-center text-center">
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/cable_crimper.png" alt="Crimper" class="img-fluid hardware-image mb-1">
+                                    <h3 class="h4">Crimper</h3>
+                                    <p>Attaches modular connectors such as RJ45, or RJ11 to the ends of phone or network cables</p>
+                                </div>
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/punchdown_tool.png" alt="Punchdown Tool" class="img-fluid hardware-image mb-1">
+                                    <h3 class="h4">Punchdown Tool</h3>
+                                    <p>Inserts and cuts wires into insulation-displacement connectors on patch panels, keystone jacks, and punchdown blocks</p>
+                                </div>
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/tone_generator_probe.png" alt="Tone Generator and Probe Kit" class="img-fluid hardware-image mb-1">
+                                    <h3 class="h4">Tone Generator and Probe Kit</h3>
+                                    <p>The Tone Generator sends an analog signal or an electrical tone then the probe kit detects the tone with a tone,
+                                    allowing technicians to trace and identify cables within a bundle or wall.</p>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center text-center mt-4">
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/loopback_adapter.png" alt="Loopback Adapter" class="img-fluid hardware-image mb-1">
+                                    <h3 class="h4">Loopback Adapter</h3>
+                                    <p>A device that connects the transmit and receive pins of a network interface to test the functionality of the network hardware.</p>
+                                </div>
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/multimeter.png" alt="Multimeter" class="img-fluid hardware-image mb-1">
+                                    <h3 class="h4">Multimeter</h3>
+                                    <p>An electronic measuring instrument that combines several measurement functions in one unit. Measures voltage, current, resistance and cable continunity.</p>
+                                </div>
+                                <div class="col-lg-3 px-3">
+                                    <img src="img/wifi_analyzer.png" alt="Wi-Fi Analyzer" class="img-fluid hardware-image">
+                                    <h3 class="h4">Wi-Fi Analyzer</h3>
+                                    <p>A software application or a dedicated hardware device that scans the surrounding wireless spectrum to
+                                    provide detailed information about WiFi networks and help troubleshoot connectivity issues. Can help identifiy overlapping channels or rogue access points.</p>
+                                </div>
+                            </div>
+                            </div>
+                        <h3 class="h4 mb-3">Essential Windows Networking Commands</h3>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>ipconfig</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Display network configuration</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    ipconfig /all
+                                </div>
+                                <p><strong>Shows:</strong> IP address, subnet mask, gateway, DNS servers, MAC address, DHCP Server for all network interfaces on that specific device. (Ex. Your Desktop
+                                    computer has an ethernet interface and a built in NIC on the motherboard). 
+                                </p>
+                                <p><strong>Key Metrics: </strong>
+                                    <ul class=""
+                                </p>
+                                <img src="img/ipconfig_all.png" alt="Command Line for the ipconfig /all command" class="img-fluid card-img">
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>ping</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Test connectivity to a device</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    ping google.com<br>
+                                    ping -t google.com (continuous)
+                                </div>
+                                <p><strong>Uses:</strong> ICMP protocol; checks if host is reachable and response time
+                                </p>
+                                <img src="img/ping_command.png" alt="ping networking command" class="img-fluid card-img">
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>tracert (traceroute)</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Trace route packets take to reach destination</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    tracert google.com
+                                </div>
+                                <p><strong>Shows:</strong> Each hop (router) between source and destination, and
+                                    response times</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>nslookup / nslookup</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Query DNS servers</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    nslookup google.com<br>
+                                    nslookup google.com 8.8.8.8 (query specific DNS server)
+                                </div>
+                                <p><strong>Shows:</strong> IP address for domain name, helps diagnose DNS issues</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>netstat</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Display network statistics and active connections</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    netstat -an (all connections and listening ports)<br>
+                                    netstat -b (connections with process names)
+                                </div>
+                                <p><strong>Shows:</strong> Listening ports, established connections, statistics</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>getmac</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Display MAC address</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    getmac<br>
+                                    getmac /s computername (remote computer)
+                                </div>
+                                <p><strong>Shows:</strong> Physical address of network adapter</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>ipconfig /release & /renew</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> Release and renew DHCP lease</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    ipconfig /release (releases current IP)<br>
+                                    ipconfig /renew (requests new IP from DHCP)
+                                </div>
+                                <p><strong>Uses:</strong> Fixing IP configuration issues, forcing new DHCP assignment
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <strong>arp (Address Resolution Protocol)</strong>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Purpose:</strong> View and manage ARP cache (IP to MAC mapping)</p>
+                                <div class="bg-dark text-light p-2 rounded mb-2"
+                                    style="font-family: monospace; font-size: 0.9em;">
+                                    arp -a (display ARP table)<br>
+                                    arp -d (clear ARP cache)
+                                </div>
+                                <p><strong>Uses:</strong> Troubleshooting MAC address issues, ARP spoofing detection</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Network Troubleshooting Checklist</h3>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>1. Check Physical Connection:</strong> Ensure cables are connected, lights on
+                                device/NIC
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>2. Verify IP Configuration:</strong> Run ipconfig to check for valid IP address
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>3. Test Local Connectivity:</strong> Ping default gateway (router)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>4. Test Remote Connectivity:</strong> Ping external IP (8.8.8.8)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>5. Check DNS Resolution:</strong> Use nslookup to verify DNS is working
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>6. Trace Route Issues:</strong> Use tracert to identify where connection fails
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>7. Check Firewall Rules:</strong> Verify firewall isn't blocking traffic
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>8. Check Device Drivers:</strong> Update network adapter drivers if needed
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- End Fluid Container -->
+    <footer class="footer mt-auto">
+        <div class="container-fluid bg-dark text-white text-center py-3 mt-4">
+            <p class="mb-0">&copy; 2025 Built by Nic LaQuatra all info credit to CompTIA</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
