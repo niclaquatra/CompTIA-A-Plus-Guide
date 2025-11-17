@@ -1,20 +1,6 @@
 // Table of Contents Active Link Highlighting
 const tocLinks = document.querySelectorAll('.toc-list a');
 const sections = document.querySelectorAll('[id]');
-const tocCollapseBtn = document.getElementById('tocCollapseBtn');
-const tocList = document.getElementById('tocList');
-
-// Initialize with correct icon for closed state
-if (tocList.classList.contains('d-none')) {
-    tocCollapseBtn.innerHTML = '<i class="bi bi-chevron-down"></i>';
-}
-
-tocCollapseBtn.addEventListener('click', function () {
-    tocList.classList.toggle('d-none');
-    tocCollapseBtn.innerHTML = tocList.classList.contains('d-none')
-        ? '<i class="bi bi-chevron-down"></i>'
-        : '<i class="bi bi-chevron-up"></i>';
-});
 
 function updateActiveLink() {
     let currentSection = '';
@@ -37,3 +23,24 @@ function updateActiveLink() {
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 // Initial call
 updateActiveLink();
+
+// Smooth scrolling for TOC links
+tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            
+            // Close the offcanvas after clicking
+            const offcanvasElement = document.getElementById('tocOffcanvas');
+            if (offcanvasElement) {
+                const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
+                offcanvas.hide();
+            }
+        }
+    });
+});

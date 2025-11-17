@@ -74,11 +74,10 @@
                 </div>
             </div>
         </div>
-        <!-- Sticky Table of Contents -->
-        <!-- Mobile/Tablet Toggle Button -->
-        <button class="btn btn-primary toc-toggle d-lg-none" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas">
-            <i class="bi bi-list"></i> Contents
+        <!-- Floating TOC Toggle Button -->
+        <button class="btn btn-primary floating-toc-btn" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" title="Toggle Table of Contents">
+            <i class="bi bi-list"></i>
         </button>
 
         <!-- Mobile/Tablet Offcanvas Sidebar -->
@@ -100,30 +99,10 @@
             </div>
         </div>
 
-        <!-- Desktop Fixed Sidebar -->
-        <div class="toc-sidebar mt-5">
-            <div class="toc-container">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h5 class="toc-title mb-0">Contents</h5>
-                    <button class="btn btn-sm btn-outline-secondary toc-collapse-btn" type="button" id="tocCollapseBtn">
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-                <ul class="toc-list d-none" id="tocList">
-                    <li><a href="#osi-model">OSI & TCP/IP Models</a></li>
-                    <li><a href="#protocols">Protocols / Ports</a></li>
-                    <li><a href="#tcp">TCP / UDP</a></li>
-                    <li><a href="#devices">Network Devices</a></li>
-                    <li><a href="#soho">SOHO Networking</a></li>
-                    <li><a href="#wireless">Wireless Networking</a></li>
-                    <li><a href="#ip-addressing">IP Addressing</a></li>
-                    <li><a href="#tools">Networking Tools</a></li>
-                </ul>
-            </div>
-        </div>
+
         <!-- Main Content -->
         <div class="row justify-content-center">
-            <div class="col-xl-10 col-xxl-8">
+            <div class="col-xl-10 col-xxl-8 text-center text-lg-start">
                 <!-- OSI & TCP/IP Models Section -->
                 <div class="content-section" id="osi-model">
                     <h2 class="display-6 mb-4">OSI & TCP/IP Models</h2>
@@ -382,7 +361,7 @@
                         </div>
                         <div class="row justify-content-center g-4 mt-3">
                             <h2 class="display-6 mb-4 text-center">Good Practices for Secure TCP/UDP</h2>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Firewall Configuration</h3>
@@ -392,7 +371,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Use Secure Protocols</h3>
@@ -402,7 +381,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Regular Updates</h3>
@@ -412,7 +391,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Logging / Monitoring</h3>
@@ -423,7 +402,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Strong Authentication</h3>
@@ -433,7 +412,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-primary text-white">
                                         <h3 class="h5 mb-0">Encryption</h3>
@@ -449,12 +428,12 @@
 
                 <!-- Network Devices Section -->
                 <div class="content-section" id="devices">
-                    <h2 class="display-6 mb-4">Network Devices</h2>
-                    <p class="lead">Network devices are hardware components that enable communication and data flow
+                    <h2 class="display-6 mb-4">Network Devices / Components</h2>
+                    <p class="lead">Network devices are hardware components or software components that enable communication and data flow
                         within networks. Each device operates at different OSI layers.</p>
 
-                    <div class="row align-items-center g-4 mb-5">
-                        <div class="col-lg-4 px-3">
+                    <div class="row justify-content-center g-2 mb-5">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/router.png" alt="Router" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Router</h3>
                             <p>Connects multiple networks and routes data packets between them based on IP addresses.
@@ -471,7 +450,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 px-3">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/switch.png" alt="Switch" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Switch</h3>
                             <p>Connects devices within a LAN and forwards frames based on MAC addresses. Operates at
@@ -488,7 +467,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 px-3">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/firewall.png" alt="Firewall" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Firewall</h3>
                             <p>Filters incoming/outgoing network traffic based on security rules. Can operate at Layer
@@ -507,11 +486,11 @@
                         </div>
                     </div>
 
-                    <div class="row align-items-center g-4 mb-5">
-                        <div class="col-lg-4 px-3">
+                    <div class="row justify-content-center g-2 mb-5">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/modem.png" alt="Modem" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Modem</h3>
-                            <p>Modulates/demodulates digital signals for transmission over ISP lines. Converts WAN
+                            <p>Modulates and demodulates digital signals for transmission over ISP lines. Converts WAN
                                 signal to network traffic.</p>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item bg-transparent ps-0">
@@ -525,7 +504,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 px-3">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/access_point.png" alt="Access Point" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Access Point (AP)</h3>
                             <p>Extends network range wirelessly. Connects to a wired network and broadcasts Wi-Fi
@@ -535,14 +514,14 @@
                                     <strong>Key Function:</strong> Wireless coverage extension
                                 </li>
                                 <li class="list-group-item bg-transparent ps-0">
-                                    <strong>Standards:</strong> 802.11a/b/g/n/ac/ax
+                                    <strong>Standards:</strong> All 802.11 standards
                                 </li>
                                 <li class="list-group-item bg-transparent ps-0">
                                     <strong>Setup:</strong> Often in bridge or AP mode
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-4 px-3">
+                        <div class="col-sm-8 col-md-4 col-lg-4 px-2">
                             <img src="img/wifi_repeater.png" alt="Repeater" class="img-fluid hardware-image mb-1">
                             <h3 class="h5">Repeater</h3>
                             <p>Repeater: Amplifies signals to extend Wi-Fi range.</p>
@@ -908,12 +887,12 @@
                                     <p>Attaches modular connectors such as RJ45, or RJ11 to the ends of phone or network cables</p>
                                 </div>
                                 <div class="col-lg-3 px-3">
-                                    <img src="img/punchdown_tool.png" alt="Punchdown Tool" class="img-fluid hardware-image mb-1">
+                                    <img src="img/punchdown_tool.png" alt="Punchdown Tool" class="img-fluid hardware-image mb-2">
                                     <h3 class="h4">Punchdown Tool</h3>
                                     <p>Inserts and cuts wires into insulation-displacement connectors on patch panels, keystone jacks, and punchdown blocks</p>
                                 </div>
                                 <div class="col-lg-3 px-3">
-                                    <img src="img/tone_generator_probe.png" alt="Tone Generator and Probe Kit" class="img-fluid hardware-image mb-1">
+                                    <img src="img/tone_generator_probe.png" alt="Tone Generator and Probe Kit" class="img-fluid hardware-image mb-2">
                                     <h3 class="h4">Tone Generator and Probe Kit</h3>
                                     <p>The Tone Generator sends an analog signal or an electrical tone then the probe kit detects the tone with a tone,
                                     allowing technicians to trace and identify cables within a bundle or wall.</p>
@@ -922,24 +901,24 @@
                             </div>
                             <div class="row justify-content-center text-center mt-4">
                                 <div class="col-lg-3 px-3">
-                                    <img src="img/loopback_adapter.png" alt="Loopback Adapter" class="img-fluid hardware-image mb-1">
+                                    <img src="img/loopback_adapter.png" alt="Loopback Adapter" class="img-fluid hardware-image mb-2">
                                     <h3 class="h4">Loopback Adapter</h3>
                                     <p>A device that connects the transmit and receive pins of a network interface to test the functionality of the network hardware.</p>
                                 </div>
                                 <div class="col-lg-3 px-3">
-                                    <img src="img/multimeter.png" alt="Multimeter" class="img-fluid hardware-image mb-1">
+                                    <img src="img/multimeter.png" alt="Multimeter" class="img-fluid hardware-image mb-2">
                                     <h3 class="h4">Multimeter</h3>
                                     <p>An electronic measuring instrument that combines several measurement functions in one unit. Measures voltage, current, resistance and cable continunity.</p>
                                 </div>
                                 <div class="col-lg-3 px-3">
-                                    <img src="img/wifi_analyzer.png" alt="Wi-Fi Analyzer" class="img-fluid hardware-image">
+                                    <img src="img/wifi_analyzer.png" alt="Wi-Fi Analyzer" class="img-fluid hardware-image mb-2">
                                     <h3 class="h4">Wi-Fi Analyzer</h3>
                                     <p>A software application or a dedicated hardware device that scans the surrounding wireless spectrum to
                                     provide detailed information about WiFi networks and help troubleshoot connectivity issues. Can help identifiy overlapping channels or rogue access points.</p>
                                 </div>
                             </div>
                             </div>
-                        <h3 class="h4 mb-3">Essential Windows Networking Commands</h3>
+                        <h3 class="h4 mb-3 text-center">Essential Windows Networking Commands</h3>
 
                         <div class="card mb-3">
                             <div class="card-header bg-info text-white">
@@ -951,11 +930,8 @@
                                     style="font-family: monospace; font-size: 0.9em;">
                                     ipconfig /all
                                 </div>
-                                <p><strong>Shows:</strong> IP address, subnet mask, gateway, DNS servers, MAC address, DHCP Server for all network interfaces on that specific device. (Ex. Your Desktop
-                                    computer has an ethernet interface and a built in NIC on the motherboard). 
-                                </p>
-                                <p><strong>Key Metrics: </strong>
-                                    <ul class=""
+                                <p><strong>Shows:</strong> IP address, subnet mask, gateway, DNS servers, MAC address, DHCP Server for all network interfaces on that specific device. (Ex. Your desktop
+                                    computer has an ethernet interface and a built in network interface card on the motherboard). 
                                 </p>
                                 <img src="img/ipconfig_all.png" alt="Command Line for the ipconfig /all command" class="img-fluid card-img">
                             </div>
@@ -972,8 +948,45 @@
                                     ping google.com<br>
                                     ping -t google.com (continuous)
                                 </div>
-                                <p><strong>Uses:</strong> ICMP protocol; checks if host is reachable and response time
+                                <p><strong>Uses:</strong> ICMP Protocol <i>(Internet Control Message Protocol)</i>; checks if host is reachable and records response time
                                 </p>
+                                <ul class="list-group list-group-flush">
+                                    <strong>Key Elements</strong>
+                                    <li class="list-group-item d-flex justify-content-start align-items-center">
+                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                                        Reply from...
+                                        </div>
+                                         <p class="ms-2">confirms if the target is reachable.</p>                                
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-start align-items-center">
+                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                                            bytes
+                                        </div>
+                                        <p class="ms-2"> The size of the data packet sent to target. (Windows default is 32 bytes)</p>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-start align-items-center">
+                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                                            time
+                                        </div>
+                                        <p class="ms-2"> The roundtrip time in milliseconds (ms). Lower vaules indicate a faster connection and less
+                                            latency.</p>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-start align-items-center">
+                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                                            TTL
+                                        </div>
+                                        <p class="ms-2"> <strong>Time to live </strong>A vaule that tells network routers how long a packet should exist on the network
+                                            before being discarded, which prevents infinite loops. The default value can indicate the target's operating
+                                            sytem.</p>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-start align-items-center">
+                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                                            Packets: Sent = 4, Received = 4, Lost = 0 (0% Loss) 
+                                        </div>
+                                        <p class="ms-2">Indicates that all packets successfully made the round trip, confirming a stable connection.</p>
+                                    </li>
+                                  </ul>
                                 <img src="img/ping_command.png" alt="ping networking command" class="img-fluid card-img">
                             </div>
                         </div>
@@ -983,13 +996,65 @@
                                 <strong>tracert (traceroute)</strong>
                             </div>
                             <div class="card-body">
-                                <p><strong>Purpose:</strong> Trace route packets take to reach destination</p>
+                                <p><strong>Purpose:</strong> shows you each hop your packet takes from your computer to a destination (like google.com).
+                                 It is extremely useful for troubleshooting slow connections, routing issues, VPN problems, ISP issues, and more.</p>
                                 <div class="bg-dark text-light p-2 rounded mb-2"
                                     style="font-family: monospace; font-size: 0.9em;">
                                     tracert google.com
                                 </div>
-                                <p><strong>Shows:</strong> Each hop (router) between source and destination, and
-                                    response times</p>
+                                <p><strong>How it works: </strong> The mechanism relies on the <i>Time-To-Live (TTL)</i> value in the IP packet header.
+                                    Tracert sends the first packet with a TTL of 1. The first router decrements the TTL to 0 and, as per standard protocol. Once TTL reaches 0 the router sends an "ICMP Time Exceeded" message back to your computer.
+                                    Your computer then sends a second packet with a TTL of 2, which reaches the second router before expiring and sending back an "ICMP Time Exceeded" message.
+                                    This process repeats, incrementing the TTL by one with each transmission, until the packet reaches its final destination or the maximum number of hops 
+                                    (30 by default) is met. The destination host then sends an "ICMP Echo Reply".</p>
+                                    <p><strong>Step by Step:</strong></p>
+                                <ol class="list-group list-group-flush px-2 mb-2">
+                                    <li class="list-group-flush">
+                                        First Packet → TTL = 1
+                                        <ul>
+                                            <li>Router 1 receives it → TTL becomes 0 → Router 1 replies with "Time Exceeded".</li>
+                                            <li><strong>tracert </strong> shows Hop #1</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-flush">
+                                        Second Packet → TTL = 2
+                                        <ul>
+                                            <li>Packet goes through Hop #1 → Hop #2 → TTL becomes 0 → Router 2 replies with "Time Exceeded".</li>
+                                            <li><strong>tracert </strong>shows Hop #2</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-">
+                                        Third Packet → TTL = 3
+                                        <ul>
+                                            <li>Packet goes through Hop #1 → Hop #2 → Hop #3 → TTL becomes 0 → Router 3 replies with "Time Exceedd".</li>
+                                            <li><strong>tracert </strong> records Hop #3</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                                <p>This process continues until</p>
+                                <ul>
+                                    <li>The destination responds</li>
+                                    <li>A timeout occurs</li>
+                                    <li>The TTL reaches 30 hops (default max)</li>
+                                </ul>
+                                <p><strong>Key Elements</strong></p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Hop Number - represents the order of routers you reached. You will get 3 values which measure latency like <br>
+                                            <div class="bg-dark text-light p-2 rounded my-2" style="font-family: monospace; font-size: 0.9em;">
+                                                1  22 ms  21 ms  20 ms
+                                            </div>
+                                            <p>These 3 values will</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><i class="bi bi-check-lg px-2" style="color: green;"></i>Helps detect jitter (Latency variation)</li>
+                                                <li class="list-group-item">Helps detect intermittent packet loss</li>
+                                                <li class="list-group-item">Helps confirm consisten routing</li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                        </li>
+                                    </ul>
+                                <img src="img/tracert_command.png" alt="Tracert Command" class="img-fluid card-img">
                             </div>
                         </div>
 
