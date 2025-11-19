@@ -89,9 +89,12 @@
                     <li><a href="#storage" data-bs-dismiss="offcanvas">Storage</a></li>
                     <li><a href="#ram" data-bs-dismiss="offcanvas">RAM</a></li>
                     <li><a href="#cables" data-bs-dismiss="offcanvas">Cables</a></li>
+                    <li><a href="#hardware-failure">Hardware Failure</a></li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="container-fluid">
         <!-- Main Content -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-xxl-8">
@@ -199,63 +202,75 @@
                     </div>
                 </div>
             </div>
-            <div class="content-section">
+            <!-- Motherboard Components-->
+            <div class="content-section text-center px-3">
                 <h2 class="display-6 mb-4 text-center" id="motherboard">Components</h2>
-                <div class="row align-items-center g-1">
-                    <div class="col-lg-4 px-5">
-                        <img src="img/ram_slots.png" alt="RAM Slots Image" class="img-fluid hardware-image">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                <div class="row aligmditems-center justify-content-center">
+                    <div class="col-md-4">
+                        <img src="img/ram_slots.png" alt="RAM Slots Image"
+                            class="img-fluid hardware-image mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h4>RAM Slots</h4>
-                            <p><i>Known as DIMM slots. Usually 2-4 on a consumer boards. They are
+                            <p class="py-2"><i>Known as DIMM slots. Usually 2-4 on a consumer boards. They are
                                     color coded
                                     for dual channel pairing.
                                 </i></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5">
-                        <img src="img/cmos_battery.png" alt="CMOS Battery Image" class="img-fluid hardware-image">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                    <div class="col-md-4">
+                        <img src="img/cmos_battery.png" alt="CMOS Battery Image"
+                            class="img-fluid hardware-image mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h4>CMOS Battery</h4>
-                            <p><i>Powers BIOS / UEFI settings and Real-Time-Clock (RTC). Removing it
+                            <p class="py-2"><i>Powers BIOS / UEFI settings and Real-Time-Clock (RTC). Removing it
                                     resets BIOS / UEFI
                                     settings to factory defaults.
                                 </i></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5">
-                        <img src="img/expansion_slots.png" alt="Expansion Slots" class="img-fluid hardware-image">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                    <div class="col-md-4">
+                        <img src="img/expansion_slots.png" alt="Expansion Slots"
+                            class="img-fluid hardware-image mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h4>Expansion Slots</h4>
-                            <p><i>PCIe Slots for GPUs, Network Cards. PCI slots are legacy slots</i></p>
+                            <p class="py-2"><i>PCIe Slots for GPUs, Network Cards. PCI slots are legacy slots</i></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5">
+                    <div class="col-md-4">
                         <img src="img/atx_mobo_power_cord.png" alt="ATX Motherboard Power Connector"
-                            class="img-fluid hardware-image">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                            class="img-fluid hardware-image mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h4>ATX Motherboard Power Connector</h4>
-                            <p><i>24 Pin Adapater which is the main power connector from PSU to
+                            <p class="py-2"><i>24 Pin Adapater which is the main power connector from PSU to
                                     motherboard</i></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5">
-                        <img src="img/cpu_power_port.png" alt="CPU Power Connector" class="img-fluid hardware-image border rounded">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                    <div class="col-md-4">
+                        <img src="img/cpu_power_port.png" alt="CPU Power Connector"
+                            class="img-fluid hardware-image border rounded mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h4>CPU Power Connector</h4>
-                            <p><i>4 / 8 pin CPU power connectors near CPU socket.</i></p>
+                            <p class="py-2"><i>4 / 8 pin CPU power connectors near CPU socket.</i></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5">
+                    <div class="col-md-4">
                         <img src="img/gpu_power_connector.png" alt="GPU Power Connector"
-                            class="img-fluid hardware-image">
-                        <div class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 text-center">
+                            class="img-fluid hardware-image mx-auto d-block">
+                        <div
+                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
                             <h2 class="h5 text-center">GPU Power Connector</h2>
-                            <p class="text-center"><i>6 / 8 pin PCIe power connectors for high performance GPUs</i></p>
+                            <p class="py-2"><i>6 / 8 pin PCIe power connectors for high performance GPUs</i></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Motherboard Components -->
         <div class="row justify-content-center gray-bg">
             <div class="col-xl-10 col-xxl-8">
                 <div class="content-section mb-5">
@@ -302,17 +317,19 @@
             </div>
             <div class="col-xl-10 col-xxl-8">
                 <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
+                    <div class="row justify-content-center g-1">
                         <div class="col-lg-6 lg-2 px-3">
-                            <img src="img/lga_socket.png" alt="LGA Socket" class="img-fluid hardware-image">
-                            <p class="lead text-center pt-2">LGA CPU Sockets have pins on the CPU</p>
+                            <img src="img/lga_socket.png" alt="LGA Socket" class="img-fluid hardware-image mb-2">
+                            <p class="lead text-center pt-2 border rounded border-danger bg-danger bg-opacity-10 p-2">
+                                LGA CPU Sockets have pins on the CPU</p>
                             <p class="text-center"><i>Source: <a
                                         href="https://www.unbxtech.com/2017/07/lga-pga-socket.html"
                                         target="_blank">UnbxTech</a></i></p>
                         </div>
                         <div class="col-lg-6 lg-2 px-3">
-                            <img src="img/pga_socket.png" alt="PGA Socket" class="img-fluid hardware-image">
-                            <p class="lead text-center pt-2">PGA CPU Sockets have pins on the Motherboard</p>
+                            <img src="img/pga_socket.png" alt="PGA Socket" class="img-fluid hardware-image mb-2">
+                            <p class="lead text-center pt-2 border rounded border-danger bg-danger bg-opacity-10 p-2">
+                                PGA CPU Sockets have pins on the Motherboard</p>
                             <p class="text-center"><i>Source: <a
                                         href="https://www.unbxtech.com/2017/07/lga-pga-socket.html"
                                         target="_blank">UnbxTech</a></i></p>
@@ -546,517 +563,732 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center gray-bg">
-            <div class="text-center">
-                <h1 class="mt-5 display-5 my-5" id="storage">Memory</h1>
-            </div>
+        <div class="row justify-content-center bg-light py-5" id="raid">
             <div class="col-xl-10 col-xxl-8">
                 <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/ram_stick.png" alt="CPU Image" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="ram">Random Access Memory</h2>
-                            <p class="lead">Random Access Memory (RAM) is a type of computer memory that is used to
-                                temporarily store data that
-                                the CPU needs to access quickly while performing tasks. RAM is volatile memory,
-                                meaning that it loses its contents when the computer is powered off. It allows for
-                                fast
-                                read and write access to a storage medium that is much quicker than traditional hard
-                                drives or even solid-state drives (SSDs).
-                            </p>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-lg-6 px-5">
+                            <h2 class="display-6 mb-4">RAID Fundamentals</h2>
+                            <p class="lead">Redundant Array of Independent Disks (RAID) combines multiple physical
+                                drives into a single logical unit in order to increase throughput, extend capacity,
+                                or keep data online when a disk fails. On the CompTIA A+ exam you must distinguish
+                                between RAID types, the protection they offer, and how they are implemented.</p>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Types of RAM:</strong>
-                                    DRAM (Dynmaic Ram) - stores each bit of data in a capactitor that must be
-                                    refreshed thousands of times. <i>Also called system memory</i></br>
-                                    SRAM (Static Ram) - stores data using flip-flops which requires no refreshing.
-                                    Faster but more expensive. <i>Also called cache memory</i> </br>
-                                    SDRAM (Synchronous DRAM) - synchronizes with the system clock which helps
-                                    coordinate better with the CPU</br>
+                                    <strong class="d-block mb-1">Implementation Methods:</strong>
+                                    <em>Hardware RAID</em> is managed by a dedicated RAID controller card or
+                                    chipset on the motherboard. It offloads parity/calculation work from the CPU and
+                                    usually supports
+                                    battery-backed cache and hot-swap bays. <em>Software RAID</em> relies on the
+                                    operating system (Windows Disk Management, Linux <code>mdadm</code>). It uses CPU
+                                    resources and offers
+                                    lower performance, but is cheaper and flexible.
                                 </li>
                                 <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">DDR Family Generation</strong>
-                                    DDR, DDR2, DDR3, DDR4, DDR5
+                                    <strong class="d-block mb-1">Core Techniques:</strong>
+                                    <em>Striping</em> splits data across disks for higher read/write performance. <br>
+                                    <em>Mirroring</em> duplicates data on two or more drives for redundancy. <br>
+                                    <em>Parity</em> stores calculated parity blocks that allow you to rebuild data if a
+                                    member disk fails.
                                 </li>
                                 <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Form Factors:</strong>
-                                    DIMM (Dual Inline Memory Module) for Desktops</br>
-                                    SO-DIMM (Small Outline Dual Inline Memory Module) for Laptops </br>
-                                    Micro-DIMM for mobile Devices and embedded systens
+                                    <strong class="d-block mb-1">Fault Tolerance & Hot Spares:</strong>
+                                    Fault tolerance defines how many disks can fail without data loss. Many controllers
+                                    support a <em>hot spare</em>, an idle drive that automatically takes over for a
+                                    failed disk to begin the rebuild immediately.
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-lg-6 px-5">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 mb-3">Common RAID Levels</h3>
+                                    <p class="mb-3">Know the minimum drive counts, what each level protects against,
+                                        and the storage trade-offs.</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover specs-table">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th scope="col">Level</th>
+                                                    <th scope="col">Min Drives</th>
+                                                    <th scope="col">Key Traits</th>
+                                                    <th scope="col">Usable Capacity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>RAID 0</td>
+                                                    <td>2</td>
+                                                    <td>Striping. Fast performance, no redundancy</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RAID 1</td>
+                                                    <td>2</td>
+                                                    <td>Full mirroring. Highest redundancy, simple recovery.</td>
+                                                    <td>50% (two 1&nbsp;TB drives → 1&nbsp;TB usable)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RAID 5</td>
+                                                    <td>3</td>
+                                                    <td>Striping + single parity. Fast reads, survives one disk loss.
+                                                    </td>
+                                                    <td>(n‑1) × drive size (three 1&nbsp;TB → 2&nbsp;TB usable)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RAID 6</td>
+                                                    <td>4</td>
+                                                    <td>Striping + dual parity. Survives two simultaneous failures.</td>
+                                                    <td>(n‑2) × drive size (four 1&nbsp;TB → 2&nbsp;TB usable)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RAID 0 + 1</td>
+                                                    <td>4 (pairs)</td>
+                                                    <td>Mirrored pairs striped together. High speed + high protection.
+                                                    </td>
+                                                    <td>50% (four 1&nbsp;TB → 2&nbsp;TB usable)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="small text-muted">RAID 0 + 1 (a hybrid of RAID 1 and RAID 0) can survive
+                                        multiple drive losses as long as each mirrored pair retains one healthy disk.
+                                        RAID 5/6 rebuild times increase as disk sizes grow, so always keep current
+                                        backups in addition to RAID redundancy.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8 text-center">
-                <h3 class="display-6 mb-3" id="ddr-specs">DDR Family Overview</h3>
-                <table class="table table-hover specs-table">
-                    <thead class="table-primary">
-                        <tr>
-                            <th scope="col">Generation</th>
-                            <th scope="col">Pins</th>
-                            <th scope="col">Bus Speed</th>
-                            <th scope="col">Transfer Rate</th>
-                            <th scope="col">Noteable Feature</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DDR1</td>
-                            <td>184</td>
-                            <td>100-200 MHz</td>
-                            <td>200-400 MT/s</td>
-                            <td>2x data per clock</td>
-                        </tr>
-                        <tr>
-                            <td>DDR2</td>
-                            <td>240</td>
-                            <td>200-533 MHz</td>
-                            <td>400-1066 MT/s</td>
-                            <td>Lower voltage, faster</td>
-                        </tr>
-                        <tr>
-                            <td>DDR3</td>
-                            <td>240</td>
-                            <td>400-1066 MHz</td>
-                            <td>800-2133 MT/s</td>
-                            <td>Lower power, higher density</td>
-                        </tr>
-                        <tr>
-                            <td>DDR4</td>
-                            <td>288</td>
-                            <td>800-1600 MHz</td>
-                            <td>1600-3200 MT/s</td>
-                            <td>Lower voltage, more efficent</td>
-                        </tr>
-                        <tr>
-                            <td>DDR5</td>
-                            <td>399</td>
-                            <td>1600+ MHz</td>
-                            <td>4800-8400+ MT/s</td>
-                            <td>Double bandwidth</td>
-                        </tr>
-                    </tbody>
-
-                </table>
+                </div>
+                <div class="col-xl-10 col-xxl-8">
+                    <div class="content-section">
+                        <div class="row align-items-center g-1">
+                            <div class="col-lg-6 px-5">
+                                <img src="img/raid0.png" alt="RAID Level 0" class="img-fluid hardware-image">
+                            </div>
+                            <div class="col-lg-6 px-5">
+                                <h2 class="display-6 mb-4">RAID 0</h2>
+                                <p class="lead">RAID 0</strong> also known as <i>stripe set or striped volume</i> splits
+                                    or <strong>stripes</strong> data evenly across 2 or more disks, without parity information,
+                                    redundancy, or fault tolerance. Due to a lack of redundancy or fault tolerance, the failure
+                                    of a single drive will cause the entire array to fail. This is because the data is striped
+                                    across all disks. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="row justify-content-center gray-bg">
+        <div class="text-center">
+            <h1 class="mt-5 display-5 my-5" id="storage">Memory</h1>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/ram_stick.png" alt="CPU Image" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="ram">Random Access Memory</h2>
+                        <p class="lead">Random Access Memory (RAM) is a type of computer memory that is used to
+                            temporarily store data that
+                            the CPU needs to access quickly while performing tasks. RAM is volatile memory,
+                            meaning that it loses its contents when the computer is powered off. It allows for
+                            fast
+                            read and write access to a storage medium that is much quicker than traditional hard
+                            drives or even solid-state drives (SSDs).
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Types of RAM:</strong>
+                                DRAM (Dynmaic Ram) - stores each bit of data in a capactitor that must be
+                                refreshed thousands of times. <i>Also called system memory</i></br>
+                                SRAM (Static Ram) - stores data using flip-flops which requires no refreshing.
+                                Faster but more expensive. <i>Also called cache memory</i> </br>
+                                SDRAM (Synchronous DRAM) - synchronizes with the system clock which helps
+                                coordinate better with the CPU</br>
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">DDR Family Generation</strong>
+                                DDR, DDR2, DDR3, DDR4, DDR5
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Form Factors:</strong>
+                                DIMM (Dual Inline Memory Module) for Desktops</br>
+                                SO-DIMM (Small Outline Dual Inline Memory Module) for Laptops </br>
+                                Micro-DIMM for mobile Devices and embedded systens
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Cable Section -->
-        <div class="row justify-content-center">
-            <div class="text-center">
-                <h1 class="mt-5 display-5 my-5" id="cables">Cables</h1>
+        <div class="col-xl-10 col-xxl-8 text-center">
+            <h3 class="display-6 mb-3" id="ddr-specs">DDR Family Overview</h3>
+            <table class="table table-hover specs-table">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Generation</th>
+                        <th scope="col">Pins</th>
+                        <th scope="col">Bus Speed</th>
+                        <th scope="col">Transfer Rate</th>
+                        <th scope="col">Noteable Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DDR1</td>
+                        <td>184</td>
+                        <td>100-200 MHz</td>
+                        <td>200-400 MT/s</td>
+                        <td>2x data per clock</td>
+                    </tr>
+                    <tr>
+                        <td>DDR2</td>
+                        <td>240</td>
+                        <td>200-533 MHz</td>
+                        <td>400-1066 MT/s</td>
+                        <td>Lower voltage, faster</td>
+                    </tr>
+                    <tr>
+                        <td>DDR3</td>
+                        <td>240</td>
+                        <td>400-1066 MHz</td>
+                        <td>800-2133 MT/s</td>
+                        <td>Lower power, higher density</td>
+                    </tr>
+                    <tr>
+                        <td>DDR4</td>
+                        <td>288</td>
+                        <td>800-1600 MHz</td>
+                        <td>1600-3200 MT/s</td>
+                        <td>Lower voltage, more efficent</td>
+                    </tr>
+                    <tr>
+                        <td>DDR5</td>
+                        <td>399</td>
+                        <td>1600+ MHz</td>
+                        <td>4800-8400+ MT/s</td>
+                        <td>Double bandwidth</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <!-- Cable Section -->
+    <div class="row justify-content-center">
+        <div class="text-center">
+            <h1 class="mt-5 display-5 my-5" id="cables">Cables</h1>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/psu_cable.png" alt="Power Supply Cable" class="img-fluid hardware-image">
+                        <p class="text-center"><i>Image shown is a 24 pin Motherboard Power Connector</i></p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">Power Supply Cables</h2>
+                        <p class="lead">Power supply cables are used to connect the power supply unit (PSU)
+                            to various components within a computer system.
+                            These cables provide the necessary electrical power to components such as the
+                            motherboard, CPU, GPU, storage devices, and peripherals.
+                            Different types of power supply cables are designed to deliver specific voltages
+                            and connectors to match the requirements of each component.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Common Power Supply Cables:</strong>
+                                24-pin ATX (Motherboard Power Cable)<br>
+                                8-pin EPS (CPU Power Cable)<br>
+                                6+2 pin PCIe (GPU Power Cable)<br>
+                                SATA Power Cable (Storage Devices)<br>
+                                Molex Power Cable (Older Peripherals)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/psu_cable.png" alt="Power Supply Cable" class="img-fluid hardware-image">
-                            <p class="text-center"><i>Image shown is a 24 pin Motherboard Power Connector</i></p>
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">Power Supply Cables</h2>
-                            <p class="lead">Power supply cables are used to connect the power supply unit (PSU)
-                                to various components within a computer system.
-                                These cables provide the necessary electrical power to components such as the
-                                motherboard, CPU, GPU, storage devices, and peripherals.
-                                Different types of power supply cables are designed to deliver specific voltages
-                                and connectors to match the requirements of each component.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Common Power Supply Cables:</strong>
-                                    24-pin ATX (Motherboard Power Cable)<br>
-                                    8-pin EPS (CPU Power Cable)<br>
-                                    6+2 pin PCIe (GPU Power Cable)<br>
-                                    SATA Power Cable (Storage Devices)<br>
-                                    Molex Power Cable (Older Peripherals)
-                                </li>
-                            </ul>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 px-5">
+                        <img src="img/pata_cable.png" alt="PATA Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 px-5">
+                        <h2 class="display-6 mb-4" id="cables">PATA Cable</h2>
+                        <p class="lead">PATA (Parallel ATA), also known as IDE (Integrated Drive Electronics),
+                            is an older interface standard used for connecting storage devices such as hard
+                            drives and optical drives to a computer's motherboard.
+                            PATA cables are wide, flat ribbon cables with multiple connectors that allow for
+                            the connection of up to two devices per cable.
+                            While PATA has largely been replaced by the faster and more efficient SATA
+                            (Serial ATA) standard, it is still found in some legacy systems and older hardware.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">PATA Cable Features:</strong>
+                                40 or 80 wires<br>
+                                Supports up to 133 MB/s data transfer rate<br>
+                                Uses a 40-pin connector<br>
+                                Supports master/slave device configuration
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/sata_cable.png" alt="SATA Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 order lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">SATA Cable</h2>
+                        <p class="lead">SATA (Serial ATA) cables are used to connect storage devices like hard
+                            drives
+                            and solid-state drives to the motherboard.
+                            They are designed for high-speed data transfer and improved performance compared to
+                            older PATA (Parallel ATA) cables.
+                            SATA cables have a distinctive L-shaped connector to ensure proper orientation when
+                            connecting devices.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">SATA Versions:</strong>
+                                SATA I (1.5 Gbps), SATA II (3 Gbps), SATA III (6 Gbps)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                Standard SATA, eSATA (external SATA)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Cable Lengths:</strong>
+                                Typically range from 0.5 to 1 meter
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 px-5">
+                        <img src="img/scsi_cable.png" alt="SCSI Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 px-5">
+                        <h2 class="display-6 mb-4" id="cables">SCSI Cable (Small Computer System Interface) </h2>
+                        <p class="lead">SCSI cables are used to connect and transfer data
+                            between computers and peripheral devices such as hard drives, scanners, and printers.
+                            SCSI cables support multiple devices on a single bus, allowing for daisy-chaining of
+                            devices.
+                            They are known for their high performance and reliability, making them suitable for
+                            enterprise-level applications and servers.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">SCSI Types:</strong>
+                                Parallel SCSI, Serial Attached SCSI (SAS)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                50-pin, 68-pin, 80-pin connectors
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Data Transfer Rates:</strong>
+                                Varies by SCSI standard (e.g., Ultra320 SCSI supports up to 320 MB/s)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Use Cases:</strong>
+                                RAID arrays, enterprise storage, servers
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/usb_type_c.png" alt="USB Cable" class="img-fluid hardware-image">
+                        <p class="text-center"><i>Image shown is a USB A to USB Type C</i></p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">USB (Universal Serial Bus)</h2>
+                        <p class="lead">USB cables are widely used for connecting a
+                            variety of peripheral devices to computers and other electronic devices.
+                            They support data transfer and power delivery, making them versatile for various
+                            applications.
+                            USB cables come in different types and versions, each offering different data transfer
+                            speeds and connector designs.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">USB Versions:</strong>
+                                USB 1.1 (12 Mbps), USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.1 (10 Gbps),
+                                USB 3.2 (20 Gbps), USB4 (40 Gbps)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                USB Type-A, USB Type-B, USB Mini, USB Micro, USB Type-C
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Common Uses:</strong>
+                                Connecting peripherals (keyboards, mice, printers), data transfer,
+                                charging devices
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-xl-10 col-xxl-8">
+            <div class="content-section">
+                <div class="text-center">
+                    <h2 class="display-6 mb-4" id="cables">USB Types</h2>
+                </div>
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-4 px-5 py-3">
+                        <img src="img/usb_a.png" alt="USB Type A" class="img-fluid hardware-image">
+                        <h5 class="mt-3 text-center">USB Type-A</h5>
+                    </div>
+                    <div class="col-lg-4 px-5 py-3">
+                        <img src="img/usb_b.png" alt="USB Type B" class="img-fluid hardware-image">
+                        <h5 class="mt-3 text-center">USB Type-B</h5>
+                    </div>
+                    <div class="col-lg-4 px-5 py-3">
+                        <img src="img/usb_c.png" alt="USB Type C" class="img-fluid hardware-image">
+                        <h5 class="mt-3 text-center">USB Type-C</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center g-1">
+                    <div class="col-lg-4 px-5 py-3">
+                        <img src="img/usb_mini.png" alt="USB Mini" class="img-fluid hardware-image">
+                        <h5 class="mt-3 text-center">USB Mini</h5>
+                    </div>
+                    <div class="col-lg-4 px-5 py-3">
+                        <img src="img/usb_micro.png" alt="USB Micro" class="img-fluid hardware-image">
+                        <h5 class="mt-3 text-center">USB Micro</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/thunderbolt_cable.png" alt="Thunderbolt Cable" class="img-fluid hardware-image">
+                        <p class="text-center"><i>Image shown is a Thunderbolt 3 Cable</i></p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">Thunderbolt Cable</h2>
+                        <p class="lead">Thunderbolt cables are high-speed data transfer cables developed by Intel
+                            in collaboration with Apple.
+                            They combine PCI Express (PCIe) and DisplayPort (DP) into a single connection,
+                            allowing for fast data transfer, video output, and power delivery through a single
+                            cable.
+                            Thunderbolt cables are commonly used for connecting external storage devices, monitors,
+                            and other peripherals to computers.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Thunderbolt Versions:</strong>
+                                Thunderbolt 1: <i>2 channels each channel can transmit up to 10 Gbps</i><br>
+                                Thunderbolt 2: <i>Aggregated the 2 channels up to 20 Gbps</i><br>
+                                Thunderbolt 3: <i>40 Gbps using USB Type-C connector</i><br>
+                                Thunderbolt 4: <i>40 Gbps with enhanced features</i>
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                Thunderbolt 1 & 2 use Mini DisplayPort connectors<br>
+                                Thunderbolt 3 & 4 use USB Type-C connectors
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Common Uses:</strong>
+                                High-speed data transfer, connecting external GPUs, docking stations,
+                                4K/5K monitors
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 px-5">
+                        <img src="img/vga_cable.png" alt="VGA Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 px-5">
+                        <h2 class="display-6 mb-4" id="cables">VGA Cable (Video Graphics Array)</h2>
+                        <p class="lead">VGA cables are used to connect computers to
+                            monitors and other display devices.
+                            They transmit analog video signals and are characterized by their 15-pin connector.
+                            VGA cables were widely used in the past but have been largely replaced by digital
+                            interfaces like HDMI and DisplayPort.
+                            However, they are still found in some older systems and legacy equipment.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">VGA Cable Features:</strong>
+                                15-pin D-sub connector<br>
+                                Supports resolutions up to 2048x1536<br>
+                                Analog signal transmission<br>
+                                Commonly used for older monitors and projectors
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/hdmi_cable.png" alt="HDMI Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">HDMI Cable (High-Definition Multimedia Interface)
+                        </h2>
+                        <p class="lead">HDMI cables are widely used for transmitting high-definition audio and video
+                            signals
+                            between devices such as computers,
+                            monitors, TVs, and gaming consoles. HDMI cables support both video and audio in a single
+                            cable, making them convenient for home entertainment systems.
+                            They come in various versions, each offering different features and capabilities.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">HDMI Versions:</strong>
+                                HDMI 1.4: <i>Supports 4K at 30Hz, 3D video, Ethernet over HDMI</i><br>
+                                HDMI 2.0: <i>Supports 4K at 60Hz, HDR, increased bandwidth</i><br>
+                                HDMI 2.1: <i>Supports 8K at 60Hz, 4K at 120Hz, Dynamic HDR, eARC</i>
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                Standard HDMI (Type A), Mini HDMI (Type C), Micro HDMI (Type D)
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Common Uses:</strong>
+                                Home theater systems, gaming consoles, computer monitors,
+                                Blu-ray players
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 px-5">
+                        <img src="img/displayport_cable.png" alt="DisplayPort Cable" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 px-5">
+                        <h2 class="display-6 mb-4" id="cables">DisplayPort Cable</h2>
+                        <p class="lead">DisplayPort cables are used to connect computers to monitors and other
+                            display
+                            devices.
+                            They support high-resolution video and audio transmission, making them suitable for
+                            gaming, professional graphics work, and multimedia applications.
+                            DisplayPort cables come in standard and mini sizes, providing flexibility for different
+                            device configurations.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">DisplayPort Versions:</strong>
+                                DisplayPort 1.2: <i>Supports 4K at 60Hz, Multi-Stream Transport (MST)</i><br>
+                                DisplayPort 1.3: <i>Supports 5K at 60Hz, HDR</i><br>
+                                DisplayPort 1.4: <i>Supports 8K at 60Hz, DSC (Display Stream Compression)</i><br>
+                                DisplayPort 2.0: <i>Supports up to 16K at 60Hz, higher bandwidth</i>
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Connector Types:</strong>
+                                Standard DisplayPort, Mini DisplayPort
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Common Uses:</strong>
+                                High-resolution monitors, gaming setups,
+                                professional graphics workstations
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-3">
+                <div class="row align-items-center g-1">
+                    <div class="col-lg-6 order-lg-2 px-5">
+                        <img src="img/ethernet_cable.png" alt="Ethernet" class="img-fluid hardware-image">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 px-5">
+                        <h2 class="display-6 mb-4" id="cables">Ethernet Cable</h2>
+                        <p class="lead">Ethernet cables are used to connect devices within a local area network
+                            (LAN),
+                            enabling wired communication
+                            between computers, routers, switches, and other network devices. They provide reliable
+                            and high-speed data transfer,
+                            making them ideal for internet connectivity, file sharing, and online gaming.
+                            Ethernet cables come in various categories, each offering different performance levels
+                            and capabilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section mb-5">
+                <div class="row align-items-center g-1">
+                    <table class="table table-hover specs-table mt-4">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Max Speed</th>
+                                <th scope="col">Max Distance</th>
+                                <th scope="col">Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cat5e</td>
+                                <td>1 Gbps</td>
+                                <td>100 meters</td>
+                                <td>General home and office networking</td>
+                            </tr>
+                            <tr>
+                                <td>Cat6</td>
+                                <td>10 Gbps</td>
+                                <td>55 meters (10 Gbps), 100 meters (1 Gbps)</td>
+                                <td>High-speed networking, data centers</td>
+                            </tr>
+                            <tr>
+                                <td>Cat6a</td>
+                                <td>10 Gbps</td>
+                                <td>100 meters</td>
+                                <td>Enhanced performance for data centers</td>
+                            </tr>
+                            <tr>
+                                <td>Cat7</td>
+                                <td>10 Gbps+</td>
+                                <td>100 meters</td>
+                                <td>High-performance networking, shielding for interference</td>
+                            </tr>
+                            <tr>
+                                <td>Cat8</td>
+                                <td>25-40 Gbps</td>
+                                <td>30 meters</td>
+                                <td>Data centers, high-speed server connections</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Cable Section -->
+    <div class="row justify-content-center bg-light py-5" id="hardware-failure">
+        <div class="col-xl-10 col-xxl-8">
+            <div class="content-section mb-5">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-7 px-5">
+                        <h2 class="display-6 mb-4">Common Causes of Hardware Failure</h2>
+                        <p class="lead">CompTIA A+ technicians are expected to know why hardware fails so they can
+                            prioritize fixes, prevent repeat issues, and communicate risk to customers. The
+                            following causes appear on the exam and in the field every day.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Heat and Dust Buildup:</strong>
+                                Restricted airflow, worn thermal paste, or dust-caked fins force components to run
+                                above design temperatures. Symptoms include thermal throttling, sudden shutdowns,
+                                and discolored PCB areas. Mitigate with regular cleaning, proper cable management,
+                                and known-good fan curves.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Power Problems:</strong>
+                                Surges, brownouts, overloaded circuits, or cheap PSUs cause voltage fluctuations
+                                that stress capacitors and MOSFETs. Expect spontaneous reboots, corrupt firmware, or
+                                a PSU that refuses to start. Deploy surge protectors/UPS units, verify wall power,
+                                and size the PSU with adequate headroom.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Mechanical Wear:</strong>
+                                Anything with moving parts—fans, hard drives, optical drives—will eventually wear
+                                out. Listen for grinding bearings, clicking HDDs, or fans that will not spin up.
+                                Replace moving components proactively and migrate data off aging HDDs before
+                                failure.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Electrical/Eletrostatic Discharge Damage:</strong>
+                                Static discharges or short circuits punch microscopic holes in semiconductor gates.
+                                The device may pass POST yet fail intermittently under load. Always use ESD straps,
+                                anti-static mats, and correct standoff placement to keep boards from shorting to the
+                                chassis.
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong class="d-block mb-1">Environmental & Human Factors:</strong>
+                                High humidity oxidizes contacts, liquid spills corrode traces, and improper
+                                handling—like forcing connectors or mixing incompatible components—breaks otherwise
+                                healthy systems. Control the workspace environment and follow vendor service guides.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 px-5">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 mb-3">Failure Indicators & Quick Checks</h3>
+                                <p class="mb-4">Use these cues during troubleshooting labs to connect the symptom to
+                                    the most likely failure mechanism.</p>
+                                <div class="table-responsive">
+                                    <table class="table table-hover specs-table">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Symptom</th>
+                                                <th scope="col">Likely Cause</th>
+                                                <th scope="col">First Check</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Spontaneous shutdown</td>
+                                                <td>Overheating or PSU fault</td>
+                                                <td>Review event logs, inspect fans/PSU</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Burnt smell or swollen caps</td>
+                                                <td>Power surge or aged VRM</td>
+                                                <td>Test wall power, swap PSU</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grinding/clicking drive</td>
+                                                <td>Mechanical wear</td>
+                                                <td>Backup data, check SMART stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Random BSODs after service</td>
+                                                <td>ESD or improper seating</td>
+                                                <td>Reseat modules, run diagnostics</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Corroded ports/connectors</td>
+                                                <td>Environmental damage</td>
+                                                <td>Clean contacts, control humidity</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="small text-muted mt-auto">Documenting symptoms and corrective actions is a
+                                    CompTIA A+ best practice to spot trends across multiple systems.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 px-5">
-                            <img src="img/pata_cable.png" alt="PATA Cable" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 px-5">
-                            <h2 class="display-6 mb-4" id="cables">PATA Cable</h2>
-                            <p class="lead">PATA (Parallel ATA), also known as IDE (Integrated Drive Electronics),
-                                is an older interface standard used for connecting storage devices such as hard
-                                drives and optical drives to a computer's motherboard.
-                                PATA cables are wide, flat ribbon cables with multiple connectors that allow for
-                                the connection of up to two devices per cable.
-                                While PATA has largely been replaced by the faster and more efficient SATA
-                                (Serial ATA) standard, it is still found in some legacy systems and older hardware.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">PATA Cable Features:</strong>
-                                    40 or 80 wires<br>
-                                    Supports up to 133 MB/s data transfer rate<br>
-                                    Uses a 40-pin connector<br>
-                                    Supports master/slave device configuration
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/sata_cable.png" alt="SATA Cable" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 order lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">SATA Cable</h2>
-                            <p class="lead">SATA (Serial ATA) cables are used to connect storage devices like hard
-                                drives
-                                and solid-state drives to the motherboard.
-                                They are designed for high-speed data transfer and improved performance compared to
-                                older PATA (Parallel ATA) cables.
-                                SATA cables have a distinctive L-shaped connector to ensure proper orientation when
-                                connecting devices.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">SATA Versions:</strong>
-                                    SATA I (1.5 Gbps), SATA II (3 Gbps), SATA III (6 Gbps)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    Standard SATA, eSATA (external SATA)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Cable Lengths:</strong>
-                                    Typically range from 0.5 to 1 meter
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 px-5">
-                            <img src="img/scsi_cable.png" alt="SCSI Cable" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 px-5">
-                            <h2 class="display-6 mb-4" id="cables">SCSI Cable (Small Computer System Interface) </h2>
-                            <p class="lead">SCSI cables are used to connect and transfer data
-                                between computers and peripheral devices such as hard drives, scanners, and printers.
-                                SCSI cables support multiple devices on a single bus, allowing for daisy-chaining of
-                                devices.
-                                They are known for their high performance and reliability, making them suitable for
-                                enterprise-level applications and servers.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">SCSI Types:</strong>
-                                    Parallel SCSI, Serial Attached SCSI (SAS)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    50-pin, 68-pin, 80-pin connectors
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Data Transfer Rates:</strong>
-                                    Varies by SCSI standard (e.g., Ultra320 SCSI supports up to 320 MB/s)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Use Cases:</strong>
-                                    RAID arrays, enterprise storage, servers
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/usb_type_c.png" alt="USB Cable" class="img-fluid hardware-image">
-                            <p class="text-center"><i>Image shown is a USB A to USB Type C</i></p>
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">USB (Universal Serial Bus)</h2>
-                            <p class="lead">USB cables are widely used for connecting a
-                                variety of peripheral devices to computers and other electronic devices.
-                                They support data transfer and power delivery, making them versatile for various
-                                applications.
-                                USB cables come in different types and versions, each offering different data transfer
-                                speeds and connector designs.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">USB Versions:</strong>
-                                    USB 1.1 (12 Mbps), USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.1 (10 Gbps),
-                                    USB 3.2 (20 Gbps), USB4 (40 Gbps)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    USB Type-A, USB Type-B, USB Mini, USB Micro, USB Type-C
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Common Uses:</strong>
-                                    Connecting peripherals (keyboards, mice, printers), data transfer,
-                                    charging devices
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-xl-10 col-xxl-8">
-                <div class="content-section">
-                    <div class="text-center">
-                        <h2 class="display-6 mb-4" id="cables">USB Types</h2>
-                    </div>
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-4 px-5 py-3">
-                            <img src="img/usb_a.png" alt="USB Type A" class="img-fluid hardware-image">
-                            <h5 class="mt-3 text-center">USB Type-A</h5>
-                        </div>
-                        <div class="col-lg-4 px-5 py-3">
-                            <img src="img/usb_b.png" alt="USB Type B" class="img-fluid hardware-image">
-                            <h5 class="mt-3 text-center">USB Type-B</h5>
-                        </div>
-                        <div class="col-lg-4 px-5 py-3">
-                            <img src="img/usb_c.png" alt="USB Type C" class="img-fluid hardware-image">
-                            <h5 class="mt-3 text-center">USB Type-C</h5>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center g-1">
-                        <div class="col-lg-4 px-5 py-3">
-                            <img src="img/usb_mini.png" alt="USB Mini" class="img-fluid hardware-image">
-                            <h5 class="mt-3 text-center">USB Mini</h5>
-                        </div>
-                        <div class="col-lg-4 px-5 py-3">
-                            <img src="img/usb_micro.png" alt="USB Micro" class="img-fluid hardware-image">
-                            <h5 class="mt-3 text-center">USB Micro</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/thunderbolt_cable.png" alt="Thunderbolt Cable"
-                                class="img-fluid hardware-image">
-                            <p class="text-center"><i>Image shown is a Thunderbolt 3 Cable</i></p>
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">Thunderbolt Cable</h2>
-                            <p class="lead">Thunderbolt cables are high-speed data transfer cables developed by Intel
-                                in collaboration with Apple.
-                                They combine PCI Express (PCIe) and DisplayPort (DP) into a single connection,
-                                allowing for fast data transfer, video output, and power delivery through a single
-                                cable.
-                                Thunderbolt cables are commonly used for connecting external storage devices, monitors,
-                                and other peripherals to computers.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Thunderbolt Versions:</strong>
-                                    Thunderbolt 1: <i>2 channels each channel can transmit up to 10 Gbps</i><br>
-                                    Thunderbolt 2: <i>Aggregated the 2 channels up to 20 Gbps</i><br>
-                                    Thunderbolt 3: <i>40 Gbps using USB Type-C connector</i><br>
-                                    Thunderbolt 4: <i>40 Gbps with enhanced features</i>
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    Thunderbolt 1 & 2 use Mini DisplayPort connectors<br>
-                                    Thunderbolt 3 & 4 use USB Type-C connectors
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Common Uses:</strong>
-                                    High-speed data transfer, connecting external GPUs, docking stations,
-                                    4K/5K monitors
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 px-5">
-                            <img src="img/vga_cable.png" alt="VGA Cable" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 px-5">
-                            <h2 class="display-6 mb-4" id="cables">VGA Cable (Video Graphics Array)</h2>
-                            <p class="lead">VGA cables are used to connect computers to
-                                monitors and other display devices.
-                                They transmit analog video signals and are characterized by their 15-pin connector.
-                                VGA cables were widely used in the past but have been largely replaced by digital
-                                interfaces like HDMI and DisplayPort.
-                                However, they are still found in some older systems and legacy equipment.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">VGA Cable Features:</strong>
-                                    15-pin D-sub connector<br>
-                                    Supports resolutions up to 2048x1536<br>
-                                    Analog signal transmission<br>
-                                    Commonly used for older monitors and projectors
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/hdmi_cable.png" alt="HDMI Cable" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">HDMI Cable (High-Definition Multimedia Interface)
-                            </h2>
-                            <p class="lead">HDMI cables are widely used for transmitting high-definition audio and video
-                                signals
-                                between devices such as computers,
-                                monitors, TVs, and gaming consoles. HDMI cables support both video and audio in a single
-                                cable, making them convenient for home entertainment systems.
-                                They come in various versions, each offering different features and capabilities.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">HDMI Versions:</strong>
-                                    HDMI 1.4: <i>Supports 4K at 30Hz, 3D video, Ethernet over HDMI</i><br>
-                                    HDMI 2.0: <i>Supports 4K at 60Hz, HDR, increased bandwidth</i><br>
-                                    HDMI 2.1: <i>Supports 8K at 60Hz, 4K at 120Hz, Dynamic HDR, eARC</i>
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    Standard HDMI (Type A), Mini HDMI (Type C), Micro HDMI (Type D)
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Common Uses:</strong>
-                                    Home theater systems, gaming consoles, computer monitors,
-                                    Blu-ray players
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 px-5">
-                            <img src="img/displayport_cable.png" alt="DisplayPort Cable"
-                                class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 px-5">
-                            <h2 class="display-6 mb-4" id="cables">DisplayPort Cable</h2>
-                            <p class="lead">DisplayPort cables are used to connect computers to monitors and other
-                                display
-                                devices.
-                                They support high-resolution video and audio transmission, making them suitable for
-                                gaming, professional graphics work, and multimedia applications.
-                                DisplayPort cables come in standard and mini sizes, providing flexibility for different
-                                device configurations.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">DisplayPort Versions:</strong>
-                                    DisplayPort 1.2: <i>Supports 4K at 60Hz, Multi-Stream Transport (MST)</i><br>
-                                    DisplayPort 1.3: <i>Supports 5K at 60Hz, HDR</i><br>
-                                    DisplayPort 1.4: <i>Supports 8K at 60Hz, DSC (Display Stream Compression)</i><br>
-                                    DisplayPort 2.0: <i>Supports up to 16K at 60Hz, higher bandwidth</i>
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Connector Types:</strong>
-                                    Standard DisplayPort, Mini DisplayPort
-                                </li>
-                                <li class="list-group-item bg-transparent ps-0">
-                                    <strong class="d-block mb-1">Common Uses:</strong>
-                                    High-resolution monitors, gaming setups,
-                                    professional graphics workstations
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-10 col-xxl-8">
-                <div class="content-section mb-3">
-                    <div class="row align-items-center g-1">
-                        <div class="col-lg-6 order-lg-2 px-5">
-                            <img src="img/ethernet_cable.png" alt="Ethernet" class="img-fluid hardware-image">
-                        </div>
-                        <div class="col-lg-6 order-lg-1 px-5">
-                            <h2 class="display-6 mb-4" id="cables">Ethernet Cable</h2>
-                            <p class="lead">Ethernet cables are used to connect devices within a local area network (LAN),
-                                enabling wired communication
-                                between computers, routers, switches, and other network devices. They provide reliable
-                                and high-speed data transfer,
-                                making them ideal for internet connectivity, file sharing, and online gaming.
-                                Ethernet cables come in various categories, each offering different performance levels
-                                and capabilities.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-section mb-5">
-                    <div class="row align-items-center g-1">
-                        <table class="table table-hover specs-table mt-4">
-                            <thead class="table-primary">
-                                <tr>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Max Speed</th>
-                                    <th scope="col">Max Distance</th>
-                                    <th scope="col">Use Case</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cat5e</td>
-                                    <td>1 Gbps</td>
-                                    <td>100 meters</td>
-                                    <td>General home and office networking</td>
-                                </tr>
-                                <tr>
-                                    <td>Cat6</td>
-                                    <td>10 Gbps</td>
-                                    <td>55 meters (10 Gbps), 100 meters (1 Gbps)</td>
-                                    <td>High-speed networking, data centers</td>
-                                </tr>
-                                <tr>
-                                    <td>Cat6a</td>
-                                    <td>10 Gbps</td>
-                                    <td>100 meters</td>
-                                    <td>Enhanced performance for data centers</td>
-                                </tr>
-                                <tr>
-                                    <td>Cat7</td>
-                                    <td>10 Gbps+</td>
-                                    <td>100 meters</td>
-                                    <td>High-performance networking, shielding for interference</td>
-                                </tr>
-                                <tr>
-                                    <td>Cat8</td>
-                                    <td>25-40 Gbps</td>
-                                    <td>30 meters</td>
-                                    <td>Data centers, high-speed server connections</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- End Cable Section -->
+        </div>
+    </div>
     </div> <!-- End Fluid Containter -->
     <footer class="footer mt-auto">
         <div class="container-fluid bg-dark text-white text-center py-3">

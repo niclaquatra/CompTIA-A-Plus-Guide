@@ -25,6 +25,13 @@ body {
     transform: scale(1.02);
 }
 
+.component-info-card {
+    max-width: 600px;
+    min-height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Content Navigation Styling */
 #contentNav .nav-link {
     padding: 0.5rem 1rem;
