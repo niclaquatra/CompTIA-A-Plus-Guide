@@ -32,6 +32,32 @@ body {
     margin-right: auto;
 }
 
+.component-card {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.component-card .card-img-top {
+    max-height: 350px;
+    object-fit: none;
+}
+
+.socket-card {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socket-card .card-img-top {
+    max-height: 220px;
+    object-fit: fill;
+}
+
+.socket-card-group {
+    gap: 1.5rem;
+}
+
 /* Content Navigation Styling */
 #contentNav .nav-link {
     padding: 0.5rem 1rem;

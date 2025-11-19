@@ -101,11 +101,11 @@
             <div class="col-xl-10 col-xxl-8">
                 <div class="content-section">
                     <div class="row align-items-center justify-content-start">
-                        <div class="col-md-5 col-xl-4 col-xxl-3">
+                        <div class="col-lg-6 order-lg-2 px-3">
                             <img src="img/motherboard.png" alt="Motherboard Image" id="motherboard"
                                 class="img-fluid hardware-image">
                         </div>
-                        <div class="col-md-7 col-xl-6 col-xxl-5 d-none d-xl-block col-xl-1 col-xxl2">
+                        <div class="col-lg-6 px-3">
                             <h2 class="display-6 mb-4" id="motherboard">Motherboard</h2>
                             <p class="lead">The motherboard (also called the mainboard or system board) is the
                                 central circuit board that connects and allows
@@ -204,68 +204,72 @@
                 </div>
             </div>
             <!-- Motherboard Components-->
-            <div class="content-section text-center px-3">
+            <div class="content-section px-3">
                 <h2 class="display-6 mb-4 text-center" id="motherboard">Components</h2>
-                <div class="row aligmditems-center justify-content-center">
-                    <div class="col-md-4">
-                        <img src="img/ram_slots.png" alt="RAM Slots Image"
-                            class="img-fluid hardware-image mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h4>RAM Slots</h4>
-                            <p class="py-2"><i>Known as DIMM slots. Usually 2-4 on a consumer boards. They are
-                                    color coded
-                                    for dual channel pairing.
-                                </i></p>
+                <div class="row align-items-center justify-content-center g-3">
+                    <div class="col-md-4 card-group">
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/ram_slots.png" alt="RAM Slots Image"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">RAM Slots</h4>
+                                <p class="card-text">DIMM slots that hold memory modules. Typically 2–4 on consumer
+                                    boards and color coded for dual-channel pairs.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/cmos_battery.png" alt="CMOS Battery Image"
-                            class="img-fluid hardware-image mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h4>CMOS Battery</h4>
-                            <p class="py-2"><i>Powers BIOS / UEFI settings and Real-Time-Clock (RTC). Removing it
-                                    resets BIOS / UEFI
-                                    settings to factory defaults.
-                                </i></p>
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/cmos_battery.png" alt="CMOS Battery Image"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">CMOS Battery</h4>
+                                <p class="card-text">Maintains BIOS/UEFI settings and the real-time clock. Removing it
+                                    resets firmware settings to factory defaults.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/expansion_slots.png" alt="Expansion Slots"
-                            class="img-fluid hardware-image mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h4>Expansion Slots</h4>
-                            <p class="py-2"><i>PCIe Slots for GPUs, Network Cards. PCI slots are legacy slots</i></p>
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/expansion_slots.png" alt="Expansion Slots"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">Expansion Slots</h4>
+                                <p class="card-text">PCIe slots host GPUs, NICs, and other add-in cards. Legacy PCI
+                                    slots may still appear on older boards.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/atx_mobo_power_cord.png" alt="ATX Motherboard Power Connector"
-                            class="img-fluid hardware-image mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h4>ATX Motherboard Power Connector</h4>
-                            <p class="py-2"><i>24 Pin Adapater which is the main power connector from PSU to
-                                    motherboard</i></p>
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/atx_mobo_power_cord.png" alt="ATX Motherboard Power Connector"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">24-Pin ATX Power</h4>
+                                <p class="card-text">Primary power connector that feeds the motherboard from the PSU.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/cpu_power_port.png" alt="CPU Power Connector"
-                            class="img-fluid hardware-image border rounded mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h4>CPU Power Connector</h4>
-                            <p class="py-2"><i>4 / 8 pin CPU power connectors near CPU socket.</i></p>
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/cpu_power_port.png" alt="CPU Power Connector"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">CPU Power Connector</h4>
+                                <p class="card-text">4/8-pin EPS connector near the CPU socket that supplies dedicated
+                                    power to the processor.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/gpu_power_connector.png" alt="GPU Power Connector"
-                            class="img-fluid hardware-image mx-auto d-block">
-                        <div
-                            class="bg-primary bg-opacity-10 border border-primary rounded my-3 p-2 component-info-card">
-                            <h2 class="h5 text-center">GPU Power Connector</h2>
-                            <p class="py-2"><i>6 / 8 pin PCIe power connectors for high performance GPUs</i></p>
+                        <div class="card h-100 shadow-sm component-card">
+                            <img src="img/gpu_power_connector.png" alt="GPU Power Connector"
+                                class="card-img-top mx-auto d-block">
+                            <div class="card-body">
+                                <h4 class="card-title">GPU Power Connector</h4>
+                                <p class="card-text">6/8-pin PCIe power leads that feed high-performance graphics
+                                    cards beyond slot power limits.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -318,22 +322,37 @@
             </div>
             <div class="col-xl-10 col-xxl-8">
                 <div class="content-section mb-5">
-                    <div class="row justify-content-center g-1">
-                        <div class="col-lg-6 lg-2 px-3">
-                            <img src="img/lga_socket.png" alt="LGA Socket" class="img-fluid hardware-image mb-2">
-                            <p class="lead text-center pt-2 border rounded border-danger bg-danger bg-opacity-10 p-2">
-                                LGA CPU Sockets have pins on the CPU</p>
-                            <p class="text-center"><i>Source: <a
-                                        href="https://www.unbxtech.com/2017/07/lga-pga-socket.html"
-                                        target="_blank">UnbxTech</a></i></p>
+                    <div class="card-group socket-card-group flex-column flex-lg-row">
+                        <div class="card socket-card text-center shadow-sm bg-light">
+                            <img src="img/lga_socket.png" alt="LGA Socket" class="card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">LGA CPU Socket</h3>
+                                <p class="card-text">LGA (Land Grid Array) sockets place the pins on the motherboard
+                                    while the CPU has flat pads. Intel desktops and modern AMD AM5 platforms rely on
+                                    LGA to protect processors from bent pins and to support high pin counts.</p>
+                                <p class="card-text mb-0"><strong>Key Trait:</strong> Pins live on the motherboard
+                                    socket.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <small class="text-muted">Source: <a
+                                        href="https://www.unbxtech.com/2017/07/lga-pga-socket.html" target="_blank"
+                                        rel="noopener">UnbxTech</a></small>
+                            </div>
                         </div>
-                        <div class="col-lg-6 lg-2 px-3">
-                            <img src="img/pga_socket.png" alt="PGA Socket" class="img-fluid hardware-image mb-2">
-                            <p class="lead text-center pt-2 border rounded border-danger bg-danger bg-opacity-10 p-2">
-                                PGA CPU Sockets have pins on the Motherboard</p>
-                            <p class="text-center"><i>Source: <a
-                                        href="https://www.unbxtech.com/2017/07/lga-pga-socket.html"
-                                        target="_blank">UnbxTech</a></i></p>
+                        <div class="card socket-card text-center shadow-sm bg-light">
+                            <img src="img/pga_socket.png" alt="PGA Socket" class="card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">PGA CPU Socket</h3>
+                                <p class="card-text">PGA (Pin Grid Array) designs keep the pins on the processor, so
+                                    the motherboard socket uses matching holes. Older AMD AM4/AM3 systems use PGA, so
+                                    careful handling is required to avoid bending CPU pins.</p>
+                                <p class="card-text mb-0"><strong>Key Trait:</strong> Pins live on the CPU itself.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <small class="text-muted">Source: <a
+                                        href="https://www.unbxtech.com/2017/07/lga-pga-socket.html" target="_blank"
+                                        rel="noopener">UnbxTech</a></small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -667,7 +686,7 @@
                             <div class="col-lg-6 px-3">
                                 <img src="img/raid0.png" alt="RAID Level 0" class="img-fluid hardware-image">
                             </div>
-                            <div class="col-lg-6 px-3">
+                            <div class="col-lg-6">
                                 <h2 class="display-6 mb-4">RAID 0</h2>
                                 <p class="lead">RAID 0</strong> also known as <i>stripe set or striped volume</i> splits
                                     or <strong>stripes</strong> data evenly across 2 or more disks, without parity information,
