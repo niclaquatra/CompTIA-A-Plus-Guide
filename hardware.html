@@ -87,6 +87,7 @@
                     <li><a href="#motherboard" data-bs-dismiss="offcanvas">Motherboard / Components</a></li>
                     <li><a href="#cpu" data-bs-dismiss="offcanvas">CPU</a></li>
                     <li><a href="#storage" data-bs-dismiss="offcanvas">Storage</a></li>
+                    <li><a href="#raid">RAID</a></li>
                     <li><a href="#ram" data-bs-dismiss="offcanvas">RAM</a></li>
                     <li><a href="#cables" data-bs-dismiss="offcanvas">Cables</a></li>
                     <li><a href="#hardware-failure">Hardware Failure</a></li>
@@ -659,20 +660,55 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
                 <div class="col-xl-10 col-xxl-8">
                     <div class="content-section">
                         <div class="row align-items-center g-1">
-                            <div class="col-lg-6 px-5">
+                            <div class="col-lg-6 px-3">
                                 <img src="img/raid0.png" alt="RAID Level 0" class="img-fluid hardware-image">
                             </div>
-                            <div class="col-lg-6 px-5">
+                            <div class="col-lg-6 px-3">
                                 <h2 class="display-6 mb-4">RAID 0</h2>
                                 <p class="lead">RAID 0</strong> also known as <i>stripe set or striped volume</i> splits
                                     or <strong>stripes</strong> data evenly across 2 or more disks, without parity information,
                                     redundancy, or fault tolerance. Due to a lack of redundancy or fault tolerance, the failure
                                     of a single drive will cause the entire array to fail. This is because the data is striped
                                     across all disks. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-10 col-xxl-8">
+                    <div class="content-section">
+                        <div class="row align-items-center g-1">
+                            <div class="col-lg-6 order-lg-2 px-3">
+                                <img src="img/raid1.png" alt="RAID Level 1" class="img-fluid hardware-image">
+                            </div>
+                            <div class="col-lg-6 px-3">
+                                <h2 class="display-6 mb-4">RAID 1</h2>
+                                <p class="lead">RAID 1</strong> is made up of an exact copy <i>or mirror</i> of a set of data
+                                    on 2 or more disks. This configuration offers no parity, striping, or spanning of disk space across
+                                    multiple disks since the data is mirroed on all disks that belongs to the array. The array can only be as
+                                    big as the smallest disk member. RAID 1 configuration is useful when reliability or read performance
+                                    is more important than storage capacity or write performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-10 col-xxl-8">
+                    <div class="content-section">
+                        <div class="row align-items-center g-1">
+                            <div class="col-lg-6 px-3">
+                                <img src="img/raid5.png" alt="RAID Level 5" class="img-fluid hardware-image">
+                            </div>
+                            <div class="col-lg-6 px-3">
+                                <h2 class="display-6 mb-4">RAID 5</h2>
+                                <p class="lead">RAID 5</strong> consists of block-level striping with distributed parity. Unlike in RAID 4 which has a dedicated drive for parity, 
+                                    RAID 5 parity information is distributed among the drives. It requires that all drives but one be present to operate. 
+                                    Upon failure of a single drive, subsequent reads can be calculated from the distributed parity such that no data is 
+                                    lost. RAID 5 requires at least three disks.
                                 </p>
                             </div>
                         </div>
