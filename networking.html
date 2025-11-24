@@ -95,6 +95,8 @@
                     <li><a href="#wireless" data-bs-dismiss="offcanvas">Wireless Networking</a></li>
                     <li><a href="#ip-addressing" data-bs-dismiss="offcanvas">IP Addressing</a></li>
                     <li><a href="#tools" data-bs-dismiss="offcanvas">Networking Tools</a></li>
+                    <li><a href="#taps" data-bs-dismiss="offcanvas">Taps & Port Mirrors</a></li>
+                    <li><a href="#commands" data-bs-dismiss="offcanvas">Networking Commands</a></li>
                 </ul>
             </div>
         </div>
@@ -918,7 +920,53 @@
                                 </div>
                             </div>
                             </div>
-                        <h3 class="h4 mb-3 text-center">Essential Windows Networking Commands</h3>
+                        <div class="card mb-4 border-0 shadow-sm">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-4 text-center p-3">
+                                    <img src="img/network_tap.png" alt="Network tap installed inline" class="img-fluid rounded mb-3">
+                                    <p class="small text-muted mb-0">Taps are inline hardware; SPAN is a switch feature that mirrors traffic.</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card-body">
+                                        <h4 class="h4 mb-2" id="taps">Network Taps & Port Mirrors</h4>
+                                        <p class="mb-3"><strong>Network TAPS:</strong> dedicated hardware device that physically connects to a network link and copies all traffic (inbound and outbound) to a separate monitoring port. 
+                                            Its like placing a splitter in the line between two network devices. (Wireshark, IDS/IPS, DLP, performance tools)</p>
+                                        <p class="mb-3"><strong>Port Mirroring (SPAN):</strong> A software feature on managed switches that duplicates traffic from one or more source ports or VLANs to a designated monitor port on the same switch.
+                                            It does not require additional hardware but can be limited by switch performance and port capacity.</p>
+                                        <div class="row row-cols-1 row-cols-md-2 g-3">
+                                            <div class="col">
+                                                <h5 class="text-primary h6 mb-1">Tap Types</h5>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Passive TAPS:</strong> do not require power and use an optical splitter to create a copy of the signal in fiber networks. 
+                                                        They are highly reliable as they have no power requirements and do not present a single point of failure in a power outage.</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Active / Regeneration TAPS:</strong> Used primarily for copper environments or where signal regeneration is needed, active 
+                                                        TAPs require a power source to regenerate the signal to both the network and monitoring destinations. Many include failsafe mechanisms, such as battery backups or relay switches, to ensure network traffic continues to flow during a power failure.</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Aggregation TAPS:</strong> aggregate traffic from both transmit (TX) and receive (RX) directions into a single monitoring port, which simplifies connectivity to monitoring tools but can lead to 
+                                                        port oversubscription if the traffic exceeds the monitor port's capacity.</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Filterable TAPS:</strong> These advanced taps can filter specific packets based on criteria like VLAN tags or IP addresses to downsize traffic and prevent monitoring port oversubscription, 
+                                                        which is especially useful for high-speed networks (10Gb+).</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Portable TAPS:</strong> compact, tabletop devices designed for easy installation and configuration in various locations, making them suitable for field testing and remote troubleshooting.</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Virtualized TAPS</strong> for virtualized environments, these taps provide visibility into traffic between virtual machines (VMs) that never crosses a physical port, sending monitored traffic 
+                                                        via encapsulated tunnels to physical monitoring devices.</li> 
+                                                </ul>
+                                            </div>
+                                            <div class="col">
+                                                <h5 class="text-primary h6 mb-1">Port Mirroring (SPAN)</h5>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Source Ports / VLANS </strong> select one or multiple ports or even an entire VLAN as the source of traffic to be mirrored. You can often specify whether to capture ingress traffic (entering the switch), 
+                                                        egress traffic (leaving the switch), or both (full-duplex).</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>Destination / Monitor Port:</strong> the port where the monitoring device (like a packet analyzer, IDS/IPS, or performance monitoring tool) connects. 
+                                                        The monitoring tool passively listens to the mirrored data stream..</li>
+                                                    <li class="list-group-item bg-transparent ps-0"><strong>RSPAN / ERSPAN:</strong> Remote Span (RSPAN) allows traffic to be mirrored across multiple switches within the same Layer 2 domain. The mirrored traffic is tagged with a dedicated RSPAN VLAN and carried across trunks between switches. <br>
+                                                        Encapsulated Remote Span (ERSPAN) extends this capability by encapsulating mirrored traffic in GRE tunnels, enabling monitoring across Layer 3 networks.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3 text-center" id="commands">Essential Windows Networking Commands</h3>
 
                         <div class="card mb-3">
                             <div class="card-header bg-info text-white">
