@@ -91,12 +91,14 @@
                     <li><a href="#osi-model" data-bs-dismiss="offcanvas">OSI & TCP/IP Models</a></li>
                     <li><a href="#protocols" data-bs-dismiss="offcanvas">Ports / Protocols</a></li>
                     <li><a href="#devices" data-bs-dismiss="offcanvas">Network Devices</a></li>
-                    <li><a href="#soho" data-bs-dismiss="offcanvas">SOHO Networking</a></li>
+                    <li><a href="#patch-panels" data-bs-dismiss="offcanvas">Patch Panels</a></li>
+                    <li><a href="#firewalls" data-bs-dismiss="offcanvas">Firewalls</a></li>
                     <li><a href="#wireless" data-bs-dismiss="offcanvas">Wireless Networking</a></li>
                     <li><a href="#ip-addressing" data-bs-dismiss="offcanvas">IP Addressing</a></li>
                     <li><a href="#tools" data-bs-dismiss="offcanvas">Networking Tools</a></li>
                     <li><a href="#taps" data-bs-dismiss="offcanvas">Taps & Port Mirrors</a></li>
                     <li><a href="#commands">Networking Commands</a></li>
+                    <li><a href="#soho" data-bs-dismiss="offcanvas">SOHO Networking</a></li>
                 </ul>
             </div>
         </div>
@@ -211,11 +213,12 @@
                 </div>
 
                 <!-- Network Protocols Section -->
-                <div class="content-section" id="protocols">
+                <div class="content-section gray-bg px-3 border rounded shadow-sm mb-3" id="protocols">
                     <h2 class="display-6 mb-4">Network Protocols & Ports</h2>
                     <p class="lead"><strong>Protocols</strong> define the rules and standards for communication between
                         network devices such
-                        as how data is formatted, transmitted, and received. You can think of Protocols like it is the languages spoken through
+                        as how data is formatted, transmitted, and received. You can think of Protocols like it is the
+                        languages spoken through
                         doorways. They set the rules that define how communication happens.</p>
                     <p class="lead"><strong>Ports</strong> are logical endpoints identifed by numbers (ex. HTTP is Port
                         80). They allow
@@ -306,7 +309,8 @@
                                         <td><strong>SMB (Server Message Block)</strong></td>
                                         <td>445/TCP</td>
                                         <td>Application</td>
-                                        <td>File sharing & printer sharing; also called CIFS (Common Internet File System)</td>
+                                        <td>File sharing & printer sharing; also called CIFS (Common Internet File
+                                            System)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>SNMP (Simple Network Management Protocol)</strong></td>
@@ -318,7 +322,8 @@
                                         <td><strong>LDAP (Lightweight Directory Access Protocol)</strong></td>
                                         <td>389/TCP</td>
                                         <td>Application</td>
-                                        <td>Stores and retrieves information in a network directory commonly used in Microsoft Active Directory</td>
+                                        <td>Stores and retrieves information in a network directory commonly used in
+                                            Microsoft Active Directory</td>
                                     </tr>
                                     <tr>
                                         <td><strong>RDP (Remote Desktop Protocol)</strong></td>
@@ -332,21 +337,33 @@
                     </div>
 
                     <div class="mb-5">
-                        <h2 class="display-6 mb-4" id="tcp">Transmission Control Protocol (TCP)</h2>
-                        <p class="lead mb-5"><strong>TCP</strong> is one of the core transport layer protocols used for
-                            data transmission over IP networks.
-                            TCP ensures reliable delivery, ordered and error-checked of the data. TCP is
-                            Connection-oriented communication. It
-                            establishes a three-way handshake <i>(SYN → SYN-ACK → ACK)</i> before data transmission.
-                            This process ensures
-                            data integrity and order. Error Detection and Retransmission uses checksums and
-                            acknowledgement messages for reliable delivery. Also retransmits
-                            lost packets to prevent data corruption.</p>
-                        <h2 class="display-6 mb-4" id="udp">User Datagram Protocol (UDP)</h2>
-                        <p class="lead mb-5"><strong>UDP</strong> is another core transport layer protocol. Unlike TCP,
-                            UDP is connectionless and does not guarantee reliable delivery or ordered packets.
-                            UDP is faster and has lower overhead, making it suitable for real-time applications where
-                            speed is more critical than reliability.</p>
+                        <div class="row g-3 p-2">
+                            <div class="col-lg-6 bg-light border rounded shadow-sm mb-5 p-2">
+                                <h3 class="h4 mb-4 bg-primary-subtle border-0 shadow-sm p-2" id="tcp">Transmission
+                                    Control Protocol (TCP)</h3>
+                                <p class="lead mb-5"><strong>TCP</strong> is one of the core transport layer protocols
+                                    used for
+                                    data transmission over IP networks.
+                                    TCP ensures reliable delivery, ordered and error-checked of the data. TCP is
+                                    Connection-oriented communication. It
+                                    establishes a three-way handshake <i>(SYN → SYN-ACK → ACK)</i> before data
+                                    transmission.
+                                    This process ensures
+                                    data integrity and order. Error Detection and Retransmission uses checksums and
+                                    acknowledgement messages for reliable delivery. Also retransmits
+                                    lost packets to prevent data corruption.</p>
+                            </div>
+                            <div class="col-lg-6 bg-light border rounded shadow-sm mb-5 p-2">
+                                <h3 class="h4 mb-4 bg-primary-subtle border-0 shadow-sm p-2" id="udp">User Datagram
+                                    Protocol (UDP)</h3>
+                                <p class="lead mb-5"><strong>UDP</strong> is another core transport layer protocol.
+                                    Unlike TCP,
+                                    UDP is connectionless and does not guarantee reliable delivery or ordered packets.
+                                    UDP is faster and has lower overhead, making it suitable for real-time applications
+                                    where
+                                    speed is more critical than reliability.</p>
+                            </div>
+                        </div>
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped">
                                 <thead class="table-dark">
@@ -393,7 +410,8 @@
                                         <h3 class="h5 mb-0">Firewall Configuration</h3>
                                     </div>
                                     <div class="card-body">
-                                        <p>Configure firewalls and access control lists to strictly filter TCP and UDP traffic.</p>
+                                        <p>Configure firewalls and access control lists to strictly filter TCP and UDP
+                                            traffic.</p>
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +421,8 @@
                                         <h3 class="h5 mb-0">Use Secure Protocols</h3>
                                     </div>
                                     <div class="card-body">
-                                        <p>Use HTTPS over HTTP, and SFTP over FTP, for secure, encrypted data transmission.</p>
+                                        <p>Use HTTPS over HTTP, and SFTP over FTP, for secure, encrypted data
+                                            transmission.</p>
                                     </div>
                                 </div>
                             </div>
@@ -423,8 +442,11 @@
                                         <h3 class="h5 mb-0">Logging / Monitoring</h3>
                                     </div>
                                     <div class="card-body">
-                                        <p>Maintain detailed logs of TCP/UDP connections to detect abnormal traffic patterns. Monitor for suspicious behavior such as <i>SYN</i> floods on TCP or amplification attacks over UDP. Implement <i>SYN</i>
-                                        flood protection for TCP and limit UDP request rates to prevent Dos/DDoS.</p>
+                                        <p>Maintain detailed logs of TCP/UDP connections to detect abnormal traffic
+                                            patterns. Monitor for suspicious behavior such as <i>SYN</i> floods on TCP
+                                            or amplification attacks over UDP. Implement <i>SYN</i>
+                                            flood protection for TCP and limit UDP request rates to prevent Dos/DDoS.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -434,7 +456,8 @@
                                         <h3 class="h5 mb-0">Strong Authentication</h3>
                                     </div>
                                     <div class="card-body">
-                                        <p>Use strong passwords and implement multi-factor authentication, digital certificates, or secure keys for services.</p>
+                                        <p>Use strong passwords and implement multi-factor authentication, digital
+                                            certificates, or secure keys for services.</p>
                                     </div>
                                 </div>
                             </div>
@@ -444,18 +467,93 @@
                                         <h3 class="h5 mb-0">Encryption</h3>
                                     </div>
                                     <div class="card-body">
-                                        <p>Use TLS/SSL for TCP traffic (HTTPS, SMTPS, IMAPS) and Datagram TLS (DTLS) for UDP traffic to prevent eavesdropping.</p>
+                                        <p>Use TLS/SSL for TCP traffic (HTTPS, SMTPS, IMAPS) and Datagram TLS (DTLS) for
+                                            UDP traffic to prevent eavesdropping.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!-- Network Topolgies Section -->
+                <div class="content-section gray-bg px-3 border rounded shadow-sm mb-3" id="topologies">
+                    <h2 class="display-6 mb-4">Network Topologies</h2>
+                    <p class="lead">Network topologies describe how devices <i>(nodes)</i> are physically or
+                        logically arranged and connected within a network. Different topologies offer various advantages
+                        and disadvantages based on factors like scalability, fault tolerance, cost, and performance.
+                    </p>
+                    <p class="lead"><strong>Physical topology: </strong>The actual layout of devices/cables <i>(star,
+                            bus, mesh, etc.)</i>
+                    </p>
+                    <p class="lead"><strong>Logical topology: </strong>How data flows regardless of physical connections
+                        <i>(e.g, Ethernet
+                            uses a logical bus even in a physical star)</i>
+                    </p>
+                    </i></p>
+                    <table class="table table-responsive table-bordered table-striped mb-5">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Topology</th>
+                                <th>Description</th>
+                                <th>Advantages</th>
+                                <th>Disadvantages</th>
+                                <th>Common Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bus</strong></td>
+                                <td>All devices connected to a single central cable (bus).</td>
+                                <td>Easy to implement, cost-effective for small networks.</td>
+                                <td>One cable failure breaks the network, hard to scale, limited cable length.</td>
+                                <td>Legacy Ethernet <i>(coax)</i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Star</strong></td>
+                                <td>All devices connected to a central hub or switch.</td>
+                                <td>Easy to manage, scalable, failure of one device doesn't affect others.</td>
+                                <td>Central hub failure affects entire network, more cabling required.</td>
+                                <td>Modern Ethernet LANs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ring</strong></td>
+                                <td>Devices connected in a circular fashion, data travels in one direction.</td>
+                                <td>Equal access, predictable performance</td>
+                                <td>One failure disrupts the whole network ring unless dual-ring implemented in
+                                    infrastructure</td>
+                                <td>Legacy Token Ring, FDDI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mesh</strong></td>
+                                <td>Devices interconnected with multiple paths between them.</td>
+                                <td>High redundancy and reliability, high fault tolerance, and scalable in backbone/WAN
+                                </td>
+                                <td>Expensive, complex wiring and configuration</td>
+                                <td>WANs, telecom, backbone networks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hybrid</strong></td>
+                                <td>Combination of two or more topologies (e.g., star-bus).</td>
+                                <td>Flexible design, scalable, can leverage advantages of multiple topologies.</td>
+                                <td>Complex management and design, higher cost, hard to troubleshoot</td>
+                                <td>Large Enterprise networks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Point-to-Point</strong></td>
+                                <td>Direct connection between 2 devices</td>
+                                <td>Fast, simple and secure</td>
+                                <td>Only supports 2 nodes</td>
+                                <td>WAN links, leased lines</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End Network Topolgies -->
                 <!-- Network Devices Section -->
                 <div class="content-section" id="devices">
                     <h2 class="display-6 mb-4">Network Devices / Components</h2>
-                    <p class="lead">Network devices are hardware components or software components that enable communication and data flow
+                    <p class="lead">Network devices are hardware components or software components that enable
+                        communication and data flow
                         within networks. Each device operates at different OSI layers.</p>
 
                     <div class="row justify-content-center g-2 mb-5">
@@ -566,78 +664,206 @@
                     </div>
                 </div>
 
-                <!-- SOHO Networking Section -->
-                <div class="content-section gray-bg px-3 border rounded" id="soho">
-                    <h2 class="display-6 mb-4">SOHO Networking</h2>
-                    <p class="lead">Small Office/Home Office (SOHO) networks are small, cost-effective setups typically
-                        used in home or small business environments.</p>
+                <!-- Patch Panel Section-->
+                <div class="content-section gray-bg px-3 border rounded mb-3" id="patch-panels">
+                    <h2 class="display-6 mb-4">Patch Panels</h2>
+                    <p class="lead">Patch panels are centralized connection points where multiple network cables are
+                        terminated and organized. They serve as a structured interface between incoming and outgoing
+                        lines, allowing technicians to manage and reroute network connections without disturbing the
+                        permanent cabling. Each cable from a workstation or network device is terminated into a patch
+                        panel port, and short patch cables connect those ports to switches, routers, or other devices.
+                    </p>
 
-                    <div class="mb-5">
-                        <h3 class="h4 mb-3">SOHO Network Characteristics</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Limited devices:</strong> 2-50 devices typically
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Shared internet:</strong> Single ISP connection shared via router
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Wireless:</strong> Wi-Fi for mobility and convenience
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Basic security:</strong> Router firewall + Wi-Fi encryption
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Automatic IP:</strong> DHCP for IP assignment
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Simple management:</strong> Minimal IT overhead
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="h4 mb-3">Typical SOHO Setup</h3>
-                        <div class="card">
-                            <div class="card-body">
-                                <p><strong>Internet → Modem → Router → Devices</strong></p>
-                                <ul>
-                                    <li><strong>ISP Line:</strong> Cable/DSL/Fiber to modem</li>
-                                    <li><strong>Modem:</strong> Converts ISP signal to Ethernet</li>
-                                    <li><strong>Router:</strong> Distributes internet to multiple devices</li>
-                                    <li><strong>Devices:</strong> Computers, phones, printers, smart home devices</li>
-                                </ul>
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3">Types of Patch Panels</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Copper patch
+                                                panels:</strong> Terminate twisted pair cables (Cat5e, Cat6, Cat6a) and
+                                            connect them to Ethernet networks.</li>
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Fiber optic patch
+                                                panels:</strong> Used for high-speed backbone connections, providing
+                                            connectors for fiber strands.</li>
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Shielded vs unshielded
+                                                panels:</strong> Shielded panels provide extra protection against EMI,
+                                            while unshielded fit typical office spaces.</li>
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Modular patch
+                                                panels:</strong> Allow insertion of keystone jacks for flexible copper,
+                                            fiber, or mixed media builds.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3">Benefits</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent ps-0">Simplifies cable management and
+                                            troubleshooting.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Reduces wear on networking gear
+                                            by avoiding constant plugging directly into switches or routers.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Provides scalability for adding,
+                                            removing, or rerouting connections.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Enhances organization and
+                                            professionalism of structured cabling.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Improves airflow and reduces
+                                            clutter in racks and data centers.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mb-5">
-                        <h3 class="h4 mb-3">SOHO Security Best Practices</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Change default credentials:</strong> Router admin username/password
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Enable WPA2/WPA3:</strong> Use strong Wi-Fi encryption (not WEP or WPA)
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Disable WPS:</strong> Wi-Fi Protected Setup has security vulnerabilities
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Update firmware:</strong> Keep router firmware current
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Enable firewall:</strong> Use built-in router firewall
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Guest network:</strong> Separate network for visitors
-                            </li>
-                        </ul>
+                    <div class="card mb-0 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3">Installing &amp; Configuring Patch Panels</h3>
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item bg-transparent ps-0"><strong>Planning and layout:</strong>
+                                    Identify required drops, choose the correct panel type (copper, fiber, modular), and
+                                    position it for easy rack access.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Mounting:</strong> Secure the
+                                    patch panel to a rack or wall-mount bracket in the network closet or server room.
+                                </li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Cable preparation:</strong> Run
+                                    Ethernet or fiber cables to the panel location and label both ends clearly.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Termination:</strong> Use a
+                                    punch-down tool (for copper) or appropriate fiber connectors, following T568A or
+                                    T568B as required.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Testing:</strong> Verify each
+                                    connection with a cable tester for continuity, pinout, and signal integrity.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Connecting to
+                                        switches/routers:</strong> Use short patch cords to tie panel ports to switch or
+                                    router interfaces.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Documentation:</strong> Record
+                                    port numbers, device locations, and cable paths to speed troubleshooting and
+                                    maintenance.</li>
+                                <li class="list-group-item bg-transparent ps-0"><strong>Labeling:</strong> Clearly label
+                                    all patch panel ports and corresponding wall jacks.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
+
+                <!-- Firewall Section -->
+                <div class="content-section gray-bg px-3 border rounded shadow-sm mb-3" id="firewalls">
+                    <h2 class="display-6 mb-4">Firewalls</h2>
+                    <p class="lead">A firewall is a security device or software that monitors, filters, and controls
+                        incoming and outgoing network traffic based on predefined security rules. It acts as a barrier
+                        between trusted internal networks and untrusted external networks such as the internet.
+                        Firewalls are essential for preventing unauthorized access and protecting systems from malicious
+                        activity.</p>
+                    <div class="row align-items-center g-4 mb-4">
+                        <h3 class="h4 mb-1 text-center">Types of Firewalls</h3>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger text-danger">Packet-filtering firewalls</h5>
+                                    <p class="card-text">Examine each packet in isolation, focusing on header
+                                        information such as source IP, destination IP, source port,
+                                        destination port, and protocol type (TCP, UDP, ICMP). They do not track session
+                                        state or inspect payload content, making
+                                        them very fast but limited in security. This means they can block or allow
+                                        traffic based on simple rules (e.g., block
+                                        all traffic on port 23 for Telnet) but cannot detect malicious content hidden
+                                        inside the packet payload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger">Stateful inspection firewalls</h5>
+                                    <p class="card-text">Track active connections by monitoring the “state” of each
+                                        session (e.g., whether a TCP handshake is complete or which
+                                        packets belong to an established flow). Instead of just checking individual
+                                        packets in isolation, they maintain a state
+                                        table of ongoing connections. This allows the firewall to determine whether
+                                        incoming packets are part of a valid,
+                                        established connection or unexpected/unauthorized traffic. Because they
+                                        understand the context of traffic, they are more
+                                        secure than simple stateless packet filters.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger">Application-layer (proxy) firewalls</h5>
+                                    <p class="card-text">Go beyond examining ports and headers by inspecting traffic at
+                                        the application layer (e.g., HTTP, FTP, SMTP). They
+                                        terminate the client connection and create a new connection to the destination
+                                        on behalf of the client, acting as an
+                                        intermediary. This allows them to inspect the entire packet, including the
+                                        payload, to detect malicious content, filter
+                                        based on application data, or enforce policies such as blocking specific
+                                        websites. While they still check ports as part
+                                        of normal packet handling, their main strength is analyzing application-level
+                                        data, not just header information.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger">Next-Generation Firewalls (NGFWs)</h5>
+                                    <p class="card-text">Advanced firewalls that combine traditional stateful inspection
+                                        with additional capabilities such as deep packet
+                                        inspection (DPI), intrusion prevention, and application awareness. DPI goes
+                                        beyond basic packet filtering by inspecting
+                                        the actual contents (payload) of packets—not just headers like IP or port. This
+                                        allows NGFWs to identify specific
+                                        applications, malware signatures, or unauthorized content even if they use
+                                        standard ports (e.g., blocking Skype over
+                                        port 80). Compared to regular packet filtering, which only checks header info
+                                        (source/destination address, port,
+                                        protocol), DPI analyzes full traffic content, enabling detection of threats
+                                        hidden inside legitimate protocols and
+                                        enforcing policies at the application level.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h5 mb-3 text-danger">Firewall Placement</h3>
+                                    <ul class="list-group list-group-flush mb-4">
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Host-based
+                                                firewalls:</strong> Installed on individual devices to protect a single
+                                            host.</li>
+                                        <li class="list-group-item bg-transparent ps-0"><strong>Network-based
+                                                firewalls:</strong> Deployed at the edge of the network to protect
+                                            entire LANs.</li>
+                                    </ul>
+                                    <h3 class="h5 mb-3 text-danger">Key Features and Functions</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent ps-0">Allow or block traffic based on
+                                            rules (IP, port, protocol).</li>
+                                        <li class="list-group-item bg-transparent ps-0">Prevent unauthorized access and
+                                            remote attacks.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Log traffic for auditing and
+                                            troubleshooting.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Support VPN passthrough or
+                                            termination.</li>
+                                        <li class="list-group-item bg-transparent ps-0">Some include intrusion detection
+                                            and prevention features.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Firewall Section -->
+
                 <!-- Wireless Networking Section -->
-                <div class="content-section" id="wireless">
+                <div class="content-section gray-bg border rounded shadow-sm mb-3 p-3" id="wireless">
                     <h2 class="display-6 mb-4">Wireless Networking</h2>
                     <p class="lead">Wireless networking allows devices to connect without physical cables using radio
                         frequencies. IEEE 802.11 standards define Wi-Fi specifications.</p>
@@ -784,59 +1010,277 @@
 
                 <!-- IP Addressing Section -->
                 <div class="content-section gray-bg border rounded px-3" id="ip-addressing">
-                    <h2 class="display-6 mb-4">IP Addressing & Subnetting</h2>
+                    <h2 class="display-6 mb-4">IP Addressing</h2>
                     <p class="lead">IP addressing is how devices identify and communicate with each other on networks.
-                        Understanding IPv4, IPv6, and subnetting is essential for networking.</p>
-
-                    <div class="mb-5">
-                        <h3 class="h4 mb-3">IPv4 Addressing</h3>
-                        <p><strong>Format:</strong> Four octets (0-255) separated by dots. Example: 192.168.1.1</p>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                                <thead class="table-dark">
+                        Understanding IPv4, IPv6, and subnetting is essential for networking.
+                    </p>
+                    <p class="lead"><strong>IP Address</strong> is a unique numerical identifier assigned to every
+                        device on
+                        a network that uses the <i>Internet Protocol (IP)</i> to communicate.
+                    </p>
+                    <p class="lead">Each IP address has two main parts which consist of..</p>
+                    <ul class="list-group list-group-flush mb-5">
+                        <li class="list-group-item bg-danger-subtle"><strong>Network ID: </strong> identifies the
+                            specific network</li>
+                        <li class="list-group-item bg-success-subtle"><strong>Host ID: </strong> identifies a specific
+                            device <i>(host)</i> on that network.</li>
+                    </ul>
+                    <h3 class="h4 mb-3">IP Assignment</h3>
+                    <ul class="list-group list-group-flush mb-5">
+                        <li class="list-group-item p-2">
+                            <strong>Static IP:</strong> Manually assigned and does not change. Used for servers,
+                            printers, and network devices.
+                        </li>
+                        <li class="list-group-item bg-transparent p-2">
+                            <strong>Dynamic IP:</strong> Automatically assigned by DHCP and can change over time.
+                            Common for client devices.
+                        </li>
+                        <li class="list-group-item p-2">
+                            <strong>Automatic Private IP Addressing <i>(APIPA)</i>:</strong> a fallback IPv4 address
+                            (169.254.0.0/16) assigned when DHCP is unavailable. Allows network communication with no
+                            internet access.
+                        </li>
+                    </ul>
+                    <h3 class="h4 mb-3">IPv4 Addressing</h3>
+                    <p class="lead"><strong>Format:</strong> 32-bit address divided into four octets which are 8 bits
+                        each.
+                        Written in dotted decimal notation.
+                    </p>
+                    <p class="lead">Example: <span class="bg-light text-success border rounded p-2">192.168.1.10</span>
+                    </p>
+                    <p class="lead">Each octet ranges from 0-255 allowing 4.3 billion possible addresses. 2³²</p>
+                    <div class="mb-4">
+                        <h4 class="h5 mb-3">Decimal to Binary (Step by Step)</h4>
+                        <div class="card border-primary-subtle shadow-sm">
+                            <div class="card-body">
+                                <p class="mb-4">Convert the IPv4 address <span
+                                        class="bg-light text-success border rounded p-1">192.168.1.10</span> to binary:
+                                </p>
+                                <div class="d-flex align-items-start gap-2 mb-3">
+                                    <span class="badge bg-primary rounded-pill">1</span>
+                                    <div>
+                                        <strong>Split into octets.</strong>
+                                        <div class="small text-muted">192 | 168 | 1 | 10</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-2 mb-3">
+                                    <span class="badge bg-success rounded-pill">2</span>
+                                    <div>
+                                        <strong>Use binary place values.</strong>
+                                        <div class="small text-muted">128 64 32 16 8 4 2 1 (for each octet)</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-2 mb-3">
+                                    <span class="badge bg-info text-dark rounded-pill">3</span>
+                                    <div class="w-100">
+                                        <strong>Select the weights that add up to each octet.</strong>
+                                        <div class="small text-muted mb-2">Green = included (1), gray = skipped (0).
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-lg-2 g-3">
+                                            <div class="col">
+                                                <div class="p-3 border rounded bg-light h-100">
+                                                    <div class="fw-semibold text-primary mb-2">192 → 11000000</div>
+                                                    <div class="d-flex flex-wrap gap-1">
+                                                        <span class="badge bg-success">128</span>
+                                                        <span class="badge bg-success">64</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">32</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">16</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">8</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">4</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">2</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">1</span>
+                                                    </div>
+                                                    <div class="small text-muted mt-2">128 + 64 = 192</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-3 border rounded bg-light h-100">
+                                                    <div class="fw-semibold text-primary mb-2">168 → 10101000</div>
+                                                    <div class="d-flex flex-wrap gap-1">
+                                                        <span class="badge bg-success">128</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">64</span>
+                                                        <span class="badge bg-success">32</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">16</span>
+                                                        <span class="badge bg-success">8</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">4</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">2</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">1</span>
+                                                    </div>
+                                                    <div class="small text-muted mt-2">128 + 32 + 8 = 168</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-3 border rounded bg-light h-100">
+                                                    <div class="fw-semibold text-primary mb-2">1 → 00000001</div>
+                                                    <div class="d-flex flex-wrap gap-1">
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">128</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">64</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">32</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">16</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">8</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">4</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">2</span>
+                                                        <span class="badge bg-success">1</span>
+                                                    </div>
+                                                    <div class="small text-muted mt-2">1 = 1</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-3 border rounded bg-light h-100">
+                                                    <div class="fw-semibold text-primary mb-2">10 → 00001010</div>
+                                                    <div class="d-flex flex-wrap gap-1">
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">128</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">64</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">32</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">16</span>
+                                                        <span class="badge bg-success">8</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">4</span>
+                                                        <span class="badge bg-success">2</span>
+                                                        <span
+                                                            class="badge bg-secondary-subtle text-secondary border">1</span>
+                                                    </div>
+                                                    <div class="small text-muted mt-2">8 + 2 = 10</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-2 mb-3">
+                                    <span class="badge bg-success rounded-pill">4</span>
+                                    <div>
+                                        <strong>Finally put together the binary values from each octet seperated with a
+                                            "."</strong>
+                                        <div class="small text-muted">11000000.10101000.00000001.00001010</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-lg-12">
+                            <h4 class="h5 mb-3">IPv4 Address Classes (Legacy Reference)</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="table-primary text-white">
+                                        <tr>
+                                            <th>Class</th>
+                                            <th>Range</th>
+                                            <th>Default Subnet Mask</th>
+                                            <th>Use</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Class A</strong></td>
+                                            <td>1-126.x.x.x</td>
+                                            <td>255.0.0.0</td>
+                                            <td>Large networks</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Class B</strong></td>
+                                            <td>128-191.x.x.x</td>
+                                            <td>255.255.0.0</td>
+                                            <td>Medium networks</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Class C</strong></td>
+                                            <td>192-223.x.x.x</td>
+                                            <td>255.255.255.0</td>
+                                            <td>Small networks</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Class D</strong></td>
+                                            <td>224-239.x.x.x</td>
+                                            <td>N/A</td>
+                                            <td>Multicasting</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Class E</strong></td>
+                                            <td>240-255.x.x.x</td>
+                                            <td>N/A</td>
+                                            <td>Research/Testing</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h5 mb-3">Private IPv4 Address Range</h4>
+                            <table class="table table-responsive table-bordered table-striped">
+                                <thead class="table-warning">
                                     <tr>
-                                        <th>Class</th>
                                         <th>Range</th>
-                                        <th>Private Range</th>
-                                        <th>Default Subnet Mask</th>
-                                        <th>Hosts</th>
+                                        <th>CIDR</th>
+                                        <th>Common Use</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><strong>Class A</strong></td>
-                                        <td>1-126.x.x.x</td>
                                         <td>10.0.0.0 - 10.255.255.255</td>
-                                        <td>255.0.0.0</td>
-                                        <td>16.7 million</td>
+                                        <td>/8</td>
+                                        <td>Large private networks</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Class B</strong></td>
-                                        <td>128-191.x.x.x</td>
                                         <td>172.16.0.0 - 172.31.255.255</td>
-                                        <td>255.255.0.0</td>
-                                        <td>65,534</td>
+                                        <td>/12</td>
+                                        <td>Medium private networks</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Class C</strong></td>
-                                        <td>192-223.x.x.x</td>
                                         <td>192.168.0.0 - 192.168.255.255</td>
-                                        <td>255.255.255.0</td>
-                                        <td>254</td>
+                                        <td>/16</td>
+                                        <td>Small private networks (home/small office)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="h5 mb-3">Special IPv4 Addresses</h4>
+                            <table class="table table-responsive table-bordered table-striped">
+                                <thead class="table-danger">
+                                    <tr>
+                                        <th>Address</th>
+                                        <th>Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>127.0.0.1</td>
+                                        <td>Loopback address for testing local host</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Class D</strong></td>
-                                        <td>224-239.x.x.x</td>
-                                        <td>N/A</td>
-                                        <td>N/A</td>
-                                        <td>Multicast</td>
+                                        <td>169.254.x.x</td>
+                                        <td>APIPA address when DHCP fails</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Class E</strong></td>
-                                        <td>240-255.x.x.x</td>
-                                        <td>N/A</td>
-                                        <td>N/A</td>
-                                        <td>Reserved</td>
+                                        <td>0.0.0.0</td>
+                                        <td>Default route or unspecified address</td>
+                                    </tr>
+                                    <tr>
+                                        <td>255.255.255.255</td>
+                                        <td>Broadcast address for local network</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -901,346 +1345,496 @@
                 <!-- Networking Tools Section -->
                 <div class="content-section" id="tools">
                     <h2 class="display-6 mb-4">Networking Tools & Troubleshooting</h2>
-                    <p class="lead">Network administrators use various physical tools, command-line and graphical tools to diagnose
+                    <p class="lead">Network administrators use various physical tools, command-line and graphical tools
+                        to diagnose
                         network issues and verify connectivity.</p>
 
                     <div class="mb-5">
                         <h3 class="h4 mb-3 text-center">Essential Networking Tools</h3>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/cable_crimper.png" alt="Crimper" class="img-fluid hardware-image mb-1">
-                                    <h3 class="h4">Crimper</h3>
-                                    <p>Attaches modular connectors such as RJ45, or RJ11 to the ends of phone or network cables</p>
-                                </div>
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/punchdown_tool.png" alt="Punchdown Tool" class="img-fluid hardware-image mb-2">
-                                    <h3 class="h4">Punchdown Tool</h3>
-                                    <p>Inserts and cuts wires into insulation-displacement connectors on patch panels, keystone jacks, and punchdown blocks</p>
-                                </div>
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/tone_generator_probe.png" alt="Tone Generator and Probe Kit" class="img-fluid hardware-image mb-2">
-                                    <h3 class="h4">Tone Generator and Probe Kit</h3>
-                                    <p>The Tone Generator sends an analog signal or an electrical tone then the probe kit detects the tone with a tone,
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-3 px-3">
+                                <img src="img/cable_crimper.png" alt="Crimper" class="img-fluid hardware-image mb-1">
+                                <h3 class="h4">Crimper</h3>
+                                <p>Attaches modular connectors such as RJ45, or RJ11 to the ends of phone or network
+                                    cables</p>
+                            </div>
+                            <div class="col-lg-3 px-3">
+                                <img src="img/punchdown_tool.png" alt="Punchdown Tool"
+                                    class="img-fluid hardware-image mb-2">
+                                <h3 class="h4">Punchdown Tool</h3>
+                                <p>Inserts and cuts wires into insulation-displacement connectors on patch panels,
+                                    keystone jacks, and punchdown blocks</p>
+                            </div>
+                            <div class="col-lg-3 px-3">
+                                <img src="img/tone_generator_probe.png" alt="Tone Generator and Probe Kit"
+                                    class="img-fluid hardware-image mb-2">
+                                <h3 class="h4">Tone Generator and Probe Kit</h3>
+                                <p>The Tone Generator sends an analog signal or an electrical tone then the probe kit
+                                    detects the tone with a tone,
                                     allowing technicians to trace and identify cables within a bundle or wall.</p>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
-                            <div class="row justify-content-center text-center mt-4">
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/loopback_adapter.png" alt="Loopback Adapter" class="img-fluid hardware-image mb-2">
-                                    <h3 class="h4">Loopback Adapter</h3>
-                                    <p>A device that connects the transmit and receive pins of a network interface to test the functionality of the network hardware.</p>
-                                </div>
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/multimeter.png" alt="Multimeter" class="img-fluid hardware-image mb-2">
-                                    <h3 class="h4">Multimeter</h3>
-                                    <p>An electronic measuring instrument that combines several measurement functions in one unit. Measures voltage, current, resistance and cable continunity.</p>
-                                </div>
-                                <div class="col-lg-3 px-3">
-                                    <img src="img/wifi_analyzer.png" alt="Wi-Fi Analyzer" class="img-fluid hardware-image mb-2">
-                                    <h3 class="h4">Wi-Fi Analyzer</h3>
-                                    <p>A software application or a dedicated hardware device that scans the surrounding wireless spectrum to
-                                    provide detailed information about WiFi networks and help troubleshoot connectivity issues. Can help identifiy overlapping channels or rogue access points.</p>
-                                </div>
+                        </div>
+                        <div class="row justify-content-center text-center mt-4">
+                            <div class="col-lg-3 px-3">
+                                <img src="img/loopback_adapter.png" alt="Loopback Adapter"
+                                    class="img-fluid hardware-image mb-2">
+                                <h3 class="h4">Loopback Adapter</h3>
+                                <p>A device that connects the transmit and receive pins of a network interface to test
+                                    the functionality of the network hardware.</p>
                             </div>
+                            <div class="col-lg-3 px-3">
+                                <img src="img/multimeter.png" alt="Multimeter" class="img-fluid hardware-image mb-2">
+                                <h3 class="h4">Multimeter</h3>
+                                <p>An electronic measuring instrument that combines several measurement functions in one
+                                    unit. Measures voltage, current, resistance and cable continunity.</p>
                             </div>
-                        <div class="card mb-4 border-0 shadow-sm">
-                            <div class="row g-0 justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="card-body">
-                                        <h4 class="h4 mb-2" id="taps">Network Taps & Port Mirrors</h4>
-                                        <p class="mb-3"><strong>Network TAPS:</strong> dedicated hardware device that physically connects to a network link and copies all traffic (inbound and outbound) to a separate monitoring port. 
-                                            Its like placing a splitter in the line between two network devices. (Wireshark, IDS/IPS, DLP, performance tools)</p>
-                                        <p class="mb-3"><strong>Port Mirroring (SPAN):</strong> A software feature on managed switches that duplicates traffic from one or more source ports or VLANs to a designated monitor port on the same switch.
-                                            It does not require additional hardware but can be limited by switch performance and port capacity.</p>
-                                            <div class="col-md-12 text-center p-3">
-                                                <img src="img/network_tap.png" alt="Network tap installed inline" class="img-fluid rounded mb-3">
-                                                <p class="small text-muted mb-0">Taps are inline hardware; SPAN is a switch feature that mirrors traffic.</p>
-                                            </div>
-                                        <div class="row row-cols-1 row-cols-md-2 g-3">
-                                            <div class="col">
-                                                <h5 class="text-primary h6 mb-1">Tap Types</h5>
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Passive TAPS:</strong> do not require power and use an optical splitter to create a copy of the signal in fiber networks. 
-                                                        They are highly reliable as they have no power requirements and do not present a single point of failure in a power outage.</li>
-                                                    <li class="list-group-item bg-light ps-0"><strong>Active / Regeneration TAPS:</strong> Used primarily for copper environments or where signal regeneration is needed, active 
-                                                        TAPs require a power source to regenerate the signal to both the network and monitoring destinations. Many include failsafe mechanisms, such as battery backups or relay switches, to ensure network traffic continues to flow during a power failure.</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Aggregation TAPS:</strong> aggregate traffic from both transmit (TX) and receive (RX) directions into a single monitoring port, which simplifies connectivity to monitoring tools but can lead to 
-                                                        port oversubscription if the traffic exceeds the monitor port's capacity.</li>
-                                                    <li class="list-group-item bg-light ps-0"><strong>Filterable TAPS:</strong> These advanced taps can filter specific packets based on criteria like VLAN tags or IP addresses to downsize traffic and prevent monitoring port oversubscription, 
-                                                        which is especially useful for high-speed networks (10Gb+).</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Portable TAPS:</strong> compact, tabletop devices designed for easy installation and configuration in various locations, making them suitable for field testing and remote troubleshooting.</li>
-                                                    <li class="list-group-item bg-light ps-0"><strong>Virtualized TAPS</strong> for virtualized environments, these taps provide visibility into traffic between virtual machines (VMs) that never crosses a physical port, sending monitored traffic 
-                                                        via encapsulated tunnels to physical monitoring devices.</li> 
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <h5 class="text-primary h6 mb-1">Port Mirroring (SPAN)</h5>
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item bg-light ps-0"><strong>Source Ports / VLANS </strong> select one or multiple ports or even an entire VLAN as the source of traffic to be mirrored. You can often specify whether to capture ingress traffic (entering the switch), 
-                                                        egress traffic (leaving the switch), or both (full-duplex).</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Destination / Monitor Port:</strong> the port where the monitoring device (like a packet analyzer, IDS/IPS, or performance monitoring tool) connects. 
-                                                        The monitoring tool passively listens to the mirrored data stream..</li>
-                                                    <li class="list-group-item bg-light ps-0"><strong>RSPAN / ERSPAN:</strong> Remote Span (RSPAN) allows traffic to be mirrored across multiple switches within the same Layer 2 domain. The mirrored traffic is tagged with a dedicated RSPAN VLAN and carried across trunks between switches. <br>
-                                                        Encapsulated Remote Span (ERSPAN) extends this capability by encapsulating mirrored traffic in GRE tunnels, enabling monitoring across Layer 3 networks.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            <div class="col-lg-3 px-3">
+                                <img src="img/wifi_analyzer.png" alt="Wi-Fi Analyzer"
+                                    class="img-fluid hardware-image mb-2">
+                                <h3 class="h4">Wi-Fi Analyzer</h3>
+                                <p>A software application or a dedicated hardware device that scans the surrounding
+                                    wireless spectrum to
+                                    provide detailed information about WiFi networks and help troubleshoot connectivity
+                                    issues. Can help identifiy overlapping channels or rogue access points.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Networking Tools -->
+                    <!-- Network Taps and Port Mirrors-->
+                    <div class="content-section gray-bg px-3 border rounded mb-5" id="taps">
+                        <div class="row g-0 justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="display-6 mb-4">Network Taps & Port Mirrors</h2>
+                                <p class="mb-3"><strong>Network TAPS:</strong> dedicated hardware device that
+                                    physically connects to a network link and copies all traffic (inbound and
+                                    outbound) to a separate monitoring port.
+                                    Its like placing a splitter in the line between two network devices. (Wireshark,
+                                    IDS/IPS, DLP, performance tools)</p>
+                                <p class="mb-3"><strong>Port Mirroring (SPAN):</strong> A software feature on
+                                    managed switches that duplicates traffic from one or more source ports or VLANs
+                                    to a designated monitor port on the same switch.
+                                </p>
+                                <p>It does not require additional hardware but can be limited by switch performance
+                                    and port capacity.
+                                </p>
+                                <div class="col-md-12 text-center p-3">
+                                    <img src="img/network_tap.png" alt="Network tap installed inline"
+                                        class="img-fluid rounded mb-3">
+                                    <p class="small text-muted mb-0">Taps are inline hardware; SPAN is a switch feature
+                                        that mirrors traffic.</p>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-2 g-3">
+                                    <div class="col-lg-6">
+                                        <h5 class="text-primary h5 mb-1">Tap Types</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-white p-2"><strong>Passive TAPS:</strong> do
+                                                not require power and use an optical splitter to create a copy of the
+                                                signal in fiber networks.
+                                                They are highly reliable as they have no power requirements and do not
+                                                present a single point of failure in a power outage.</li>
+                                            <li class="list-group-item bg-secondary-subtle p-3"><strong>Active /
+                                                    Regeneration TAPS:</strong> Used primarily for copper environments
+                                                or where signal regeneration is needed, active
+                                                TAPs require a power source to regenerate the signal to both the network
+                                                and monitoring destinations. Many include failsafe mechanisms, such as
+                                                battery backups or relay switches, to ensure network traffic continues
+                                                to flow during a power failure.</li>
+                                            <li class="list-group-item bg-white p-3"><strong>Aggregation TAPS:</strong>
+                                                aggregate traffic from both transmit (TX) and receive (RX) directions
+                                                into a single monitoring port, which simplifies connectivity to
+                                                monitoring tools but can lead to
+                                                port oversubscription if the traffic exceeds the monitor port's
+                                                capacity.</li>
+                                            <li class="list-group-item bg-secondary-subtle p-3"><strong>Filterable
+                                                    TAPS:</strong> These advanced taps can filter specific packets based
+                                                on criteria like VLAN tags or IP addresses to downsize traffic and
+                                                prevent monitoring port oversubscription,
+                                                which is especially useful for high-speed networks (10Gb+).</li>
+                                            <li class="list-group-item bg-white p-3"><strong>Portable TAPS:</strong>
+                                                compact, tabletop devices designed for easy installation and
+                                                configuration in various locations, making them suitable for field
+                                                testing and remote troubleshooting.</li>
+                                            <li class="list-group-item bg-secondary-subtle p-3"><strong>Virtualized
+                                                    TAPS</strong> for virtualized environments, these taps provide
+                                                visibility into traffic between virtual machines (VMs) that never
+                                                crosses a physical port, sending monitored traffic
+                                                via encapsulated tunnels to physical monitoring devices.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h5 class="text-primary h5 mb-1">Port Mirroring (SPAN)</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-secondary-subtle p-3"><strong>Source Ports /
+                                                    VLANS </strong> select one or multiple ports or even an entire VLAN
+                                                as the source of traffic to be mirrored. You can often specify whether
+                                                to capture ingress traffic (entering the switch),
+                                                egress traffic (leaving the switch), or both (full-duplex).</li>
+                                            <li class="list-group-item bg-white p-3"><strong>Destination / Monitor
+                                                    Port:</strong> the port where the monitoring device (like a packet
+                                                analyzer, IDS/IPS, or performance monitoring tool) connects.
+                                                The monitoring tool passively listens to the mirrored data stream..</li>
+                                            <li class="list-group-item bg-secondary-subtle p-3"><strong>RSPAN /
+                                                    ERSPAN:</strong> Remote Span (RSPAN) allows traffic to be mirrored
+                                                across multiple switches within the same Layer 2 domain. The mirrored
+                                                traffic is tagged with a dedicated RSPAN VLAN and carried across trunks
+                                                between switches. <br>
+                                                Encapsulated Remote Span (ERSPAN) extends this capability by
+                                                encapsulating mirrored traffic in GRE tunnels, enabling monitoring
+                                                across Layer 3 networks.</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="h4 mb-3 text-center" id="commands">Essential Windows Networking Commands</h3>
+                    </div>
+                    <h2 class="mb-3 text-center" id="commands">Essential Windows Networking Commands</h2>
 
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>ipconfig</strong>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Display network configuration</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    ipconfig /all
-                                </div>
-                                <p><strong>Shows:</strong> IP address, subnet mask, gateway, DNS servers, MAC address, DHCP Server for all network interfaces on that specific device. (Ex. Your desktop
-                                    computer has an ethernet interface and a built in network interface card on the motherboard). 
-                                </p>
-                                <img src="img/ipconfig_all.png" alt="Command Line for the ipconfig /all command" class="img-fluid card-img">
-                            </div>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>ipconfig</strong>
                         </div>
-
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>ping</strong>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Display network configuration</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                ipconfig /all
                             </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Test connectivity to a device</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    ping google.com<br>
-                                    ping -t google.com (continuous)
-                                </div>
-                                <p><strong>Uses:</strong> ICMP Protocol <i>(Internet Control Message Protocol)</i>; checks if host is reachable and records response time
-                                </p>
-                                <ul class="list-group list-group-flush">
-                                    <strong>Key Elements</strong>
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
+                            <p><strong>Shows:</strong> IP address, subnet mask, gateway, DNS servers, MAC address, DHCP
+                                Server for all network interfaces on that specific device. (Ex. Your desktop
+                                computer has an ethernet interface and a built in network interface card on the
+                                motherboard).
+                            </p>
+                            <img src="img/ipconfig_all.png" alt="Command Line for the ipconfig /all command"
+                                class="img-fluid card-img">
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>ping</strong>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Test connectivity to a device</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                ping google.com<br>
+                                ping -t google.com (continuous)
+                            </div>
+                            <p><strong>Uses:</strong> ICMP Protocol <i>(Internet Control Message Protocol)</i>; checks
+                                if host is reachable and records response time
+                            </p>
+                            <ul class="list-group list-group-flush">
+                                <strong>Key Elements</strong>
+                                <li class="list-group-item d-flex justify-content-start align-items-center">
+                                    <div class="bg-dark text-light p-2 rounded mb-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
                                         Reply from...
-                                        </div>
-                                         <p class="ms-2">confirms if the target is reachable.</p>                                
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
-                                            bytes
-                                        </div>
-                                        <p class="ms-2"> The size of the data packet sent to target. (Windows default is 32 bytes)</p>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
-                                            time
-                                        </div>
-                                        <p class="ms-2"> The roundtrip time in milliseconds (ms). Lower vaules indicate a faster connection and less
-                                            latency.</p>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
-                                            TTL
-                                        </div>
-                                        <p class="ms-2"> <strong>Time to live </strong>A vaule that tells network routers how long a packet should exist on the network
-                                            before being discarded, which prevents infinite loops. The default value can indicate the target's operating
-                                            sytem.</p>
-                                    </li>
+                                    </div>
+                                    <p class="ms-2">confirms if the target is reachable.</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-start align-items-center">
+                                    <div class="bg-dark text-light p-2 rounded mb-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
+                                        bytes
+                                    </div>
+                                    <p class="ms-2"> The size of the data packet sent to target. (Windows default is 32
+                                        bytes)</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-start align-items-center">
+                                    <div class="bg-dark text-light p-2 rounded mb-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
+                                        time
+                                    </div>
+                                    <p class="ms-2"> The roundtrip time in milliseconds (ms). Lower vaules indicate a
+                                        faster connection and less
+                                        latency.</p>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-start align-items-center">
+                                    <div class="bg-dark text-light p-2 rounded mb-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
+                                        TTL
+                                    </div>
+                                    <p class="ms-2"> <strong>Time to live </strong>A vaule that tells network routers
+                                        how long a packet should exist on the network
+                                        before being discarded, which prevents infinite loops. The default value can
+                                        indicate the target's operating
+                                        sytem.</p>
+                                </li>
 
-                                    <li class="list-group-item d-flex justify-content-start align-items-center">
-                                        <div class="bg-dark text-light p-2 rounded mb-2" style="font-family: monospace; font-size: 0.9em;">
-                                            Packets: Sent = 4, Received = 4, Lost = 0 (0% Loss) 
-                                        </div>
-                                        <p class="ms-2">Indicates that all packets successfully made the round trip, confirming a stable connection.</p>
-                                    </li>
-                                  </ul>
-                                <img src="img/ping_command.png" alt="ping networking command" class="img-fluid card-img">
-                            </div>
+                                <li class="list-group-item d-flex justify-content-start align-items-center">
+                                    <div class="bg-dark text-light p-2 rounded mb-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
+                                        Packets: Sent = 4, Received = 4, Lost = 0 (0% Loss)
+                                    </div>
+                                    <p class="ms-2">Indicates that all packets successfully made the round trip,
+                                        confirming a stable connection.</p>
+                                </li>
+                            </ul>
+                            <img src="img/ping_command.png" alt="ping networking command" class="img-fluid card-img">
                         </div>
+                    </div>
 
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>tracert (traceroute)</strong>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>tracert (traceroute)</strong>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> shows you each hop your packet takes from your computer to a
+                                destination (like google.com).
+                                It is extremely useful for troubleshooting slow connections, routing issues, VPN
+                                problems, ISP issues, and more.</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                tracert google.com
                             </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> shows you each hop your packet takes from your computer to a destination (like google.com).
-                                 It is extremely useful for troubleshooting slow connections, routing issues, VPN problems, ISP issues, and more.</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    tracert google.com
-                                </div>
-                                <p><strong>How it works: </strong> The mechanism relies on the <i>Time-To-Live (TTL)</i> value in the IP packet header.
-                                    Tracert sends the first packet with a TTL of 1. The first router decrements the TTL to 0 and, as per standard protocol. Once TTL reaches 0 the router sends an "ICMP Time Exceeded" message back to your computer.
-                                    Your computer then sends a second packet with a TTL of 2, which reaches the second router before expiring and sending back an "ICMP Time Exceeded" message.
-                                    This process repeats, incrementing the TTL by one with each transmission, until the packet reaches its final destination or the maximum number of hops 
-                                    (30 by default) is met. The destination host then sends an "ICMP Echo Reply".</p>
-                                    <p><strong>Step by Step:</strong></p>
-                                <ol class="list-group list-group-flush px-2 mb-2">
-                                    <li class="list-group-flush">
-                                        First Packet → TTL = 1
-                                        <ul>
-                                            <li>Router 1 receives it → TTL becomes 0 → Router 1 replies with "Time Exceeded".</li>
-                                            <li><strong>tracert </strong> shows Hop #1</li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-group-flush">
-                                        Second Packet → TTL = 2
-                                        <ul>
-                                            <li>Packet goes through Hop #1 → Hop #2 → TTL becomes 0 → Router 2 replies with "Time Exceeded".</li>
-                                            <li><strong>tracert </strong>shows Hop #2</li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-group-">
-                                        Third Packet → TTL = 3
-                                        <ul>
-                                            <li>Packet goes through Hop #1 → Hop #2 → Hop #3 → TTL becomes 0 → Router 3 replies with "Time Exceedd".</li>
-                                            <li><strong>tracert </strong> records Hop #3</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                                <p>This process continues until</p>
-                                <ul>
-                                    <li>The destination responds</li>
-                                    <li>A timeout occurs</li>
-                                    <li>The TTL reaches 30 hops (default max)</li>
-                                </ul>
-                                <p><strong>Key Elements</strong></p>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            Hop Number - represents the order of routers you reached. You will get 3 values which measure latency like <br>
-                                            <div class="bg-dark text-light p-2 rounded my-2" style="font-family: monospace; font-size: 0.9em;">
-                                                1  22 ms  21 ms  20 ms
-                                            </div>
-                                            <p>These 3 values will</p>
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item"><i class="bi bi-check-lg px-2" style="color: green;"></i>Helps detect jitter (Latency variation)</li>
-                                                <li class="list-group-item">Helps detect intermittent packet loss</li>
-                                                <li class="list-group-item">Helps confirm consisten routing</li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item">
-                                        </li>
+                            <p><strong>How it works: </strong> The mechanism relies on the <i>Time-To-Live (TTL)</i>
+                                value in the IP packet header.
+                                Tracert sends the first packet with a TTL of 1. The first router decrements the TTL to 0
+                                and, as per standard protocol. Once TTL reaches 0 the router sends an "ICMP Time
+                                Exceeded" message back to your computer.
+                                Your computer then sends a second packet with a TTL of 2, which reaches the second
+                                router before expiring and sending back an "ICMP Time Exceeded" message.
+                                This process repeats, incrementing the TTL by one with each transmission, until the
+                                packet reaches its final destination or the maximum number of hops
+                                (30 by default) is met. The destination host then sends an "ICMP Echo Reply".</p>
+                            <p><strong>Step by Step:</strong></p>
+                            <ol class="list-group list-group-flush px-2 mb-2">
+                                <li class="list-group-flush">
+                                    First Packet → TTL = 1
+                                    <ul>
+                                        <li>Router 1 receives it → TTL becomes 0 → Router 1 replies with "Time
+                                            Exceeded".</li>
+                                        <li><strong>tracert </strong> shows Hop #1</li>
                                     </ul>
-                                <img src="img/tracert_command.png" alt="Tracert Command" class="img-fluid card-img">
-                            </div>
+                                </li>
+                                <li class="list-group-flush">
+                                    Second Packet → TTL = 2
+                                    <ul>
+                                        <li>Packet goes through Hop #1 → Hop #2 → TTL becomes 0 → Router 2 replies with
+                                            "Time Exceeded".</li>
+                                        <li><strong>tracert </strong>shows Hop #2</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-">
+                                    Third Packet → TTL = 3
+                                    <ul>
+                                        <li>Packet goes through Hop #1 → Hop #2 → Hop #3 → TTL becomes 0 → Router 3
+                                            replies with "Time Exceedd".</li>
+                                        <li><strong>tracert </strong> records Hop #3</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p>This process continues until</p>
+                            <ul>
+                                <li>The destination responds</li>
+                                <li>A timeout occurs</li>
+                                <li>The TTL reaches 30 hops (default max)</li>
+                            </ul>
+                            <p><strong>Key Elements</strong></p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    Hop Number - represents the order of routers you reached. You will get 3 values
+                                    which measure latency like <br>
+                                    <div class="bg-dark text-light p-2 rounded my-2"
+                                        style="font-family: monospace; font-size: 0.9em;">
+                                        1 22 ms 21 ms 20 ms
+                                    </div>
+                                    <p>These 3 values will</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><i class="bi bi-check-lg px-2"
+                                                style="color: green;"></i>Helps detect jitter (Latency variation)</li>
+                                        <li class="list-group-item">Helps detect intermittent packet loss</li>
+                                        <li class="list-group-item">Helps confirm consisten routing</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                </li>
+                            </ul>
+                            <img src="img/tracert_command.png" alt="Tracert Command" class="img-fluid card-img">
                         </div>
+                    </div>
 
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>nslookup / nslookup</strong>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Query DNS servers</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    nslookup google.com<br>
-                                    nslookup google.com 8.8.8.8 (query specific DNS server)
-                                </div>
-                                <p><strong>Shows:</strong> IP address for domain name, helps diagnose DNS issues</p>
-                            </div>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>nslookup / nslookup</strong>
                         </div>
-
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>netstat</strong>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Query DNS servers</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                nslookup google.com<br>
+                                nslookup google.com 8.8.8.8 (query specific DNS server)
                             </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Display network statistics and active connections</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    netstat -an (all connections and listening ports)<br>
-                                    netstat -b (connections with process names)
-                                </div>
-                                <p><strong>Shows:</strong> Listening ports, established connections, statistics</p>
-                            </div>
+                            <p><strong>Shows:</strong> IP address for domain name, helps diagnose DNS issues</p>
                         </div>
+                    </div>
 
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>getmac</strong>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Display MAC address</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    getmac<br>
-                                    getmac /s computername (remote computer)
-                                </div>
-                                <p><strong>Shows:</strong> Physical address of network adapter</p>
-                            </div>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>netstat</strong>
                         </div>
-
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>ipconfig /release & /renew</strong>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Display network statistics and active connections</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                netstat -an (all connections and listening ports)<br>
+                                netstat -b (connections with process names)
                             </div>
-                            <div class="card-body">
-                                <p><strong>Purpose:</strong> Release and renew DHCP lease</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    ipconfig /release (releases current IP)<br>
-                                    ipconfig /renew (requests new IP from DHCP)
-                                </div>
-                                <p><strong>Uses:</strong> Fixing IP configuration issues, forcing new DHCP assignment
-                                </p>
-                            </div>
+                            <p><strong>Shows:</strong> Listening ports, established connections, statistics</p>
                         </div>
+                    </div>
 
-                        <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                                <strong>arp (Address Resolution Protocol)</strong>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>getmac</strong>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Display MAC address</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                getmac<br>
+                                getmac /s computername (remote computer)
                             </div>
+                            <p><strong>Shows:</strong> Physical address of network adapter</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>ipconfig /release & /renew</strong>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> Release and renew DHCP lease</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                ipconfig /release (releases current IP)<br>
+                                ipconfig /renew (requests new IP from DHCP)
+                            </div>
+                            <p><strong>Uses:</strong> Fixing IP configuration issues, forcing new DHCP assignment
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <strong>arp (Address Resolution Protocol)</strong>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Purpose:</strong> View and manage ARP cache (IP to MAC mapping)</p>
+                            <div class="bg-dark text-light p-2 rounded mb-2"
+                                style="font-family: monospace; font-size: 0.9em;">
+                                arp -a (display ARP table)<br>
+                                arp -d (clear ARP cache)
+                            </div>
+                            <p><strong>Uses:</strong> Troubleshooting MAC address issues, ARP spoofing detection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h3 class="h4 mb-3">Network Troubleshooting Checklist</h3>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>1. Check Physical Connection:</strong> Ensure cables are connected, lights on
+                            device/NIC
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>2. Verify IP Configuration:</strong> Run ipconfig to check for valid IP address
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>3. Test Local Connectivity:</strong> Ping default gateway (router)
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>4. Test Remote Connectivity:</strong> Ping external IP (8.8.8.8)
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>5. Check DNS Resolution:</strong> Use nslookup to verify DNS is working
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>6. Trace Route Issues:</strong> Use tracert to identify where connection fails
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>7. Check Firewall Rules:</strong> Verify firewall isn't blocking traffic
+                        </li>
+                        <li class="list-group-item bg-transparent ps-0">
+                            <strong>8. Check Device Drivers:</strong> Update network adapter drivers if needed
+                        </li>
+                    </ol>
+                </div>
+                <!-- SOHO Networking Section -->
+                <div class="content-section gray-bg px-3 border rounded mb-3 p-3" id="soho">
+                    <h2 class="display-6 mb-4">SOHO Networking</h2>
+                    <p class="lead">Small Office/Home Office (SOHO) networks are small, cost-effective setups typically
+                        used in home or small business environments.</p>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">SOHO Network Characteristics</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Limited devices:</strong> 2-50 devices typically
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Shared internet:</strong> Single ISP connection shared via router
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Wireless:</strong> Wi-Fi for mobility and convenience
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Basic security:</strong> Router firewall + Wi-Fi encryption
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Automatic IP:</strong> DHCP for IP assignment
+                            </li>
+                            <li class="list-group-item bg-transparent ps-0">
+                                <strong>Simple management:</strong> Minimal IT overhead
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="h4 mb-3">Typical SOHO Setup</h3>
+                        <div class="card">
                             <div class="card-body">
-                                <p><strong>Purpose:</strong> View and manage ARP cache (IP to MAC mapping)</p>
-                                <div class="bg-dark text-light p-2 rounded mb-2"
-                                    style="font-family: monospace; font-size: 0.9em;">
-                                    arp -a (display ARP table)<br>
-                                    arp -d (clear ARP cache)
-                                </div>
-                                <p><strong>Uses:</strong> Troubleshooting MAC address issues, ARP spoofing detection</p>
+                                <p><strong>Internet → Modem → Router → Devices</strong></p>
+                                <ul>
+                                    <li><strong>ISP Line:</strong> Cable/DSL/Fiber to modem</li>
+                                    <li><strong>Modem:</strong> Converts ISP signal to Ethernet</li>
+                                    <li><strong>Router:</strong> Distributes internet to multiple devices</li>
+                                    <li><strong>Devices:</strong> Computers, phones, printers, smart home devices</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-5">
-                        <h3 class="h4 mb-3">Network Troubleshooting Checklist</h3>
-                        <ol class="list-group list-group-flush">
+                        <h3 class="h4 mb-3">SOHO Security Best Practices</h3>
+                        <ul class="list-group list-group-flush">
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>1. Check Physical Connection:</strong> Ensure cables are connected, lights on
-                                device/NIC
+                                <strong>Change default credentials:</strong> Router admin username/password
                             </li>
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>2. Verify IP Configuration:</strong> Run ipconfig to check for valid IP address
+                                <strong>Enable WPA2/WPA3:</strong> Use strong Wi-Fi encryption (not WEP or WPA)
                             </li>
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>3. Test Local Connectivity:</strong> Ping default gateway (router)
+                                <strong>Disable WPS:</strong> Wi-Fi Protected Setup has security vulnerabilities
                             </li>
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>4. Test Remote Connectivity:</strong> Ping external IP (8.8.8.8)
+                                <strong>Update firmware:</strong> Keep router firmware current
                             </li>
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>5. Check DNS Resolution:</strong> Use nslookup to verify DNS is working
+                                <strong>Enable firewall:</strong> Use built-in router firewall
                             </li>
                             <li class="list-group-item bg-transparent ps-0">
-                                <strong>6. Trace Route Issues:</strong> Use tracert to identify where connection fails
+                                <strong>Guest network:</strong> Separate network for visitors
                             </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>7. Check Firewall Rules:</strong> Verify firewall isn't blocking traffic
-                            </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>8. Check Device Drivers:</strong> Update network adapter drivers if needed
-                            </li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
-
             </div>
+
         </div>
+    </div>
     </div> <!-- End Fluid Container -->
     <footer class="footer mt-auto">
         <div class="container-fluid bg-dark text-white text-center py-3 mt-4">
