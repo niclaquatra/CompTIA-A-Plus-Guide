@@ -96,7 +96,7 @@
                     <li><a href="#ip-addressing" data-bs-dismiss="offcanvas">IP Addressing</a></li>
                     <li><a href="#tools" data-bs-dismiss="offcanvas">Networking Tools</a></li>
                     <li><a href="#taps" data-bs-dismiss="offcanvas">Taps & Port Mirrors</a></li>
-                    <li><a href="#commands" data-bs-dismiss="offcanvas">Networking Commands</a></li>
+                    <li><a href="#commands">Networking Commands</a></li>
                 </ul>
             </div>
         </div>
@@ -237,25 +237,25 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><strong>HTTP</strong></td>
+                                        <td><strong>HTTP (Hypertext Transfer Protocol)</strong></td>
                                         <td>80/TCP</td>
                                         <td>Application</td>
                                         <td>Unsecured web traffic</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>HTTPS</strong></td>
+                                        <td><strong>HTTPS (Hypertext Transfer Protocol Secure)</strong></td>
                                         <td>443/TCP</td>
                                         <td>Application</td>
                                         <td>Secured web traffic (SSL/TLS)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>FTP</strong></td>
+                                        <td><strong>FTP (File Transfer Protocol)</strong></td>
                                         <td>20, 21/TCP</td>
                                         <td>Application</td>
                                         <td>File transfer</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>SSH</strong></td>
+                                        <td><strong>SSH (Secure Shell)</strong></td>
                                         <td>22/TCP</td>
                                         <td>Application</td>
                                         <td>Secure shell & remote access</td>
@@ -267,37 +267,61 @@
                                         <td>Unsecured remote access</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>SMTP</strong></td>
+                                        <td><strong>SMTP (Simple Mail Transfer Protocol)</strong></td>
                                         <td>25, 587/TCP</td>
                                         <td>Application</td>
                                         <td>Email sending</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>DNS</strong></td>
+                                        <td><strong>DNS (Domain Name System)</strong></td>
                                         <td>53/UDP, TCP</td>
                                         <td>Application</td>
-                                        <td>Domain name resolution</td>
+                                        <td>Converts domain names typed in the URL to IP addresses</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>DHCP</strong></td>
+                                        <td><strong>DHCP (Dynamic Host Configuration Protocol)</strong></td>
                                         <td>67, 68/UDP</td>
                                         <td>Application</td>
                                         <td>Dynamic IP assignment</td>
                                     </tr>
                                     <tr>
                                         <td><strong>POP3</strong></td>
-                                        <td>110/TCP</td>
+                                        <td>110 (unencrypted), 995/TCP (encrypted)</td>
                                         <td>Application</td>
                                         <td>Email retrieval</td>
                                     </tr>
                                     <tr>
                                         <td><strong>IMAP</strong></td>
-                                        <td>143, 993/TCP</td>
+                                        <td>143 (unencrypted), 993/TCP (encrypted)</td>
                                         <td>Application</td>
                                         <td>Email access (secure)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>RDP</strong></td>
+                                        <td><strong>NetBIOS (Network Basic Input/Output System)</strong></td>
+                                        <td>Name services 137/UDP - Session Services 139/TCP</td>
+                                        <td>Application</td>
+                                        <td>Finds devices on the network by device name</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SMB (Server Message Block)</strong></td>
+                                        <td>445/TCP</td>
+                                        <td>Application</td>
+                                        <td>File sharing & printer sharing; also called CIFS (Common Internet File System)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SNMP (Simple Network Management Protocol)</strong></td>
+                                        <td>Quries: 161/UDP, Traps: 162/UDP</td>
+                                        <td>Application</td>
+                                        <td>Gathers statistics and manages network devices</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>LDAP (Lightweight Directory Access Protocol)</strong></td>
+                                        <td>389/TCP</td>
+                                        <td>Application</td>
+                                        <td>Stores and retrieves information in a network directory commonly used in Microsoft Active Directory</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>RDP (Remote Desktop Protocol)</strong></td>
                                         <td>3389/TCP</td>
                                         <td>Application</td>
                                         <td>Remote desktop protocol</td>
@@ -921,11 +945,7 @@
                             </div>
                             </div>
                         <div class="card mb-4 border-0 shadow-sm">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-lg-4 text-center p-3">
-                                    <img src="img/network_tap.png" alt="Network tap installed inline" class="img-fluid rounded mb-3">
-                                    <p class="small text-muted mb-0">Taps are inline hardware; SPAN is a switch feature that mirrors traffic.</p>
-                                </div>
+                            <div class="row g-0 justify-content-center">
                                 <div class="col-lg-8">
                                     <div class="card-body">
                                         <h4 class="h4 mb-2" id="taps">Network Taps & Port Mirrors</h4>
@@ -933,31 +953,35 @@
                                             Its like placing a splitter in the line between two network devices. (Wireshark, IDS/IPS, DLP, performance tools)</p>
                                         <p class="mb-3"><strong>Port Mirroring (SPAN):</strong> A software feature on managed switches that duplicates traffic from one or more source ports or VLANs to a designated monitor port on the same switch.
                                             It does not require additional hardware but can be limited by switch performance and port capacity.</p>
+                                            <div class="col-md-12 text-center p-3">
+                                                <img src="img/network_tap.png" alt="Network tap installed inline" class="img-fluid rounded mb-3">
+                                                <p class="small text-muted mb-0">Taps are inline hardware; SPAN is a switch feature that mirrors traffic.</p>
+                                            </div>
                                         <div class="row row-cols-1 row-cols-md-2 g-3">
                                             <div class="col">
                                                 <h5 class="text-primary h6 mb-1">Tap Types</h5>
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item bg-transparent ps-0"><strong>Passive TAPS:</strong> do not require power and use an optical splitter to create a copy of the signal in fiber networks. 
                                                         They are highly reliable as they have no power requirements and do not present a single point of failure in a power outage.</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Active / Regeneration TAPS:</strong> Used primarily for copper environments or where signal regeneration is needed, active 
+                                                    <li class="list-group-item bg-light ps-0"><strong>Active / Regeneration TAPS:</strong> Used primarily for copper environments or where signal regeneration is needed, active 
                                                         TAPs require a power source to regenerate the signal to both the network and monitoring destinations. Many include failsafe mechanisms, such as battery backups or relay switches, to ensure network traffic continues to flow during a power failure.</li>
                                                     <li class="list-group-item bg-transparent ps-0"><strong>Aggregation TAPS:</strong> aggregate traffic from both transmit (TX) and receive (RX) directions into a single monitoring port, which simplifies connectivity to monitoring tools but can lead to 
                                                         port oversubscription if the traffic exceeds the monitor port's capacity.</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Filterable TAPS:</strong> These advanced taps can filter specific packets based on criteria like VLAN tags or IP addresses to downsize traffic and prevent monitoring port oversubscription, 
+                                                    <li class="list-group-item bg-light ps-0"><strong>Filterable TAPS:</strong> These advanced taps can filter specific packets based on criteria like VLAN tags or IP addresses to downsize traffic and prevent monitoring port oversubscription, 
                                                         which is especially useful for high-speed networks (10Gb+).</li>
                                                     <li class="list-group-item bg-transparent ps-0"><strong>Portable TAPS:</strong> compact, tabletop devices designed for easy installation and configuration in various locations, making them suitable for field testing and remote troubleshooting.</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Virtualized TAPS</strong> for virtualized environments, these taps provide visibility into traffic between virtual machines (VMs) that never crosses a physical port, sending monitored traffic 
+                                                    <li class="list-group-item bg-light ps-0"><strong>Virtualized TAPS</strong> for virtualized environments, these taps provide visibility into traffic between virtual machines (VMs) that never crosses a physical port, sending monitored traffic 
                                                         via encapsulated tunnels to physical monitoring devices.</li> 
                                                 </ul>
                                             </div>
                                             <div class="col">
                                                 <h5 class="text-primary h6 mb-1">Port Mirroring (SPAN)</h5>
                                                 <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>Source Ports / VLANS </strong> select one or multiple ports or even an entire VLAN as the source of traffic to be mirrored. You can often specify whether to capture ingress traffic (entering the switch), 
+                                                    <li class="list-group-item bg-light ps-0"><strong>Source Ports / VLANS </strong> select one or multiple ports or even an entire VLAN as the source of traffic to be mirrored. You can often specify whether to capture ingress traffic (entering the switch), 
                                                         egress traffic (leaving the switch), or both (full-duplex).</li>
                                                     <li class="list-group-item bg-transparent ps-0"><strong>Destination / Monitor Port:</strong> the port where the monitoring device (like a packet analyzer, IDS/IPS, or performance monitoring tool) connects. 
                                                         The monitoring tool passively listens to the mirrored data stream..</li>
-                                                    <li class="list-group-item bg-transparent ps-0"><strong>RSPAN / ERSPAN:</strong> Remote Span (RSPAN) allows traffic to be mirrored across multiple switches within the same Layer 2 domain. The mirrored traffic is tagged with a dedicated RSPAN VLAN and carried across trunks between switches. <br>
+                                                    <li class="list-group-item bg-light ps-0"><strong>RSPAN / ERSPAN:</strong> Remote Span (RSPAN) allows traffic to be mirrored across multiple switches within the same Layer 2 domain. The mirrored traffic is tagged with a dedicated RSPAN VLAN and carried across trunks between switches. <br>
                                                         Encapsulated Remote Span (ERSPAN) extends this capability by encapsulating mirrored traffic in GRE tunnels, enabling monitoring across Layer 3 networks.</li>
                                                 </ul>
                                             </div>

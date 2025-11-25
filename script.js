@@ -1,22 +1,25 @@
 // Table of Contents Active Link Highlighting
 const tocLinks = document.querySelectorAll('.toc-list a');
-const sections = document.querySelectorAll('[id]');
+const tocSections = Array.from(tocLinks)
+    .map(link => document.getElementById(link.getAttribute('href').slice(1)))
+    .filter(Boolean);
 
 function updateActiveLink() {
-    let currentSection = '';
+    // Offset so the highlight switches slightly before the heading hits the top
+    const scrollPos = window.scrollY + 180;
+    let currentSectionId = tocSections[0] ? tocSections[0].id : '';
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 200) {
-            currentSection = section.getAttribute('id');
+    for (let i = 0; i < tocSections.length; i++) {
+        const thisTop = tocSections[i].offsetTop;
+        const nextTop = tocSections[i + 1]?.offsetTop ?? Number.POSITIVE_INFINITY;
+        if (scrollPos >= thisTop && scrollPos < nextTop) {
+            currentSectionId = tocSections[i].id;
+            break;
         }
-    });
+    }
 
     tocLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === currentSection) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href').slice(1) === currentSectionId);
     });
 }
 
