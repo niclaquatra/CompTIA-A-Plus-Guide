@@ -1041,12 +1041,13 @@
                             internet access.
                         </li>
                     </ul>
+                    <!-- IPv4 Addressing -->
                     <h3 class="h4 mb-3">IPv4 Addressing</h3>
                     <p class="lead"><strong>Format:</strong> 32-bit address divided into four octets which are 8 bits
                         each.
                         Written in dotted decimal notation.
                     </p>
-                    <p class="lead">Example: <span class="bg-light text-success border rounded p-2">192.168.1.10</span>
+                    <p class="lead">Example: <span class="bg-light text-success border rounded shadow-sm p-2">192.168.1.10</span>
                     </p>
                     <p class="lead">Each octet ranges from 0-255 allowing 4.3 billion possible addresses. 2³²</p>
                     <div class="mb-4">
@@ -1286,60 +1287,177 @@
                             </table>
                         </div>
                     </div>
-
+                    <!-- End IPv4 Addressing -->
+                    <!-- IPv6 Addressing -->
                     <div class="mb-5">
                         <h3 class="h4 mb-3">IPv6 Addressing</h3>
-                        <p><strong>Format:</strong> Eight groups of hexadecimal numbers separated by colons. Example:
-                            2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Length:</strong> 128 bits (vs IPv4's 32 bits)
+                        <p class="lead">IPv6 is the current version of the Internet Protocol, designed to replace IPv4 due to address limitations.
+                            IPv4 provided approximately 4.3 billion addresses, while IPv6 offers a vastly larger address space with 2¹²⁸ possible addresses.
+                        </p>
+                        <h4 class="h5 mb-3">Key Features of IPv6</h4>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>No broadcast traffic → </strong> uses multicast and anycast instead, reducing network congestion.
                             </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Advantages:</strong> Vastly larger address space, built-in security (IPsec)
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>Auto-configuration (SLAAC): </strong> devices can automatically generate their own IPv6 addresses using the network prefix.
                             </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Shorthand:</strong> Can omit leading zeros and consecutive zero groups (::)
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>Improved security: </strong> IPsec is mandatory in IPv6, providing better end-to-end encryption and authentication.
                             </li>
-                            <li class="list-group-item bg-transparent ps-0">
-                                <strong>Link-local:</strong> fe80:: prefix for automatic local addresses
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>Simplified header format: </strong> more efficient routing and faster processing by routers.
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="h4 mb-3">DHCP & DNS</h3>
-                        <div class="card mb-3">
-                            <div class="card-header bg-primary text-white">
-                                <strong>DHCP (Dynamic Host Configuration Protocol)</strong>
-                            </div>
-                            <div class="card-body">
-                                <ul>
-                                    <li>Automatically assigns IP addresses to devices on a network</li>
-                                    <li><strong>Process:</strong> DISCOVER → OFFER → REQUEST → ACK</li>
-                                    <li>Uses ports 67 (server) and 68 (client)</li>
-                                    <li>Includes lease time (how long address is valid)</li>
-                                    <li>Also provides subnet mask, gateway, and DNS server addresses</li>
-                                </ul>
-                            </div>
+                        <p class="lead"><strong>Format:</strong> 128-bit address written in hexadecimal (base 16) and divided into eight 16-bit blocks 
+                            separated by colons.
+                        </p>
+                        <p class="lead"><strong>Example: </strong><span class="bg-light text-monospace text-success border rounded shadow-sm p-2">
+                            2001:0db8:85a3:0000:0000:8a2e:0370:7334</span>
+                        </p>
+                        <ul class="list-group list-group-flush mb-5">
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>Simplified <i>(Remove leading 0s): </i></strong><span class="bg-light text-monospace text-success border rounded shadow-sm p-2">
+                                2001:db8:85a3:0:0:8a2e:370:7334</span>
+                            </li>
+                            <li class="list-group-item bg-transparent p-2">
+                                <strong>Using double '::' for every consecutive zeros: </strong><span class="bg-light text-monospace text-success border rounded shadow-sm p-2">
+                                2001:db8:85a3::8a2e:370:7334</span>
+                            </li>
+                        </ul>
+                        <div class="col-lg-12">
+                            <h4 class="h5 mb-3">IPv6 Address Types</h4>
+                            <table class="table table-responsive table-bordered table-striped">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Global Unicast</td>
+                                        <td>Publicly routable addresses on the internet like IPv4</td>
+                                        <td>2001::/16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Link-Local</td>
+                                        <td>Used within a local network segment (auto-assigned)</td>
+                                        <td>fe80::/10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unique Local</td>
+                                        <td>Private addressing wihin organization</td>
+                                        <td>fc00::/7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multicast</td>
+                                        <td>One-to-many communication</td>
+                                        <td>ff00::/8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anycast</td>
+                                        <td>Delivered to the nearest node in a group</td>
+                                        <td>Assigned from global unicast range</td>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card">
-                            <div class="card-header bg-primary text-white">
-                                <strong>DNS (Domain Name System)</strong>
-                            </div>
-                            <div class="card-body">
-                                <ul>
-                                    <li>Translates domain names to IP addresses</li>
-                                    <li>Uses port 53 (TCP and UDP)</li>
-                                    <li><strong>Record types:</strong> A (IPv4), AAAA (IPv6), MX (mail), CNAME
-                                        (alias), TXT (text)
-                                    </li>
-                                    <li>Recursive resolution through root, TLD, and authoritative nameservers</li>
-                                    <li>Common public DNS: 8.8.8.8 (Google), 1.1.1.1 (Cloudflare)</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <!-- End IPv6 Addressing -->
+                    <!-- IPv4 vs IPv6 table -->
+                    <div class="col-lg-12">
+                        <h4 class="h5 mb-3">IPv4 vs IPv6 Comparison</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-5">
+                                <thead class="table-primary text-white">
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>IPv4</th>
+                                        <th>IPv6</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Address Length</td>
+                                        <td>32 bits</td>
+                                        <td>128 bits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address Format</td>
+                                        <td>Dotted decimal</td>
+                                        <td>Hexadecimal with colons</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address Count</td>
+                                        <td>Approximately 4.3 billion addresses</td>
+                                        <td>Approximately 2¹²⁸</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Configuration</td>
+                                        <td>Manual or DHCP</td>
+                                        <td>Stateless autoconfiguration or DHCPv6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Security</td>
+                                        <td>Optional IPsec add-on</td>
+                                        <td>Built in IPsec</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Broadcast</td>
+                                        <td>Supported</td>
+                                        <td>Not used (multicast / anycast instead)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NAT Usage</td>
+                                        <td>Commonly used</td>
+                                        <td>Not needed theoretically</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                    <!-- End IPv4 vs IPv6 table -->
+                    <!-- Domain Name System -->
+                    <h3 class="h4 mb-3">Domain Name System</h3>
+                    <p class="lead">The Domain Name System (DNS) is a hierarchical and decentralized naming system for
+                        computers, services, or other resources connected to the internet or a private network. It translates 
+                        human-friendly domain names (like www.google.com) into an IP address (like 172.217.14.206). DNS allows
+                        users to access websites and services using easy-to-remember names instead of numerical IP addresses.
+                    </p>
+                    <h3 class="h4 mb-3">How DNS Works</h3>
+                    <ol class="list-group list-group-numbered mb-5">
+                        <li class="list-group-item bg-dark text-white p-2">
+                            <strong>DNS Query Initiation:</strong> When a user types a domain name into their web browser, the
+                            browser initiates a DNS query to resolve the domain name into an IP address.
+                        </li>
+                        <li class="list-group-item bg-light p-2">
+                            <strong>Recursive Resolver:</strong> The query is first sent to a recursive DNS resolver, typically
+                            provided by the user's ISP or a third-party DNS service.
+                        </li>
+                        <li class="list-group-item bg-dark text-white p-2">
+                            <strong>Cache Check:</strong> The resolver checks its cache to see if it has a recent record of the domain name.
+                            If found, it returns the IP address to the user's browser. If not move onto the next step.
+                        </li>
+                        <li class="list-group-item bg-light p-2">
+                            <strong>Root Name Servers:</strong> If the resolver does not have the record cached, it queries one of the
+                            root name servers. The root server responds with a referral to the appropriate Top-Level Domain (TLD)
+                            name server (e.g., .com, .org, .net).
+                        </li>
+                        <li class="list-group-item bg-dark text-white p-2">
+                            <strong>Top Level Domain Name Servers:</strong> The resolver then queries the TLD name server, which responds with a referral
+                            to the authoritative name server for the specific domain.
+                        </li>
+                        <li class="list-group-item bg-light text-dark p-2">
+                            <strong>Authoritative Name Servers:</strong> The resolver queries the authoritative name server, which holds the
+                            actual DNS records for the domain. It responds with the requested IP address.
+                        </li>
+                        <li class="list-group-item bg-dark text-white p-2">
+                            <strong>Response to User's Browser:</strong> The resolver sends the IP address back to the user's browser and the IP address
+                            is cached for future requests. The browser can now establish a connection to the web server using the IP address.
+                        </li>
+                    </ol>
+                    <!-- End Domain Name System -->
                 </div>
 
                 <!-- Networking Tools Section -->
