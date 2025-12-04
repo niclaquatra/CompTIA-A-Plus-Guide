@@ -1278,46 +1278,56 @@
                             physical segmentation.
                         </li>
                     </ul>
-                    <div class="row justify-content-center mb-4">
-                        <h3 class="h4 mb-4">Segmentation Technologies</h3>
-                        <div class="col-md-4 bg-light border rounded shadow-sm p-3">
-                            <h3 class="h4 mb-3 text-center">VLANs (Virtual LANs)</h3>
-                            <p class="lead">
-                                VLANs logically segment a physical network into seperate,
-                                isolated networks even if all devices share the same physical
-                                infrastructure. This enables devices to be grouped together
-                                regardless of their physical location. VLANs operate at Layer
-                                2 (Data Link) of the OSI model. Each VLAN is treated like its
-                                own seperate network or boradcast domain. Unlike traditional LANs
-                                which rely on physical topology, VLANs use software configuration on switches
-                                using IEEE 802.1Q tagging to identify and separate traffic.
-                            </p>
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="card h-100 border rounded shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success text-center">VLANs (Virtual LANs)</h5>
+                                    <p class="card-text mb-0">
+                                        VLANs logically segment a physical network into
+                                        separate, isolated networks even if all devices share
+                                        the same physical infrastructure. This enables devices
+                                        to be grouped together regardless of their physical
+                                        location. VLANs operate at Layer 2 (Data Link) of the
+                                        OSI model. Each VLAN is treated like its own separate
+                                        network or broadcast domain. Unlike traditional LANs
+                                        which rely on physical topology, VLANs use software
+                                        configuration on switches using IEEE 802.1Q tagging to
+                                        identify and separate traffic.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="col-lg-4 bg-light border rounded shadow-sm p-3">
-                            <h3 class="h4 mb-3 text-center">VPNs (Virtual Private Networks)</h3>
-                            <p class="lead">
-                                VPNs create secure, encrypted tunnels over public networks
-                                (like the internet) to allow remote users to access a private
-                                network. VPNs operate at Layer 3 (Network) of the OSI model.
-                                They provide confidentiality and integrity for data
-                                transmitted between the remote user and the private network.
-                            </p>
+                        <div class="col">
+                            <div class="card h-100 border rounded shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger text-center">VPNs (Virtual Private Networks)</h5>
+                                    <p class="card-text mb-0">
+                                        VPNs create secure, encrypted tunnels over public
+                                        networks (like the internet) to allow remote users to
+                                        access a private network. VPNs operate at Layer 3
+                                        (Network) of the OSI model. They provide confidentiality
+                                        and integrity for data transmitted between the remote
+                                        user and the private network.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 bg-light border rounded shadow-sm p-3">
-                            <h3 class="h4 mb-3 text-center">Proxy</h3>
+                        <div class="col">
+                            <div class="card h-100 border rounded shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary text-center">Proxy</h5>
+                                    <p class="card-text mb-0">
+                                        A proxy server acts as an intermediary between a user's
+                                        device and the internet. It forwards user requests to
+                                        destination servers, masking the user's IP address and
+                                        providing anonymity. Proxies can also cache content to
+                                        improve load times and filter traffic for security.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="lead">
-                        <strong>Example Scenario: </strong> A healthcare provider wants to
-                        ensure proper compliance and security for patient data. By
-                        segmenting their network, they ensured that patient data was only
-                        accessible to authorized medical staff and important systems. So
-                        even if a less secure device like a smart thermostat that is
-                        conntected to the network would not have access to patient
-                        information which protects patient privacy and complies with
-                        regulations.
-                    </p>
                 </div>
 
                 <!-- End Remote Access and Network Segmentation Section -->
