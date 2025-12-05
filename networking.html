@@ -1238,7 +1238,7 @@
                     </p>
 
                     <h3 class="h4 mb-3">Remote Access Methods</h3>
-                    <ul class="list-group list-group-flush mb-4">
+                    <ul class="list-group list-group-flush mb-4 ps-2">
                         <li class="list-group-item bg-transparent ps-0">
                             <strong>VPN (Virtual Private Network):</strong> Creates a
                             secure, encrypted tunnel over the internet for remote users to
@@ -1256,7 +1256,7 @@
                         </li>
                     </ul>
                     <h3 class="h4 mb-3">Network Segmentation</h3>
-                    <p class="lead">
+                    <p class="lead ps-2">
                         Network segmentation involves dividing a network into smaller
                         segments or subnets to improve security and performance. In a work
                         from home scenario, segmentation can help isolate sensitive
@@ -1264,7 +1264,7 @@
                         the risk of a security breach on the entire network. There are two
                         different ways to implement segmentation:
                     </p>
-                    <ul class="list-group list-group-flush mb-4">
+                    <ul class="list-group list-group-flush mb-4 ps-2">
                         <li class="list-group-item bg-transparent ps-0">
                             <strong>Physical Segmentation:</strong> Uses physical devices
                             like switches and routers to separate network segments. Each
@@ -1277,81 +1277,154 @@
                             infrastructure. Often more cost-effective and flexible than
                             physical segmentation.
                         </li>
-                      </ul>
-                    <h3 class="h4 mb-3">Segmentation Technologies</Tem></h3>
+                    </ul>
+                    <h3 class="h4 mb-3">Segmentation Technologies</Tem>
+                    </h3>
                     <h4 class="h5 mb-3 ps-2">VLANs (Virtual LANs)</h4>
-                    <p class="lead mb-3 ps-2">VLANs logically segment a physical network into seperate, isolated networks
-                      even if all devices share the same physical infastructure such as a switch. This enables devices
-                      to be grouped together regardless of their physcial location. Each VLAN is treated like its own
-                      seperate network or broadcast domain. Unlike traditional LANs which rely on physical topology,
-                      VLANs use software configuration on switches using IEEE 802.1Q tagging to identify and seperate
-                      traffic. VLANs operate at Layer 2 (Data Link) of the OSI model.
+                    <p class="lead mb-3 ps-3">VLANs logically segment a physical network into seperate, isolated
+                        networks
+                        even if all devices share the same physical infastructure such as a switch. This enables devices
+                        to be grouped together regardless of their physcial location. Each VLAN is treated like its own
+                        seperate network or broadcast domain. Unlike traditional LANs which rely on physical topology,
+                        VLANs use software configuration on switches using IEEE 802.1Q tagging to identify and seperate
+                        traffic. VLANs operate at Layer 2 (Data Link) of the OSI model. VLANs provide improved security,
+                        reduced broadcast traffic, better network management, and more flexibility
                     </p>
                     <h4 class="h5 mb-3 ps-2">How VLANs Work</h4>
-                    <p class="lead mb-2 ps-2"><strong>1. Segmentation of Broadcast Domain: </strong> In a standard, unsegmented network (a single LAN), a broadcast message 
-                      sent by any device is received by every other device. This is called a broadcast domain. VLANs break up a 
-                      large physical network into smaller networks or broadcast domains. A broadcast sent within one VLAN will only be forwarded to 
-                      other devices that belong to the same VLAN, significantly reducing unnecessary network traffic and improving efficiency.
+                    <p class="lead mb-2 ps-3"><strong>1. Segmentation of Broadcast Domain: </strong> In a standard,
+                        unsegmented network (a single LAN), a broadcast message
+                        sent by any device is received by every other device. This is called a broadcast domain. VLANs
+                        break up a
+                        large physical network into smaller networks or broadcast domains. A broadcast sent within one
+                        VLAN will only be forwarded to
+                        other devices that belong to the same VLAN, significantly reducing unnecessary network traffic
+                        and improving efficiency.
                     </p>
-                    <p class="lead mb-2 ps-2"><strong>2. VLAN Memebership: </strong> Devices are assigned to a specific 
-                    VLAN based of one of several methods
+                    <p class="lead mb-3 ps-3"><strong>2. VLAN Memebership: </strong> Devices are assigned to a specific
+                        VLAN based of one of several methods
                     </p>
-                    <ul>
-                      <li><strong>Port Based VLANs <i>(Access Ports)</i>- </strong> the most common method. A specific port on a switch is statically configured to belong 
-                        to only one VLAN (e.g., port 5 is assigned to VLAN 10). Any device connected to that port automatically becomes a member of that VLAN. Traffic coming 
-                        from a device connected to an access port is untagged when it leaves the device.
-                      </li>
-                    </ul>
-                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-3 justify-content-center px-4">
                         <div class="col">
-                            <div class="card h-100 border rounded shadow-sm">
+                            <div class="card h-100 border rounded border-info-subtle shadow-sm bg-info-subtle">
                                 <div class="card-body">
-                                    <h5 class="card-title text-primary text-center">VLANs (Virtual LANs)</h5>
+                                    <h5 class="card-title text-dark">Port-Based VLANs (Access Ports)</h5>
                                     <p class="card-text mb-0">
-                                        VLANs logically segment a physical network into
-                                        separate, isolated networks even if all devices share
-                                        the same physical infrastructure. This enables devices
-                                        to be grouped together regardless of their physical
-                                        location. VLANs operate at Layer 2 (Data Link) of the
-                                        OSI model. Each VLAN is treated like its own separate
-                                        network or broadcast domain. Unlike traditional LANs
-                                        which rely on physical topology, VLANs use software
-                                        configuration on switches using IEEE 802.1Q tagging to
-                                        identify and separate traffic.
+                                        The most common method. A specific switch port is statically configured to
+                                        belong to one VLAN.
+                                        Any device connected to that port automatically becomes a member of that VLAN.
+                                        When a device sends an untagged Ethernet frame, the switch reads the port
+                                        configuration
+                                        and inserts a 4-byte VLAN ID tag into the frame header for internal switching.
+                                        The tag is removed before the frame reaches the end device.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 border rounded shadow-sm">
+                            <div class="card h-100 border rounded border-success-subtle shadow-sm bg-success-subtle">
                                 <div class="card-body">
-                                    <h5 class="card-title text-primary text-center">VPNs (Virtual Private Networks)</h5>
+                                    <h5 class="card-title text-dark">MAC Address-Based VLANs</h5>
                                     <p class="card-text mb-0">
-                                        VPNs create secure, encrypted tunnels over public
-                                        networks (like the internet) to allow remote users to
-                                        access a private network. VPNs operate at Layer 3
-                                        (Network) of the OSI model. They provide confidentiality
-                                        and integrity for data transmitted between the remote
-                                        user and the private network.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 border rounded shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title text-primary text-center">Proxy</h5>
-                                    <p class="card-text mb-0">
-                                        A proxy server acts as an intermediary between a user's
-                                        device and the internet. When you use a proxy, your device doesn`t connect directly 
-                                        to a website or service — it sends the request to the proxy first, and the proxy forwards 
-                                        it to the destination server on your behalf. Proxies can also cache content to
-                                        improve load times and filter traffic for security.
+                                        Instead of using the port number, the switch checks the device's MAC address
+                                        against a pre-configured database.
+                                        This allows devices to move to different physical ports while retaining their
+                                        VLAN membership. Configuration is typically managed on the switch or through a
+                                        RADIUS server.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <p class="lead mb-3 ps-3"><strong>3. VLAN Tagging: </strong>When multiple VLANs need to share a
+                        single physical link, typically between two switches or a switch and a router, that
+                        link is configured as a Trunk Port. This is where VLAN Tagging comes in
+                    </p>
+                    <div class="row row-cols-1 row-cols-md-4 g-4 mb-5 px-4">
+                        <div class="col">
+                            <div
+                                class="card h-100 border rounded border-secondary-subtle shadow-sm bg-secondary-subtle">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark text-center">Tagged Traffic</h5>
+                                    <p class="card-text mb-0">
+                                        When a frame (data packet) from one VLAN is sent across a trunk port, the
+                                        sending switch inserts a small 4-byte VLAN Tag
+                                        into the Ethernet frame header
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="card h-100 border rounded border-secondary-subtle shadow-sm bg-secondary-subtle">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark text-center">VLAN ID (VID)</h5>
+                                    <p class="card-text mb-0">
+                                        The most important part of the tag is the 12-bit VLAN Identifier (VID), which
+                                        specifies the VLAN to which the frame
+                                        belongs (from 1 to 4094).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="card h-100 border rounded border-secondary-subtle shadow-sm bg-secondary-subtle">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark text-center">Switch Processing</h5>
+                                    <p class="card-text mb-0">
+                                        When the frame reaches the receiving switch via the trunk port, the switch
+                                        inspects the VID and uses it to decide which
+                                        ports the frame should be forwarded to (only ports that belong to that specific
+                                        VLAN).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="card h-100 border rounded border-secondary-subtle shadow-sm bg-secondary-subtle">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark text-center">Untagged Traffic</h5>
+                                    <p class="card-text mb-0">
+                                        When a frame finally reaches a switch port configured as an Access Port for a
+                                        device, the switch removes the VLAN tag
+                                        before sending the frame to the end device, as the end device typically doesn't
+                                        understand VLAN tags.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="h4 mb-3">Inter-VLAN Communication</h3>
+                    <p class="lead ps-2">Inter-VLAN communication, or Inter-VLAN Routing, is the process that allows
+                        devices on separate VLANs to
+                        exchange traffic.
+
+                        By default, VLANs are designed to be isolated at Layer 2 <i>(Data Link Layer)</i> to separate
+                        broadcast domains. To allow
+                        communication between devices in different VLANs, you must use a Layer 3 device, which is either
+                        a Router or a Layer 3 Switch
+                    </p>
+                    <h4 class="h5 mb-3 ps-2">Why Routing is Important?</h4>
+                    <p class="ps-3">
+                        Each VLAN is treated as its own logical network, and is therefore assigned its own unique IP
+                        subnet.
+                    </p>
+                    <p class="ps-3">
+                        <strong>For Example: </strong>VLAN 10 might use 192.168.10.0/24 and VLAN 20 might use
+                        192.168.20.0/24
+                    </p>
+                    <p class="ps-3 mb-5">
+                        Devices on the same subnet communicate using Layer 2 (MAC addresses). Devices on different
+                        subnets <i>(which is the case
+                            for different VLANs)</i> must communicate using Layer 3 <i>(Network Layer)</i> and require a
+                        router to forward the packet between
+                        the subnets. When a device wants to send traffic to a device in another VLAN, it sends the
+                        packet to its Default Gateway, which is
+                        the IP address of the router or Layer 3 switch interface configured for that VLAN.
+                    </p>
+                    <h4 class="h5 mb-3 ps-2">VPN (Virtual Private Network)</h4>
+                    <p class="lead ps-3">VPNs </p>
                 </div>
 
                 <!-- End Remote Access and Network Segmentation Section -->
