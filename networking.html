@@ -1424,7 +1424,96 @@
                         the IP address of the router or Layer 3 switch interface configured for that VLAN.
                     </p>
                     <h4 class="h5 mb-3 ps-2">VPN (Virtual Private Network)</h4>
-                    <p class="lead ps-3">VPNs </p>
+                    <p class="lead ps-3">VPNs creates a secure, encrypted connection over a less secure network, such as the public internet. 
+                      This connection ensures data privacy, anonymity, and security for the user or organization. VPN is broken down into three parts.
+                    </p>
+                    <ul class="list-group list-group-flush mb-3 ps-3">
+                      <li class="list-group-item bg-transparent">
+                        <strong>Virtual - </strong>The connection is not physical like a hard-wired ethernet connection but is established 
+                        logically via software over the shared internet infrastructure.
+                      </li>
+                      <li class="list-group-item bg-transparent">
+                        <strong>Private - </strong>The data traveling through the connection is encrypted, making it unreadable to outsiders 
+                        like your ISP, hackers, or third parties.
+                      </li>
+                      <li class="list-group-item bg-transparent">
+                        <strong>Network - </strong>It creates a secure, established link between your device (the VPN client) 
+                        and a remote server (the VPN server).
+                      </li>
+                    </ul>
+                    <h4 class="h5 mb-3 ps-2">How VPNs Work</h4>
+                    <p class="lead mb-3 ps-3">
+                      The process of establishing a VPN consists of three main steps: 
+                      <strong>Authentication, Tunneling and Encryption.</strong>
+                    </p>
+                    <section class="py-5 px-3 bg-light rounded-3">
+                      <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+                        <div class="col">
+                          <div class="card h-100 border-0 shadow-sm bg-white">
+                            <div class="card-body">
+                              <div class="text-uppercase small fw-semibold text-primary mb-2 text-center">Step 1</div>
+                              <h5 class="card-title text-center text-primary">
+                                <i class="bi bi-shield-lock text-warning me-2"></i>Authentication
+                              </h5>
+                              <p class="card-text text-secondary mb-0">
+                                You use a VPN client (an app on your phone or computer) to initiate a connection to a remote VPN
+                                server run by a VPN provider or your company. The VPN server authenticates your identity (using
+                                credentials or digital certificates).
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-0 shadow-sm bg-white">
+                            <div class="card-body">
+                              <div class="text-uppercase small fw-semibold text-info mb-2 text-center">Step 2</div>
+                              <h5 class="card-title text-center text-info">
+                                <i class="bi bi-diagram-3 text-warning me-2"></i>Tunneling
+                              </h5>
+                              <p class="card-text text-secondary mb-0">
+                                Once authenticated, a secure tunnel is established. This is a virtual point-to-point link between
+                                your device and the VPN server. The VPN protocol (like OpenVPN or WireGuard) encapsulates your
+                                private data packets inside another, external data packet. This process hides the source and
+                                destination of the original packet.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-0 shadow-sm bg-white">
+                            <div class="card-body">
+                              <div class="text-uppercase small fw-semibold text-success mb-2 text-center">Step 3</div>
+                              <h5 class="card-title text-center text-success">
+                                <i class="bi bi-lock text-warning me-2"></i>Encryption
+                              </h5>
+                              <p class="card-text text-secondary mb-0">
+                                Before sending the encapsulated packet over the public internet, the VPN client encrypts it
+                                (scrambles the data using algorithms like AES-256). The encrypted data travels safely through the
+                                public internet to the VPN server. The VPN server receives the data, decrypts it, and then unwraps
+                                it to read the original packet.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border-0 shadow-sm bg-white">
+                            <div class="card-body">
+                              <div class="text-uppercase small fw-semibold text-warning mb-2 text-center">Step 4</div>
+                              <h5 class="card-title text-center text-warning">
+                                <i class="bi bi-eye-slash text-primary me-2"></i>IP Masking
+                              </h5>
+                              <p class="card-text text-secondary mb-0">
+                                When the VPN server sends your request out to the final destination (e.g., a website), it uses the
+                                VPN server's IP address, not your device's real IP address. To the outside world, it appears as
+                                though your traffic is originating from the VPN server's location, ensuring anonymity and allowing
+                                you to bypass geo-restrictions.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <img src="img/vpn_tunnel.png" alt="VPN Tunnel" class="img-fluid"/>
                 </div>
 
                 <!-- End Remote Access and Network Segmentation Section -->
