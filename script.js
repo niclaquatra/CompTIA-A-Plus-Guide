@@ -29,15 +29,15 @@ updateActiveLink();
 
 // Smooth scrolling for TOC links
 tocLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
         const href = this.getAttribute('href');
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
-            
+
             // Close the offcanvas after clicking
             const offcanvasElement = document.getElementById('tocOffcanvas');
             if (offcanvasElement) {

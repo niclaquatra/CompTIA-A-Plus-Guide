@@ -142,7 +142,7 @@ body {
     .toc-sidebar {
         display: block;
     }
-    
+
     .toc-toggle {
         display: none !important;
     }
@@ -163,7 +163,8 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 4rem; /* Add padding for fixed navbar */
+    padding-top: 4rem;
+    /* Add padding for fixed navbar */
 }
 
 /* Content section styling */
@@ -207,9 +208,11 @@ body {
     .display-4 {
         font-size: 3.5rem;
     }
+
     .display-6 {
         font-size: 2.5rem;
     }
+
     .lead {
         font-size: 1.3rem;
     }
@@ -231,10 +234,22 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
+/* Collapse chevron rotation */
+.btn[data-bs-toggle="collapse"][aria-expanded="true"].bi-chevron-down::before {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.btn[data-bs-toggle="collapse"][aria-expanded="false"].bi-chevron-down::before {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         padding: 1rem 0;
     }
+
     .nav-item {
         padding: 0.5rem 0;
     }
@@ -275,4 +290,17 @@ body {
         height: 50px;
         font-size: 1.25rem;
     }
+}
+
+/* Collapse chevron rotation */
+.btn[data-bs-toggle="collapse"] .bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.btn[data-bs-toggle="collapse"][aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(0deg);
+}
+
+.btn[data-bs-toggle="collapse"][aria-expanded="false"] .bi-chevron-down {
+    transform: rotate(-180deg);
 }
